@@ -1,3 +1,9 @@
+@import "aos.css";
+@import "bootstrap.min.css";
+@import "materialdesignicons.min.css";
+@import "style.min.css";
+@import "swiper-bundle.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

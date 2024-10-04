@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Oxhen - Responsive HTML Template</title>
+        <title>Register</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap v5.3.2 Landing Page Template" />
         <meta name="keywords" content="bootstrap v5.3.2, premium, marketing, multipurpose" />
@@ -107,7 +107,7 @@
                         </div>
                      </div>
                      <div class="mt-5 text-center text-white-50">
-                         <p>Have account already? <a href="login.html" class="fw-bold text-white"> Sign in</a> </p>
+                         <p>Have account already? <a href="/login" class="fw-bold text-white"> Sign in</a> </p>
                          <p>©<script>document.write(new Date().getFullYear())</script> Oxhen. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign</p>
                      </div>
                     </div>

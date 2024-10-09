@@ -9,7 +9,7 @@
         <meta content="Themesdesign" name="author" />
 
         <!-- fevicon -->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
 
         <!-- Bootstrap css -->
         <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" />
@@ -1051,12 +1051,14 @@
                             </div>
                         </div>
                     </div><!-- end col--> --}}
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                </div><!-- End row-->
+                <div class="row row-cols-4 row-cols-md-12 g-4">
                         <div class="col">
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user1.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">TEATER</h5>
+                                <h5 class="card-title">OSIS</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                             <div class="card-footer">
@@ -1068,7 +1070,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user2.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">TARI TRADIDIONAL</h5>
+                                <h5 class="card-title">PMR</h5>
                                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                             </div>
                             <div class="card-footer">
@@ -1080,7 +1082,67 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">OLIMPIADE</h5>
+                                <h5 class="card-title">Pramuka</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kerohanian/Keagamaan</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Seni Tari</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Desain Grafis</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Layanan Bimbingan</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Karir</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">
@@ -1089,7 +1151,6 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- End row-->
             </div><!-- end container-->
         </section>
         <!-- End ekstrakulikuler -->

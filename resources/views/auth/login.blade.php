@@ -39,8 +39,8 @@
                          <div class="text-center bg-primary position-relative">
                              <div class="img-overlay"></div>
                              <div class="position-relative pt-4 py-5 mb-1">
-                                 <h5 class="text-white">Welcome!</h5>
-                             <p class="text-white-50 mb-0 fs-14">Sign in to Continue to Oxhen..</p>
+                                 <h5 class="text-white">Selamat Datang!</h5>
+                             <p class="text-white-50 mb-0 fs-14">Login dulu ya sebelum lanjut..</p>
                              </div>
                          </div>
                          <div class="card-body position-relative">
@@ -58,12 +58,12 @@
                                         <div class="col-sm-6">
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input" id="auth-remember-check">
-                                                <label class="form-check-label" for="auth-remember-check">Remember me</label>
+                                                <label class="form-check-label" for="auth-remember-check">Ingat Saya</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="text-sm-end">
-                                                <a href="recoverpw.html" class="text-muted fs-13"><i class="mdi mdi-lock me-1"></i> Forgot password?</a>
+                                                <a href="recoverpw.html" class="text-muted fs-13"><i class="mdi mdi-lock me-1"></i> Lupa Password?</a>
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                                 </form>
                             </div>
                          </div>
-                            <div class="row mt-2">
+                            {{-- <div class="row mt-2">
                                 <div class="col-12">
                                     <div class="text-center plan-line">
                                         or sign up with
@@ -100,11 +100,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> --}}
                      </div>
                      <div class="mt-5 text-center text-white-50">
-                         <p>Don't have an account ? <a href="/register" class="fw-bold text-white"> Register</a> </p>
-                         <p>©<script>document.write(new Date().getFullYear())</script> Oxhen. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign</p>
+                         <p>Belum punya akun? <a href="/register" class="fw-bold text-white"> Daftar</a> </p>
+                         <p>©<script>document.write(new Date().getFullYear())</script> Created by <a href="https://www.mandar.web.id" class="fst-italic text-reset" target="_blank" >mandar.web.id</a> with <i class="mdi mdi-heart text-danger"></i></p>
                      </div>
                     </div>
                  </div>

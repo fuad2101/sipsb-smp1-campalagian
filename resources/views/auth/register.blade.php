@@ -45,14 +45,15 @@
                          </div>
                          <div class="card-body position-relative">
                             <div class="p-4 mt-n5 bg-white card rounded pb-0">
-                                <form>
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
                                     <div class="mb-3">
                                         <label class="fs-14 mb-2" for="first name">First Name</label>
-                                        <input type="text" class="form-control" id="first name" placeholder="First Name">
+                                        <input type="text" class="form-control" name="name" id="first name" placeholder="First Name">
                                     </div>
                                     <div class="mb-3">
                                         <label class="fs-14 mb-2" for="email">Email</label>
-                                        <input type="password" class="form-control" id="email" placeholder="Enter Email">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
                                     </div>
                                     <div class="mb-2">
                                         <label class="fs-14 mb-2" for="password">Password</label>

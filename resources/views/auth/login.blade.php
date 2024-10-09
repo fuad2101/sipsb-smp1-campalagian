@@ -45,14 +45,21 @@
                          </div>
                          <div class="card-body position-relative">
                             <div class="p-4 mt-n5 bg-white card rounded pb-0">
-                                <form>
+                                <form method="POST" action="{{route('login')}}">
+                                    @csrf
                                     <div class="mb-3">
                                         <label class="fs-14 mb-2" for="user name">User Name</label>
-                                        <input type="text" class="form-control" id="user name" placeholder="Enter Username">
+                                        <input type="email" class="form-control" name="name" id="user name" placeholder="Enter Email">
+                                        @error('user')
+                                            {{$message }}
+                                        @enderror
                                     </div>
                                     <div class="mb-2">
                                         <label class="fs-14 mb-2" for="userpassword">Password</label>
-                                        <input type="password" class="form-control" id="userpassword" placeholder="Enter Password">
+                                        <input type="password" name="password" class="form-control" id="userpassword" placeholder="Enter Password">
+                                        @error('password')
+                                            {{$message }}
+                                        @enderror
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">

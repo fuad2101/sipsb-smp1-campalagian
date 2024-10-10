@@ -48,17 +48,17 @@
                                 <form method="POST" action="{{route('login')}}">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="fs-14 mb-2" for="user name">User Name</label>
-                                        <input type="email" class="form-control" name="name" id="user name" placeholder="Enter Email">
-                                        @error('user')
-                                            {{$message }}
+                                        <label class="fs-14 mb-2" for="user name">Email</label>
+                                        <input type="email" class="form-control" name="email" id="user name" placeholder="Enter Email">
+                                        @error('email')
+                                                <div class="text-danger text-sm">{{$message }}</div>
                                         @enderror
                                     </div>
                                     <div class="mb-2">
                                         <label class="fs-14 mb-2" for="userpassword">Password</label>
                                         <input type="password" name="password" class="form-control" id="userpassword" placeholder="Enter Password">
                                         @error('password')
-                                            {{$message }}
+                                                <div class="text-danger text-sm">{{$message }}</div>
                                         @enderror
                                     </div>
                                     <div class="row">

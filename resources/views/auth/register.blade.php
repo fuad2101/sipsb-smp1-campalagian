@@ -48,16 +48,29 @@
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="fs-14 mb-2" for="first name">First Name</label>
-                                        <input type="text" class="form-control" name="name" id="first name" placeholder="First Name">
+                                        <label class="fs-14 mb-2" for="Nama Lengkap">Nama Lengkap</label>
+                                        <input type="text" class="form-control" name="name" id="Nama Lengkap" placeholder="Nama Lengkap">
                                     </div>
                                     <div class="mb-3">
                                         <label class="fs-14 mb-2" for="email">Email</label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Masukkan Email">
+                                        @error('email')
+                                                <div class="text-danger text-sm">{{$message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-2">
                                         <label class="fs-14 mb-2" for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                                        <input type="password" class="form-control" name="password" id="password" autocomplete="new-password" placeholder="Masukkan Password">
+                                        @error('password')
+                                                <div class="text-danger text-sm">{{$message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="fs-14 mb-2" for="password">Ulangi Password</label>
+                                        <input type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Ulangi Password">
+                                        @error('password')
+                                                <div class="text-danger text-sm">{{$message }}</div>
+                                        @enderror
                                     </div>
                                     {{-- <div class="row">
                                         <div class="col-sm-6">
@@ -120,6 +133,8 @@
 
     </body>
 </html>
+
+
 {{-- <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf

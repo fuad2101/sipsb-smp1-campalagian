@@ -48,5 +48,8 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Link verifikasi terkirim!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
+Route::get('/user/form',function(){
+    return view('pages.siswa.index');
+});
 
 require __DIR__.'/auth.php';

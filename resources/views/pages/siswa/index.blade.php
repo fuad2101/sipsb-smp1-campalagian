@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Enlink - Admin Dashboard Template</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <link rel="shortcut icon" href="/enlink-template/images/logo/favicon.png">
 
     <!-- page css -->
 
     <!-- Core css -->
-    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="/enlink-template/css/app.min.css" rel="stylesheet">
 
 </head>
 
@@ -23,14 +23,14 @@
             <div class="header">
                 <div class="logo logo-dark">
                     <a href="index.html">
-                        <img src="assets/images/logo/logo.png" alt="Logo">
-                        <img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
+                        <img src="/enlink-template/images/logo/logo.png" alt="Logo">
+                        <img class="logo-fold" src="/enlink-template/images/logo/logo-fold.png" alt="Logo">
                     </a>
                 </div>
                 <div class="logo logo-white">
                     <a href="index.html">
-                        <img src="assets/images/logo/logo-white.png" alt="Logo">
-                        <img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
+                        <img src="/enlink-template/images/logo/logo-white.png" alt="Logo">
+                        <img class="logo-fold" src="/enlink-template/images/logo/logo-fold-white.png" alt="Logo">
                     </a>
                 </div>
                 <div class="nav-wrap">
@@ -157,7 +157,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>    
+            </div>
             <!-- Header END -->
 
             <!-- Side Nav START -->
@@ -227,7 +227,7 @@
 
             <!-- Page Container START -->
             <div class="page-container">
-                
+
                 <!-- Content Wrapper START -->
                 <div class="main-content">
                     <div class="page-header">
@@ -292,20 +292,20 @@
                             <!-- Content goes Here -->
                         </div>
                     </div>
-                </div>            
+                </div>
             </div>
             <!-- Quick View END -->
         </div>
     </div>
 
-    
+
     <!-- Core Vendors JS -->
-    <script src="assets/js/vendors.min.js"></script>
+    <script src="/enlink-template/js/vendors.min.js"></script>
 
     <!-- page js -->
 
     <!-- Core JS -->
-    <script src="assets/js/app.min.js"></script>
+    <script src="/enlink-template/js/app.min.js"></script>
 
 </body>
 

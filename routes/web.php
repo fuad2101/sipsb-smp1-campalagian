@@ -24,6 +24,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
 
+Route::get('/helpdesk', function () {
+    return view('pages.helpdesk');
+})->middleware(['auth','verified'])->name('helpdesk');
+
+Route::get('/form', function () {
+    return view('pages.form');
+})->middleware(['auth','verified'])->name('form');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -41,6 +49,15 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/dashboard');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
+Route::middleware(['first', 'second'])->group(function () {
+    Route::get('/', function () {
+        // Uses first & second middleware...
+    });
+ 
+    Route::get('/user/profile', function () {
+        // Uses first & second middleware...
+    });
+});
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();

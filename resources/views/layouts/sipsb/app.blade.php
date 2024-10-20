@@ -165,14 +165,30 @@
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
                         <li class="nav-item dropdown">
+                            <a href="/form">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-dashboard"></i>
+                                </span>
+                                <span class="title">Form Pendaftaran</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="/helpdesk">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-dashboard"></i>
+                                </span>
+                                <span class="title">Helpdesk</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a href="">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-dashboard"></i>
                                 </span>
-                                <span class="title">Single Link</span>
+                                <span class="title">Logout</span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-pie-chart"></i>
@@ -219,7 +235,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -241,6 +257,10 @@
                         </div>
                     </div>
                     <!-- Content goes Here -->
+                    @section('content')
+                    <p>Master content</p>
+                    @show
+
                 </div>
                 <!-- Content Wrapper END -->
 

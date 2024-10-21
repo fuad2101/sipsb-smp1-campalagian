@@ -7,6 +7,10 @@
     <title>Admin</title>
 </head>
 <body>
-    <h1>HEllo THis is Admin Page</h1>
+    <h1>Hello This is Admin Page</h1>
+    <form action="{{route('logout')}}" method="post">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>

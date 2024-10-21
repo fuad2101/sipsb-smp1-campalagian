@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 */
 
 /****
-Default Route
+USER Route
  ****/
 
 Route::get('/', function () {
@@ -25,8 +25,21 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $role = auth()->user()->role;
+    if($role == 'admin'){
+        return view('pages.admin.index');
+    }else{
+        return view('dashboard');
+    }
 })->middleware(['auth','verified'])->name('dashboard');
+
+
+/****
+ADMIN Route
+ ****/
+Route::get('/dashboard/admin', function () {
+    return view('pages.admin.index');
+})->middleware(['auth','verified','admin'])->name('admin-dashboard');
 
 
 /****

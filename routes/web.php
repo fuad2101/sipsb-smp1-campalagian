@@ -28,6 +28,8 @@ Route::get('/dashboard', function () {
     $role = auth()->user()->role;
     if($role == 'admin'){
         return view('pages.admin.index');
+    }elseif($role == 'vip') {
+        return view('pages.vip.index');
     }else{
         return view('dashboard');
     }

@@ -16,6 +16,15 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
+            'name' => 'Ramli Syamsuddin',
+            'email' => 'ramli_syamsuddin@gmail.com',
+            'email_verified_at' => now(),
+            'role' => 'vip',
+            'password' => 'ramlisyamsuddin',
+            'remember_token' => Str::random(10),
+         ]);
+
+        \App\Models\User::factory()->create([
             'name' => 'Muhammad Fuad',
             'email' => 'muhfuad67@gmail.com',
             'email_verified_at' => now(),
@@ -24,12 +33,12 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
          ]);
 
-        \App\Models\User::factory()->create([
-            'name' => 'Ramli Syamsuddin',
-            'email' => 'ramli_syamsuddin@gmail.com',
+         \App\Models\User::factory()->create([
+            'name' => 'Multy Muradewi',
+            'email' => 'multy_muradewi@gmail.com',
             'email_verified_at' => now(),
-            'role' => 'vip',
-            'password' => 'ramlisyamsuddin',
+            'role' => 'user',
+            'password' => 'multy',
             'remember_token' => Str::random(10),
          ]);
     }

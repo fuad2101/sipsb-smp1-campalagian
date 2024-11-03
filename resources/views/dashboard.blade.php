@@ -1,10 +1,238 @@
+@php
+$role = auth()->user()->role;
+@endphp
+
 @extends('layouts.sipsb.app')
 
-@section('content')
-@parent
-<p>Append dari dashboard view</p>
-@endsection
-
+@if ($role = auth()->user()->role == 'vip')
+    @section('content')
+    VIP perspective
+    @endsection
+    @section('sidebar-menu')
+    <li class="nav-item dropdown">
+        <a href="/form">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Statistik Pendaftaran</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Logout</span>
+        </a>
+    </li>
+    {{-- <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-pie-chart"></i>
+            </span>
+            <span class="title">Dropdown</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="">Dropdown 1</a>
+            </li>
+            <li>
+                <a href="">Dropdown 2</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-file"></i>
+            </span>
+            <span class="title">Multi Level</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="nav-item dropdown">
+                <a href="javascript:void(0);">
+                    <span>Level 1</span>
+                    <span class="arrow">
+                        <i class="arrow-icon"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="">Level 2.1</a>
+                    </li>
+                    <li>
+                        <a href="">Level 2.2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li> --}}
+    @endsection
+    @elseif ($role = auth()->user()->role == 'admin')
+    @section('content')
+    Admin perspective
+    @endsection
+    @section('sidebar-menu')
+    <li class="nav-item dropdown">
+        <a href="/form">
+            <span class="icon-holder">
+                <i class="anticon anticon-user"></i>
+            </span>
+            <span class="title">Pendaftar Baru</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="/form">
+            <span class="icon-holder">
+                <i class="anticon anticon-bar-chart"></i>
+            </span>
+            <span class="title">Statistik</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown" style="padding:10px 15px;">
+            <span class="icon-holder">
+                <i class="anticon anticon-logout"></i>
+            </span>
+            <form action="" method="post" class="d-inline">
+            @csrf
+            <button class="btn" >Logout</button>
+            </form>
+            {{-- <span class="title">Logout</span> --}}
+    </li>
+    {{-- <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-pie-chart"></i>
+            </span>
+            <span class="title">Dropdown</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="">Dropdown 1</a>
+            </li>
+            <li>
+                <a href="">Dropdown 2</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-file"></i>
+            </span>
+            <span class="title">Multi Level</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="nav-item dropdown">
+                <a href="javascript:void(0);">
+                    <span>Level 1</span>
+                    <span class="arrow">
+                        <i class="arrow-icon"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="">Level 2.1</a>
+                    </li>
+                    <li>
+                        <a href="">Level 2.2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li> --}}
+    @endsection
+@else
+    @section('content')
+    User perspective
+    @endsection
+    @section('sidebar-menu')
+    <li class="nav-item dropdown">
+        <a href="/form">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Formulir Pendaftaran</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="/form">
+            <span class="icon-holder">
+                <i class="anticon anticon-form"></i>
+            </span>
+            <span class="title">Status Pendaftaran</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Helpdesk</span>
+        </a>
+    </li>
+    {{-- <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-pie-chart"></i>
+            </span>
+            <span class="title">Dropdown</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="">Dropdown 1</a>
+            </li>
+            <li>
+                <a href="">Dropdown 2</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-file"></i>
+            </span>
+            <span class="title">Multi Level</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="nav-item dropdown">
+                <a href="javascript:void(0);">
+                    <span>Level 1</span>
+                    <span class="arrow">
+                        <i class="arrow-icon"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="">Level 2.1</a>
+                    </li>
+                    <li>
+                        <a href="">Level 2.2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li> --}}
+    @endsection
+@endif
 
 
 

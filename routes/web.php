@@ -16,37 +16,19 @@ use Illuminate\Http\Request;
 |
 */
 
-/****
-USER Route
- ****/
-
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    $role = auth()->user()->role;
-    if($role == 'admin'){
-        return view('pages.admin.index');
-    }elseif($role == 'vip') {
-        return view('pages.vip.index');
-    }else{
-        return view('dashboard');
-    }
+    return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
 
 
-/****
-ADMIN Route
- ****/
 Route::get('/dashboard/admin', function () {
     return view('pages.admin.index');
 })->middleware(['auth','verified','admin'])->name('admin-dashboard');
 
-
-/****
-MY ROUTE
- ****/
 
 Route::get('/user/form',function(){
     return view('pages.siswa.index');
@@ -61,10 +43,6 @@ Route::get('/form', function () {
 })->middleware(['auth','verified'])->name('form');
 
 
-
-/****
-Email & Auth Route
- ****/
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -23,7 +23,7 @@
             <!-- Header START -->
             <div class="header">
                 <div class="logo logo-dark">
-                    <a href="index.html">
+                    <a href="/dashboard">
                         {{-- <img src="/enlink-template/images/logo/logo.png" alt="Logo"> --}}
                         <img src="/logo.png" alt="Logo">
                         <img class="logo-fold p-2" src="/logo-fold.png" alt="Logo">

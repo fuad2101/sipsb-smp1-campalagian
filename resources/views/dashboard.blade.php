@@ -99,7 +99,7 @@ $role = auth()->user()->role;
             <span class="icon-holder">
                 <i class="anticon anticon-logout"></i>
             </span>
-            <form action="" method="post" class="d-inline">
+            <form action="{{ route('logout') }}" method="post" class="d-inline">
             @csrf
             <button class="btn" >Logout</button>
             </form>
@@ -176,7 +176,7 @@ $role = auth()->user()->role;
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a href="">
+        <a href="/helpdesk">
             <span class="icon-holder">
                 <i class="anticon anticon-dashboard"></i>
             </span>

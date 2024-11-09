@@ -1,51 +1,51 @@
-@extends('layouts.sipsb.app')
+@extends('dashboard')
 
 @section('content')
 <div>
     <h1>Form Pendaftaran</h1>
     <hr>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="/form" method="post" enctype="multipart/form-data">
+        @csrf
         <div class="mb-3">
             <label for="" class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm" value="Muhammad Fuad" name="nama" id="" aria-describedby="helpId" placeholder=""/>
             <small id="helpId" class="form-text text-muted">Nama Sesuai Ijazah</small>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Jenis Kelamin</label>
-            <select class="form-control form-control-sm" name="" id="">
-                <option>Laki-laki</option>
-                <option>Perempuan</option>
+            <select class="form-control form-control-sm" name="jenis_kelamin" id="">
+                <option selected value="1">Laki-laki</option>
+                <option value="2">Perempuan</option>
               </select>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
         <div class="mb-3">
             <label for="" class="form-label">NISN</label>
-            <input type="text" class="form-control form-control-sm" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm" value="12345678" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Tempat lahir</label>
-            <input type="text" class="form-control form-control-sm" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm" value="Polewali" name="tempat_lahir" id="" aria-describedby="helpId" placeholder=""/>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Tanggal lahir</label>
-            <input type="date" class="form-control form-control-sm" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="date" class="form-control form-control-sm" name="tanggal_lahir" id="" aria-describedby="helpId" placeholder=""/>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Sekolah asal</label>
-            <input type="text" class="form-control form-control-sm" name="asal" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm" name="sekolah_asal" id="" aria-describedby="helpId" placeholder=""/>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Agama</label>
-              <label for=""></label>
-              <select class="form-control form-control-sm" name="" id="">
-                <option>Islam</option>
-                <option>Kristen</option>
-                <option>Hindu</option>
-                <option>Protestan</option>
+              <select class="form-control form-control-sm" name="agama" id="">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="hindu">Hindu</option>
+                <option value="protestan">Protestan</option>
               </select>
         </div>
         <div class="mb-3">
@@ -58,9 +58,9 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Pendidikan terakhir</label>
-            <select class="form-control form-control-sm" name="" id="">
-                <option>SD</option>
-                <option>SMP</option>
+            <select class="form-control form-control-sm" name="pend_terakhir" id="">
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
               </select>
         </div>
         <div class="mb-3">
@@ -70,19 +70,19 @@
 
         <div class="row">
             <div class="col">
-                <label for="">Upload Foto</label><input class="form-control form-control-sm" type="file" name="" id="">
+                <label for="">Upload Foto</label><input class="form-control form-control-sm" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png">
             </div>
             <div class="col">
-                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm" type="file" name="" id="">
+                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm" type="file" name="kk" id="" accept=".pdf">
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm" type="file" name="" id="">
+                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm" type="file" name="akta" id="" accept=".pdf">
             </div>
             <div class="col">
-                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm" type="file" name="" id="">
+                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm" type="file" name="ijazah" id="" accept=".pdf">
             </div>
         </div>
         <button class="btn btn-primary mt-4 form-control" type="submit">Submit Pendaftaran</button>
@@ -91,78 +91,15 @@
 </div>
 @endsection
 
-@section('sidebar-menu')
-    <li class="nav-item dropdown">
-        <a href="/form">
-            <span class="icon-holder">
-                <i class="anticon anticon-dashboard"></i>
-            </span>
-            <span class="title">Formulir Pendaftaran</span>
-        </a>
-    </li>
-    <li class="nav-item dropdown">
-        <a href="/form">
-            <span class="icon-holder">
-                <i class="anticon anticon-form"></i>
-            </span>
-            <span class="title">Status Pendaftaran</span>
-        </a>
-    </li>
-    <li class="nav-item dropdown">
-        <a href="/helpdesk">
-            <span class="icon-holder">
-                <i class="anticon anticon-dashboard"></i>
-            </span>
-            <span class="title">Helpdesk</span>
-        </a>
-    </li>
-    {{-- <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="javascript:void(0);">
-            <span class="icon-holder">
-                <i class="anticon anticon-pie-chart"></i>
-            </span>
-            <span class="title">Dropdown</span>
-            <span class="arrow">
-                <i class="arrow-icon"></i>
-            </span>
-        </a>
-        <ul class="dropdown-menu">
-            <li>
-                <a href="">Dropdown 1</a>
-            </li>
-            <li>
-                <a href="">Dropdown 2</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="javascript:void(0);">
-            <span class="icon-holder">
-                <i class="anticon anticon-file"></i>
-            </span>
-            <span class="title">Multi Level</span>
-            <span class="arrow">
-                <i class="arrow-icon"></i>
-            </span>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="nav-item dropdown">
-                <a href="javascript:void(0);">
-                    <span>Level 1</span>
-                    <span class="arrow">
-                        <i class="arrow-icon"></i>
-                    </span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="">Level 2.1</a>
-                    </li>
-                    <li>
-                        <a href="">Level 2.2</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li> --}}
-    @endsection
+@push('script')
+<script>
+    $(function () {
+        $('[name="foto"]').change(function() {
+            alert($(this).val());
+        })
+    });
+</script>
+@endpush
+
+
 

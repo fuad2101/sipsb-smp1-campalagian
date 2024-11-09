@@ -4,16 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
     <title>Dashboard</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon-32x32.png">
-
-    <!-- page css -->
-
     <!-- Core css -->
     <link href="/enlink-template/css/app.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -261,11 +258,9 @@
 
     <!-- Core Vendors JS -->
     <script src="/enlink-template/js/vendors.min.js"></script>
-
-    <!-- page js -->
-
     <!-- Core JS -->
     <script src="/enlink-template/js/app.min.js"></script>
+    @stack('script')
 
 </body>
 

@@ -1,13 +1,21 @@
+@extends('layouts.sipsb.app')
+
+
 @php
 $role = auth()->user()->role;
 @endphp
 
-@extends('layouts.sipsb.app')
 
 @if ($role = auth()->user()->role == 'vip')
+
+/****
+VIP perspective
+ ****/
+
     @section('content')
     VIP perspective
     @endsection
+
     @section('sidebar-menu')
     <li class="nav-item dropdown">
         <a href="/form">
@@ -74,10 +82,17 @@ $role = auth()->user()->role;
         </ul>
     </li> --}}
     @endsection
+
+/****
+Admin perspective
+ ****/
+
     @elseif ($role = auth()->user()->role == 'admin')
+
     @section('content')
     Admin perspective
     @endsection
+
     @section('sidebar-menu')
     <li class="nav-item dropdown">
         <a href="/form">
@@ -154,6 +169,11 @@ $role = auth()->user()->role;
         </ul>
     </li> --}}
     @endsection
+
+/****
+User perspective
+ ****/
+
 @else
     @section('content')
     User perspective

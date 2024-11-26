@@ -99,7 +99,7 @@ Admin perspective
             <span class="icon-holder">
                 <i class="anticon anticon-user"></i>
             </span>
-            <span class="title">Pendaftar Baru</span>
+            <span class="title">Daftar</span>
         </a>
     </li>
     <li class="nav-item dropdown">

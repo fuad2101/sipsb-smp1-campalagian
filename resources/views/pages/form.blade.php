@@ -25,7 +25,7 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">NISN</label>
-            <input type="text" class="form-control form-control-sm @error('nisn') is-invalid @enderror"" value="12345678" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm @error('nisn') is-invalid @enderror"" value="" name="nisn" id="" aria-describedby="helpId" placeholder=""/>
             @error('nisn')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -34,7 +34,7 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Tempat lahir</label>
-            <input type="text" class="form-control form-control-sm @error('tempat_lahir') is-invalid @enderror"" value="Polewali" name="tempat_lahir" id="" aria-describedby="helpId" placeholder=""/>
+            <input type="text" class="form-control form-control-sm @error('tempat_lahir') is-invalid @enderror"" value="" name="tempat_lahir" id="" aria-describedby="helpId" placeholder=""/>
             @error('tempat_lahir')
                 <div class="invalid-feedback">
                     {{$message}}

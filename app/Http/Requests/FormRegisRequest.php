@@ -22,7 +22,7 @@ class FormRegisRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama'=>'required',
+            /* 'nama'=>'required',
             'nisn'=>'required',
             'tempat_lahir'=>'required',
             'tanggal_lahir'=>'required',
@@ -30,13 +30,13 @@ class FormRegisRequest extends FormRequest
             'alamat'=>'required',
             'nomor'=>'required',
             'wali'=>'required',
-            'foto'=>'required',
-            'kk'=>'required',
-            'akta'=>'required',
-            'ijazah'=>'required',
+            'foto'=>'required|mimes:pdf',
+            'kk'=>'required|mimes:pdf',
+            'akta'=>'required|mimes:pdf',
+            'ijazah'=>'required|mimes:pdf',
             'jenis_kelamin'=>'required',
             'agama'=>'required',
-            'pend_terakhir'=>'required',
+            'pend_terakhir'=>'required', */
         ];
     }
 }

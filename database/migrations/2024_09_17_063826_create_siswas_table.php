@@ -14,8 +14,20 @@ return new class extends Migration
         Schema::create('siswas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('nisn');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->string('sekolah_asal');
+            $table->string('alamat');
+            $table->string('nomor');
+            $table->string('wali');
+            $table->string('foto');
+            $table->string('kk');
+            $table->string('akta');
+            $table->string('ijazah');
             $table->string('jenis_kelamin');
-            $table->string('jenis_kelamin');
+            $table->string('agama');
+            $table->string('pend_terakhir');
             $table->timestamps();
         });
     }

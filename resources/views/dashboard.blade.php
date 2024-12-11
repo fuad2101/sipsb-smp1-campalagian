@@ -188,7 +188,7 @@ User perspective
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="/status">
             <span class="icon-holder">
                 <i class="anticon anticon-form"></i>
             </span>

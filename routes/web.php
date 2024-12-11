@@ -43,6 +43,11 @@ Route::get('/form', function () {
     return view('pages.form');
 })->middleware(['auth','verified'])->name('form');
 
+Route::get('/status', function () {
+    return view('pages.status');
+})->middleware(['auth','verified'])->name('status');
+
+
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 
 

@@ -51,6 +51,9 @@ Route::get('/statistik', function () {
     return view('pages.statistik');
 })->middleware(['auth','verified'])->name('status');
 
+Route::get('/pendaftar', function () {
+    return view('pages.admin.pendaftar');
+})->middleware(['auth','verified'])->name('status');
 
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 

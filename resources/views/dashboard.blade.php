@@ -85,10 +85,10 @@ VIP perspective
 Admin perspective
  ****/
 
-    @elseif ($role = auth()->user()->role == 'admin')
+    @elseif ($role = auth()->user()->roles == 'admin')
 
     @section('content')
-    Admin perspective
+    Admin Perspective
     @endsection
 
     @section('sidebar-menu')
@@ -97,7 +97,7 @@ Admin perspective
             <span class="icon-holder">
                 <i class="anticon anticon-user"></i>
             </span>
-            <span class="title">Pendaftar Baru</span>
+            <span class="title">Data Pendaftar</span>
         </a>
     </li>
     <li class="nav-item dropdown">

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -43,17 +44,15 @@ Route::get('/form', function () {
     return view('pages.form');
 })->middleware(['auth','verified'])->name('form');
 
-Route::get('/status', function () {
-    return view('pages.status');
-})->middleware(['auth','verified'])->name('status');
+Route::get('/status', [SiswaController::class,'index'])->middleware(['auth','verified']);
 
 Route::get('/statistik', function () {
     return view('pages.statistik');
-})->middleware(['auth','verified'])->name('status');
+})->middleware(['auth','verified'])->name('statistik');
 
 Route::get('/pendaftar', function () {
     return view('pages.admin.pendaftar');
-})->middleware(['auth','verified'])->name('status');
+})->middleware(['auth','verified'])->name('pendaftar');
 
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 

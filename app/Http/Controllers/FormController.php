@@ -10,12 +10,30 @@ use Illuminate\Support\Facades\Storage;
 class FormController extends Controller
 {
     public function index(FormRegisRequest $request){
-        /* dd($request->file(["foto"]));
-        $ext = $request->file(["foto"]);
-        $name = $request->file(["foto"])->getClientOriginalName();
-        $files = $request->file(); */
+        $files = $request->file();
+        $randomTime = '.'.time().'.';
 
-        Storage::putFileAs('foto',$request->file('foto'),'foto-'.auth()->user()->name.$request->user()->id);
+        $foto = $files['foto'];
+        $foto_ext = $foto->getClientOriginalExtension();
+        $foto_name = $foto->getClientOriginalName();
+
+        $ijazah = $files['ijazah'];
+        $ijazah_ext = $ijazah->getClientOriginalExtension();
+        $ijazah_name = $ijazah->getClientOriginalName();
+
+        $akta = $files['akta'];
+        $akta_ext = $akta->getClientOriginalExtension();
+        $akta_name =$akta->getClientOriginalName() ;
+
+        $kk = $files['kk'];
+        $kk_ext = $kk->getClientOriginalExtension();
+        $kk_name = $kk->getClientOriginalName();
+
+        //dd($files);
+        $ijazah = $files['ijazah'];
+        $kk = $files['kk'];
+        $akta = $files['akta'];
+
 
         Siswa::create([
             'nama'=>$request->nama,
@@ -26,17 +44,16 @@ class FormController extends Controller
             'alamat'=>$request->alamat,
             'nomor'=>$request->nomor,
             'wali'=>$request->wali,
-            'kk'=>'kk.pdf',
-            'akta'=>'akta.pdf',
-            'ijazah'=>'ijazah.pdf',
-            'foto'=>$request->file('foto')->storeAs('foto','foto'.$request->user()->id),
+            'kk'=>$kk->storeAs('KK',$request->nama.$randomTime.$kk_ext),
+            'akta'=>$akta->storeAs('Akta',$request->nama.$randomTime.$akta_ext),
+            'ijazah'=>$ijazah->storeAs('Ijazah',$request->nama.$randomTime.$ijazah_ext),
+            'foto'=>$foto->storeAs('Foto',$request->nama.$randomTime.$foto_ext),
             'jenis_kelamin'=>$request->jenis_kelamin,
             'agama'=>$request->agama,
             'pend_terakhir'=>$request->pend_terakhir,
             'status_daftar'=>'verfikasi',
             ]);
 
-
-
+    redirect('/dashboard');
     }
 }

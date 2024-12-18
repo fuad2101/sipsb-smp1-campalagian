@@ -6,6 +6,7 @@ use App\Http\Requests\FormRegisRequest;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FormController extends Controller
 {
@@ -54,6 +55,7 @@ class FormController extends Controller
             'status_daftar'=>'verfikasi',
             ]);
 
-    redirect('/dashboard');
+    Alert::success('Berhasil','Pendaftaran Berhasil');
+    return redirect()->back();
     }
 }

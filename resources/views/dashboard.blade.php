@@ -93,7 +93,7 @@ Admin perspective
 
     @section('sidebar-menu')
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="/pendaftar">
             <span class="icon-holder">
                 <i class="anticon anticon-user"></i>
             </span>

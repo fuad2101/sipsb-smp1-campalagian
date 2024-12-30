@@ -16,10 +16,22 @@
             @foreach ($data as $val)
                 <tr>
                     <td>{{$loop->iteration}}</td>
-                    <td>{{$val->nama}}</td>
+                    <td> <a href="#">{{$val->nama}}</a></td>
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
-                    <td> {{$val->status_daftar}}</td>
+                    <td>
+                        @if ($val->status_daftar == 'verfikasi')
+                            <span
+                                class="badge bg-warning"
+                                >Verifikasi</span
+                            >
+                        @else
+                            <span
+                                class="badge bg-success text-white"
+                                >Lulus Berkas</span
+                            >
+                        @endif
+                    </td>
                 </tr>
             @endforeach
         </tbody>

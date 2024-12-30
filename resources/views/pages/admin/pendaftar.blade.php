@@ -6,31 +6,18 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Name</th>
+                <th>Nama</th>
                 <th>NISN</th>
+                <th>Asal Sekolah</th>
+                <th>Status Daftar</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td scope="row">1</td>
-                <td>Muhammad Fuad</td>
-                <td>4534958357</td>
-            </tr>
-            <tr>
-                <td scope="row">1</td>
-                <td>Muhammad Fuad</td>
-                <td>4534958357</td>
-            </tr>
-            <tr>
-                <td scope="row">1</td>
-                <td>FUlan</td>
-                <td>4534958357</td>
-            </tr>
-            <tr>
-                <td scope="row">1</td>
-                <td>Fulana</td>
-                <td>4534958357</td>
-            </tr>
+            @foreach ($data as $val)
+                <tr>
+                    <td>{{$val}}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 @endsection

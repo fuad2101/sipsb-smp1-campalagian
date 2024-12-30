@@ -15,7 +15,11 @@
         <tbody>
             @foreach ($data as $val)
                 <tr>
-                    <td>{{$val}}</td>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$val->nama}}</td>
+                    <td>{{$val->nisn}}</td>
+                    <td>{{$val->sekolah_asal}}</td>
+                    <td> {{$val->status_daftar}}</td>
                 </tr>
             @endforeach
         </tbody>

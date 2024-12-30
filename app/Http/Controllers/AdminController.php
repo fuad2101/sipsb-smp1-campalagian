@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function index(){
-        $data = ['data1','data2','data3'];
+        $data = Siswa::all();
         return view('pages.admin.pendaftar')->with(['data'=>$data]);
     }
 }

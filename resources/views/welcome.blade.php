@@ -256,9 +256,15 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
-                            <h3 class="feature-heading">Visi Misi SMP 1 Campalagian</h3>
-                            <p class="text-muted">Lorem text is also used to demonstrate the appearance of different typefaces and layouts.</p>
-                            <div class="accordion" id="accordionExample">
+                            <h3 class="feature-heading">Visi</h3>
+                            <p class="text-muted">Visi: Religius, memiliki kecakapan abad 21, berprestasi dan peduli lingkungan.</p>
+                            <h3 class="feature-heading">Misi</h3>
+                            <ul>
+                                <li>Mewujudkan peserta didik yang religious sehingga terbangun insan yang beriman, bertaqwa, mandiri, berakhlak mulia, terampil, dan siap mendukung Pendidikan/jenjang berikutnya. </li>
+                                <li>Mengarahkan peserta didik untuk memiliki kecakapan abad 21. </li>
+                                <li>Mewujudkan peserta didik yang berprestasi akakdemik maupun non akademik.</li>
+                            </ul>
+                            {{-- <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <a class="accordion-button" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -313,7 +319,7 @@
                                     </div>
                                 </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div><!-- end col -->
                     <div class="col-lg-6">
@@ -819,7 +825,7 @@
                                 </div>
                             </div>
                             <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Bao Pan</h5>
+                                <h5 class="fw-bold mb-0">Pendidikan Agama Islam</h5>
                                 <p class="mb-0 fs-13 text-muted">Back End Developer</p>
                             </div>
                         </div>
@@ -1058,7 +1064,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user1.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">OSIS</h5>
+                                <h5 class="card-title">Pramuka</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                             <div class="card-footer">
@@ -1082,7 +1088,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Pramuka</h5>
+                                <h5 class="card-title">Tari</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">
@@ -1094,8 +1100,15 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Kerohanian/Keagamaan</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <h5 class="card-title">Bimbingan Prestasi</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>OSN</li>
+                                        <li>Matematika</li>
+                                        <li>IPA</li>
+                                        <li>IPS</li>
+                                    </ul>
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1118,31 +1131,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Desain Grafis</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Layanan Bimbingan</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Karir</h5>
+                                <h5 class="card-title">Layanan Bimbingan Konseling</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">

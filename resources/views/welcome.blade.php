@@ -11,8 +11,12 @@
         <!-- fevicon -->
         <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
 
+        {{-- Bootstrap CDNku --}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
         <!-- Bootstrap css -->
-        <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" />
+        {{-- <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" /> --}}
 
         <!-- animation -->
         <link rel="stylesheet" href="/oxhen-template/css/aos.css" />
@@ -376,7 +380,7 @@
                                                 <div class="col-md-4">
                                                     <div class="card reviews-card">
                                                         <div class="card-body text-center">
-                                                            <img class="img-fluid" src="images/user/user1.png" alt="">
+                                                            <img class="img-fluid" src="images/user/user1.png" alt="Image 1">
                                                             <div class="mt-3">
                                                                 <h6 class="mb-0">Brandon Carney</h6>
                                                                 <p class="text-muted mb-0 fs-14">Vice president</p>
@@ -797,39 +801,47 @@
                 <div class="row gy-4">
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
-                            <div class="team-card-img">
-                               <img class="img-fluid" src="/oxhen-template/images/user/user.png" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                 </div>
-                            </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Martan, S.Ag</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Second slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Nurintang, S.Ag</h5>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <div class="team-card-text-2">
                                 <h5 class="fw-bold mb-0">Pendidikan Agama Islam</h5>
-                                <p class="mb-0 fs-13 text-muted">Back End Developer</p>
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
                             <div class="team-card-img">

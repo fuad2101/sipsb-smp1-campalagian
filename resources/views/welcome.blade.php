@@ -799,6 +799,9 @@
                     </div><!-- end col-->
                 </div><!-- end row -->
                 <div class="row gy-4">
+                    @foreach ($guru as $val)
+                        {{$val->nama}}
+                    @endforeach
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
                             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -825,7 +828,7 @@
                                             <h5>Nurintang, S.Ag</h5>
                                         </div>
                                     </div>
-                                    
+
 
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

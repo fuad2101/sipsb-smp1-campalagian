@@ -13,7 +13,36 @@ class LandingController extends Controller
     public function index()
     {
         $guru = Guru::all();
-        return view('welcome')->with(['guru'=>$guru]);
+        $pkn = Guru::where('mata_pelajaran','Pendidikan Kewarganegaraan')->get();
+        $pai = Guru::where('mata_pelajaran','Pendidikan Agama Islam')->get();
+        $bhi = Guru::where('mata_pelajaran','Bahasa Indonesia')->get();
+        $matematika = Guru::where('mata_pelajaran','Matematika')->get();
+        $ipa = Guru::where('mata_pelajaran','IPA')->get();
+        $ips = Guru::where('mata_pelajaran','IPS')->get();
+        $bahasa_inggris = Guru::where('mata_pelajaran','bahasa inggris')->get();
+        $sbd = Guru::where('mata_pelajaran','seni budaya')->get();
+        $pjok = Guru::where('mata_pelajaran','PJOK')->get();
+        $informatika = Guru::where('mata_pelajaran','Informatika')->get();
+        $prakarya = Guru::where('mata_pelajaran','Prakarya')->get();
+        $bimkol= Guru::where('mata_pelajaran','Bimbingan dan Konseling ')->get();
+        $staff= Guru::where('mata_pelajaran','Staf Administrasi')->get();
+
+        return view('welcome')->with([
+
+            'pkn'=>$pkn,
+            'pai'=>$pai,
+            'bhi'=>$bhi,
+            'matematika'=>$matematika,
+            'ipa'=>$ipa,
+            'ips'=>$ips,
+            'bahasa_inggris'=>$bahasa_inggris,
+            'sbd'=>$sbd,
+            'pjok'=>$pjok,
+            'informatika'=>$informatika,
+            'prakarya'=>$prakarya,
+            'bimkol'=>$bimkol,
+            'staff'=>$staff,
+            ]);
     }
 
     /**

@@ -11,4 +11,9 @@ class AdminController extends Controller
         $data = Siswa::all();
         return view('pages.admin.pendaftar')->with(['data'=>$data]);
     }
+
+    public function show($id){
+        $singleSiswa = Siswa::where('id',$id)->get();
+        return view('pages.admin.showsiswa')->with(['singleSiswa'=>$singleSiswa]);
+    }
 }

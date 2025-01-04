@@ -16,7 +16,7 @@
             @foreach ($data as $val)
                 <tr>
                     <td>{{$loop->iteration}}</td>
-                    <td> <a href="#">{{$val->nama}}</a></td>
+                    <td> <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a></td>
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
                     <td>

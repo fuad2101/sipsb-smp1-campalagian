@@ -16,4 +16,11 @@ class AdminController extends Controller
         $singleSiswa = Siswa::where('id',$id)->get();
         return view('pages.admin.showsiswa')->with(['singleSiswa'=>$singleSiswa]);
     }
+
+    public function store($id){
+        $siswa = Siswa::find($id);
+        $siswa->status_daftar = 'lulus';
+        $siswa->save();
+        return redirect('/pendaftar');
+    }
 }

@@ -52,8 +52,8 @@ Route::get('/statistik', function () {
 })->middleware(['auth','verified'])->name('statistik');
 
 Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified'])->name('pendaftar');
-
 Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified']);
+Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified']);
 
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 

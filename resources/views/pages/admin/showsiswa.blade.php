@@ -12,13 +12,34 @@
     <p>Nama: {{$val->nama}}</p>
     <p>Nama: {{$val->foto}}</p>
     @endforeach
-    <form action="" class="btn" >
-        <button onclick="confirm()">Lulus Administrasi</button>
+    <form action="" class="btn" method="post">
+        @csrf
+        <button class="btn btn-primary" type="submit" onclick="confirm() ">Lulus Administrasi</button>
     </form>
 
     <script>
-        function confirm() {
-            Swal.fire("SweetAlert2 is working!");
+        function confirm(e) {
+            preventDefault();
+
+            Swal.fire({
+            title: "Luluskan?",
+            text: "Tindakan ini tidak dapat dibatalkan. Mohon dicek dengan baik",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, Luluskan"
+            }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                title: "Berhasil",
+                text: "Your file has been deleted.",
+                icon: "success"
+                });
+            }
+            });
+            a.preventDefault();
+
         }
     </script>
 

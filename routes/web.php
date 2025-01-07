@@ -54,7 +54,7 @@ Route::get('/pendaftar', function () {
     return view('pages.admin.pendaftar');
 })->middleware(['auth','verified'])->name('pendaftar');
 
-Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
+Route::post('/form', [SiswaController::class,'store'])->middleware(['auth','verified']);
 
 
 Route::middleware('auth')->group(function () {

@@ -20,7 +20,7 @@
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
                     <td>
-                        @if ($val->status_daftar == 'verfikasi')
+                        @if ($val->status_daftar == 'verifikasi')
                             <span
                                 class="badge bg-warning"
                                 >Verifikasi</span

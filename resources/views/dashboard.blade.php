@@ -2,7 +2,7 @@
 
 
 @php
-$role = auth()->user()->roles;
+$role = auth()->user()->role;
 @endphp
 
 
@@ -85,7 +85,7 @@ VIP perspective
 Admin perspective
  ****/
 
-    @elseif ($role = auth()->user()->roles == 'admin')
+    @elseif ($role == 'admin')
 
     @section('content')
     Admin Perspective

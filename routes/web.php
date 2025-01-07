@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
@@ -50,9 +51,9 @@ Route::get('/statistik', function () {
     return view('pages.statistik');
 })->middleware(['auth','verified'])->name('statistik');
 
-Route::get('/pendaftar', function () {
-    return view('pages.admin.pendaftar');
-})->middleware(['auth','verified'])->name('pendaftar');
+Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified'])->name('pendaftar');
+Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified']);
+Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified']);
 
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 

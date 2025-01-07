@@ -2,25 +2,38 @@
 
 @section('content')
     Rekap Pendaftar
-    <table class="table">
+    <table class="table" id="myTable" >
         <thead>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NISN</th>
+                <th>Asal Sekolah</th>
+                <th>Status Daftar</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @foreach ($data as $val)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td> <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a></td>
+                    <td>{{$val->nisn}}</td>
+                    <td>{{$val->sekolah_asal}}</td>
+                    <td>
+                        @if ($val->status_daftar == 'verifikasi')
+                            <span
+                                class="badge bg-warning"
+                                >Verifikasi</span
+                            >
+                        @else
+                            <span
+                                class="badge bg-success text-white"
+                                >Lulus Berkas</span
+                            >
+                        @endif
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 @endsection

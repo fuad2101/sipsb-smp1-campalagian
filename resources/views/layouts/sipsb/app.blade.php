@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="/favicon-32x32.png">
     <!-- Core css -->
     <link href="/enlink-template/css/app.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {{-- Datatables --}}
+    <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/af-2.7.0/b-3.2.0/b-print-3.2.0/datatables.min.css" rel="stylesheet">
 
 
 </head>
@@ -259,10 +260,17 @@
     </div>
 
 
-    <!-- Core Vendors JS -->
+    {{-- Datatables --}}
+    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/af-2.7.0/b-3.2.0/b-print-3.2.0/datatables.min.js"></script>
+
+    <!-- Enlink Templates -->
     <script src="/enlink-template/js/vendors.min.js"></script>
-    <!-- Core JS -->
     <script src="/enlink-template/js/app.min.js"></script>
+
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+
     @stack('script')
 
 </body>

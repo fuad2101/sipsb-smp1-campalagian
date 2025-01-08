@@ -11,8 +11,12 @@
         <!-- fevicon -->
         <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
 
+        {{-- Bootstrap CDNku --}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
         <!-- Bootstrap css -->
-        <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" />
+        {{-- <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" /> --}}
 
         <!-- animation -->
         <link rel="stylesheet" href="/oxhen-template/css/aos.css" />
@@ -256,9 +260,15 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
-                            <h3 class="feature-heading">Visi Misi SMP 1 Campalagian</h3>
-                            <p class="text-muted">Lorem text is also used to demonstrate the appearance of different typefaces and layouts.</p>
-                            <div class="accordion" id="accordionExample">
+                            <h3 class="feature-heading">Visi</h3>
+                            <p class="text-muted">Visi: Religius, memiliki kecakapan abad 21, berprestasi dan peduli lingkungan.</p>
+                            <h3 class="feature-heading">Misi</h3>
+                            <ul>
+                                <li>Mewujudkan peserta didik yang religious sehingga terbangun insan yang beriman, bertaqwa, mandiri, berakhlak mulia, terampil, dan siap mendukung Pendidikan/jenjang berikutnya. </li>
+                                <li>Mengarahkan peserta didik untuk memiliki kecakapan abad 21. </li>
+                                <li>Mewujudkan peserta didik yang berprestasi akakdemik maupun non akademik.</li>
+                            </ul>
+                            {{-- <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <a class="accordion-button" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -313,7 +323,7 @@
                                     </div>
                                 </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div><!-- end col -->
                     <div class="col-lg-6">
@@ -370,7 +380,7 @@
                                                 <div class="col-md-4">
                                                     <div class="card reviews-card">
                                                         <div class="card-body text-center">
-                                                            <img class="img-fluid" src="images/user/user1.png" alt="">
+                                                            <img class="img-fluid" src="images/user/user1.png" alt="Image 1">
                                                             <div class="mt-3">
                                                                 <h6 class="mb-0">Brandon Carney</h6>
                                                                 <p class="text-muted mb-0 fs-14">Vice president</p>
@@ -791,144 +801,459 @@
                 <div class="row gy-4">
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
-                            <div class="team-card-img">
-                               <img class="img-fluid" src="/oxhen-template/images/user/user.png" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($pkn as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
                                 </div>
-                            </div>
+                                <div class="carousel-inner">
+                                    @foreach ($pkn as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Bao Pan</h5>
-                                <p class="mb-0 fs-13 text-muted">Back End Developer</p>
+                                <h5 class="fw-bold mb-0">Pendidikan Kewarganegaraan</h5>
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
-                            <div class="team-card-img">
-                               <img class="img-fluid" src="/oxhen-template/images/user/user1.png" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div id="pai" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($pai as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#pai" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#pai" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
                                 </div>
-                            </div>
+                                <div class="carousel-inner">
+                                    @foreach ($pai as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#pai" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#pai" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Ines Durr</h5>
-                                <p class="mb-0 fs-13 text-muted">Front End Developer</p>
+                                <h5 class="fw-bold mb-0">Pendidikan Agama Islam</h5>
                             </div>
                         </div>
-                    </div><!-- End col -->
+                    </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
-                            <div class="team-card-img">
-                               <img class="img-fluid" src="/oxhen-template/images/user/user2.png" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div id="bhi" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($bhi as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#bhi" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#bhi" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
                                 </div>
-                            </div>
+                                <div class="carousel-inner">
+                                    @foreach ($bhi as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#bhi" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#bhi" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Stephan Vogt</h5>
-                                <p class="mb-0 fs-13 text-muted">Bid Manager</p>
+                                <h5 class="fw-bold mb-0">Bahasa Indonesia</h5>
                             </div>
                         </div>
-                    </div><!-- End col -->
+                    </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
-                            <div class="team-card-img">
-                               <img class="img-fluid" src="/oxhen-template/images/user/user3.png" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript:void(0)" target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div id="matematika" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($matematika as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#matematika" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#matematika" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
                                 </div>
-                            </div>
+                                <div class="carousel-inner">
+                                    @foreach ($matematika as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#matematika" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#matematika" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Cong Chia</h5>
-                                <p class="mb-0 fs-13 text-muted">Team Lead</p>
+                                <h5 class="fw-bold mb-0">Matematika</h5>
                             </div>
                         </div>
-                    </div> <!-- End col-->
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="ipa" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($ipa as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#ipa" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#ipa" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($ipa as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#ipa" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#ipa" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">IPA</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="ips" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($ips as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#ips" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#ips" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($ips as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#ips" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#ips" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">IPS</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="bahasa_inggris" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($bahasa_inggris as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#bahasa_inggris" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#bahasa_inggris" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($bahasa_inggris as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#bahasa_inggris" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#bahasa_inggris" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Bahasa Inggris</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="sbd" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($sbd as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#sbd" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#sbd" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($sbd as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#sbd" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#sbd" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Seni Budaya</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="pjok" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($pjok as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#pjok" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#pjok" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($pjok as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#pjok" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#pjok" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">PJOK</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="informatika" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($informatika as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#informatika" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#informatika" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($informatika as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#informatika" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#informatika" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Informatika</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="prakarya" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($prakarya as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#prakarya" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#prakarya" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($prakarya as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#prakarya" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#prakarya" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Prakarya</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="bimkol" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($bimkol as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#bimkol" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#bimkol" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($bimkol as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#bimkol" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#bimkol" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Bimbingan dan Konsultasi</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-card">
+                            <div id="staff" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @foreach ($staff as $val)
+                                        @if ($loop->first)
+                                            <button type="button" data-bs-target="#staff" data-bs-slide-to="0" class="active" aria-label="Slide 2"></button>
+                                        @endif
+                                            <button type="button" data-bs-target="#staff" data-bs-slide-to="{{$loop->iteration}}" aria-label="Slide 2"></button>
+                                    @endforeach
+                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($staff as $val)
+                                        <div class="carousel-item @if ($loop->first) active @endif ">
+                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>{{$val->nama}}</h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#staff" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#staff" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
+                            <div class="team-card-text-2">
+                                <h5 class="fw-bold mb-0">Staff Administrasi</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- end row-->
             </div><!-- end cotainer-->
         </section>
@@ -1058,7 +1383,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user1.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">OSIS</h5>
+                                <h5 class="card-title">Pramuka</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                             <div class="card-footer">
@@ -1082,7 +1407,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Pramuka</h5>
+                                <h5 class="card-title">Tari</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">
@@ -1094,8 +1419,15 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Kerohanian/Keagamaan</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <h5 class="card-title">Bimbingan Prestasi</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>OSN</li>
+                                        <li>Matematika</li>
+                                        <li>IPA</li>
+                                        <li>IPS</li>
+                                    </ul>
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1118,31 +1450,7 @@
                             <div class="card h-100">
                             <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Desain Grafis</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Layanan Bimbingan</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Karir</h5>
+                                <h5 class="card-title">Layanan Bimbingan Konseling</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">

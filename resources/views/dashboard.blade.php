@@ -2,11 +2,11 @@
 
 
 @php
-$role = auth()->user()->role;
+$role = auth()->user()->roles;
 @endphp
 
 
-@if ($role = auth()->user()->role == 'vip')
+@if ($role == "vip")
 
 /****
 VIP perspective
@@ -18,20 +18,18 @@ VIP perspective
 
     @section('sidebar-menu')
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="/statistik">
             <span class="icon-holder">
                 <i class="anticon anticon-dashboard"></i>
             </span>
             <span class="title">Statistik Pendaftaran</span>
         </a>
-    </li>
+    </li>sd
     <li class="nav-item dropdown">
-        <a href="">
-            <span class="icon-holder">
-                <i class="anticon anticon-dashboard"></i>
-            </span>
-            <span class="title">Logout</span>
-        </a>
+        <form action="{{ route('logout') }}" method="post" class="d-inline">
+            @csrf
+            <button class="btn" >Logout</button>
+            </form>
     </li>
     {{-- <li class="nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">
@@ -87,19 +85,19 @@ VIP perspective
 Admin perspective
  ****/
 
-    @elseif ($role = auth()->user()->role == 'admin')
+    @elseif ($role = auth()->user()->roles == 'admin')
 
     @section('content')
-    Admin perspective
+    Admin Perspective
     @endsection
 
     @section('sidebar-menu')
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="/pendaftar">
             <span class="icon-holder">
                 <i class="anticon anticon-user"></i>
             </span>
-            <span class="title">Daftar</span>
+            <span class="title">Data Pendaftar</span>
         </a>
     </li>
     <li class="nav-item dropdown">
@@ -188,7 +186,7 @@ User perspective
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="/status">
             <span class="icon-holder">
                 <i class="anticon anticon-form"></i>
             </span>
@@ -202,6 +200,12 @@ User perspective
             </span>
             <span class="title">Helpdesk</span>
         </a>
+    </li>
+    <li class="nav-item dropdown">
+        <form action="{{route('logout')}}" method="post">
+            @csrf
+            <button>Logout</button>
+        </form>
     </li>
     {{-- <li class="nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">

@@ -64,5 +64,11 @@ class SiswaController extends Controller
             return redirect()->back();
     }
 
+    public function uploadBayar(){
+        $email = auth()->user()->email;
+        $user  = Siswa::where('email',$email);
+        dd($user);
+    }
+
 
 }

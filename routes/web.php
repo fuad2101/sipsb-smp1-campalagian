@@ -56,7 +56,7 @@ Route::get('/pendaftar', function () {
 
 Route::post('/form', [SiswaController::class,'store'])->middleware(['auth','verified']);
 
-Route::post('upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth','verified']);
+Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth','verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

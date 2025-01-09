@@ -16,6 +16,7 @@ class SiswaController extends Controller
     }
 
     public function store(FormRequest $request){
+        dd($request);
         $files = $request->file();
         $randomTime = '.'.time().'.';
 
@@ -64,10 +65,14 @@ class SiswaController extends Controller
             return redirect()->back();
     }
 
-    public function uploadBayar(){
+    public function uploadBayar(FormRequest $request){
+
+        $ext = $request->file('bukti_bayar')->getClientOriginalExtension();
+
         $email = auth()->user()->email;
-        $user  = Siswa::where('email',$email);
-        dd($user);
+        $bar = Siswa::where('email',$email)->first();
+        $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext);
+        $bar->save();
     }
 
 

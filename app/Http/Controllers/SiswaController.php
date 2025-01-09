@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Siswa;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -73,6 +74,13 @@ class SiswaController extends Controller
         $bar = Siswa::where('email',$email)->first();
         $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext);
         $bar->save();
+    }
+
+    public function download(){
+        $email = auth()->user()->email;
+        $data = [$email];
+        $pdf = Pdf::loadView('export.view.kartu-daftar', $data);
+        return $pdf->download('invoice.pdf');
     }
 
 

@@ -20,7 +20,7 @@
                 <button class="btn btn-primary" type="submit">Upload</button>
             </div>
             </form>
-            <a class="btn btn-primary my-4" href="">Download Kartu Pendaftaran</a>
+            <a class="btn btn-primary my-4" target="_blank" href="/download">Download Kartu Pendaftaran</a>
             @endif
         @endforeach
 

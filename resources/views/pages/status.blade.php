@@ -20,6 +20,11 @@
                 <button class="btn btn-primary" type="submit">Upload</button>
             </div>
             </form>
+
+            <form action="/download" method="get">
+                @csrf
+                <button>Download Kartu Pendaftara</button>
+            </form>
             <a class="btn btn-primary my-4" target="_blank" href="/download">Download Kartu Pendaftaran</a>
             @endif
         @endforeach

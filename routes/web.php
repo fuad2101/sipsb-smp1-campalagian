@@ -72,7 +72,7 @@ Route::post('/form', [SiswaController::class,'store'])->middleware(['auth','veri
 
 Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth','verified']);
 
-Route::get('download',[SiswaController::class,'download'])->middleware(['auth','verified']);
+Route::get('/download',[SiswaController::class,'download'])->middleware(['auth','verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

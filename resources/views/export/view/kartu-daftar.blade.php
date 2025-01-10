@@ -8,7 +8,28 @@
 </head>
 <body>
 
-    {{ $data[0]}}
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nama</td>
+                    <td>{{ $data->nama}}</td>
+                </tr>
+                <tr>
+                    <td>NISN</td>
+                    <td>{{ $data->nisn}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ $data->email}}</td>
+                </tr>
+                <tr>
+                    <td>NISN</td>
+                    <td>{{ $data->nisn}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>

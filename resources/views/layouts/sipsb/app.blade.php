@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
 
+    @stack('css')
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon-32x32.png">
     <!-- Core css -->
     <link href="/enlink-template/css/app.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
 
 
 </head>

@@ -83,6 +83,7 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Link verifikasi terkirim!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
+Route::get('/export/{type}',[AdminController::class,'export']);
 
 
 require __DIR__.'/auth.php';

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class AdminController extends Controller
 {
@@ -22,5 +23,15 @@ class AdminController extends Controller
         $siswa->status_daftar = 'lulus';
         $siswa->save();
         return redirect('/pendaftar');
+    }
+
+    public function export($type){
+        if ($type == 'pdf') {
+            $data = Siswa::all();
+            $pdf = Pdf::loadView('pages.admin.export.pdf',['data'=>$data]);
+            return $pdf->download('Laporan PPDB 2024.pdf');
+        }elseif ($type == 'xls') {
+            return "Export Excel";
+        }
     }
 }

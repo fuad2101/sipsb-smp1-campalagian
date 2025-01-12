@@ -1,7 +1,12 @@
 @extends('dashboard')
 
 @section('content')
-    Rekap Pendaftar
+
+    <div class="row mb-5">
+        <a class="btn btn-danger mr-2" href="/export/pdf" target="_blank">Export PDF</a>
+        <a class="btn btn-success" href="/export/xls" target="_blank">Export Excel</a>
+    </div>
+
     <table class="table" id="myTable" >
         <thead>
             <tr>
@@ -13,6 +18,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach ($data as $val)
                 <tr>
                     <td>{{$loop->iteration}}</td>

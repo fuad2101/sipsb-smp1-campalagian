@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Exports\SiswasExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -31,7 +33,7 @@ class AdminController extends Controller
             $pdf = Pdf::loadView('pages.admin.export.pdf',['data'=>$data]);
             return $pdf->download('Laporan PPDB 2024.pdf');
         }elseif ($type == 'xls') {
-            return "Export Excel";
+            return Excel::download(new SiswasExport, 'Laporan PPDB.xlsx');
         }
     }
 }

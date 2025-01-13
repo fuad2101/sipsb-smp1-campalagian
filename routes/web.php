@@ -22,10 +22,18 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 Route::get('/', [LandingController::class,'index']);
 
+/****
+ * VIP
+ ****/
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');
 
+
+/****
+ * Admin
+ ****/
 
 Route::get('/dashboard/admin', function () {
     return view('pages.admin.index');
@@ -54,8 +62,17 @@ Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','
 Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified']);
 Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified']);
 
-Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 
+/****
+ * Siswa
+ ****/
+
+
+Route::post('/form', [SiswaController::class,'store'])->middleware(['auth','verified']);
+
+Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth','verified']);
+
+Route::get('/download',[SiswaController::class,'download'])->middleware(['auth','verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -63,6 +80,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
+/****
+ * Email Verification
+ ****/
 
 Route::get('/email/verify', function () {
     return view('auth.verify-email');

@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('siswas',function(Blueprint $table){
-            $table->string('status_daftar')->default('verifikasi');
+        Schema::table('siswas', function (Blueprint $table) {
+            $table->string('email')->after('nama');
         });
     }
 
@@ -21,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('siswas', function (Blueprint $table) {
+            //
+        });
     }
 };

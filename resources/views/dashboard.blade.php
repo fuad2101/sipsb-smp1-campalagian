@@ -2,7 +2,7 @@
 
 
 @php
-$role = auth()->user()->roles;
+$role = auth()->user()->role;
 @endphp
 
 
@@ -24,7 +24,15 @@ VIP perspective
             </span>
             <span class="title">Statistik Pendaftaran</span>
         </a>
-    </li>sd
+    </li>
+    <li class="nav-item dropdown">
+        <a href="/pendaftar">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Data Pendaftar</span>
+        </a>
+    </li>
     <li class="nav-item dropdown">
         <form action="{{ route('logout') }}" method="post" class="d-inline">
             @csrf

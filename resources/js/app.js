@@ -1,4 +1,5 @@
 import "./bootstrap";
+import "laravel-datatables-vite";
 // import "./oxhen-template/bootstrap.bundle.min";
 // import "./oxhen-template/counter";
 // import "./oxhen-template/aos";

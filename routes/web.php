@@ -51,6 +51,8 @@ Route::get('/statistik', function () {
 })->middleware(['auth','verified'])->name('statistik');
 
 Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified'])->name('pendaftar');
+Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified']);
+Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified']);
 
 Route::post('/form', [FormController::class,'index'])->middleware(['auth','verified']);
 
@@ -80,6 +82,7 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Link verifikasi terkirim!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
+Route::get('/export/{type}',[AdminController::class,'export']);
 
 
 require __DIR__.'/auth.php';

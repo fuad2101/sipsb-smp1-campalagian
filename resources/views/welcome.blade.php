@@ -57,16 +57,13 @@
                             <a class="nav-link" href="#fasilitas">Fasilitas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#review">Testimoni</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#tenaga">Tenaga Pengajar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#ekstrakulikuler">Ekstrakulikuler</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mb-3 mb-lg-0" href="#contact">Contact</a>
+                            <a class="nav-link mb-3 mb-lg-0" href="#contact">Alamat</a>
                         </li>
                     </ul>
                     <!-- Button trigger modal -->
@@ -74,7 +71,7 @@
                         Sign Up
                     </button> --}}
                     <a href="/login" class="btn btn-primary nav-btn">
-                        Login
+                        Login / Daftar
                     </a>
                     <!-- Nav btn -->
                 </div>
@@ -148,11 +145,11 @@
                         <div class="home-btn hstack gap-2 flex-column d-sm-block">
                             <a class="btn btn-white me-1" href="/register">Daftar Calon Siswa Baru </a>
                             <a class="modal-btn" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target=".watchvideomodal">
-                                <span class="avatar-sm">
+                                {{-- <span class="avatar-sm">
                                     <span class="avatar-title rounded-circle btn-icon">
                                         <i class="mdi mdi-play"></i>
                                     </span>
-                                </span>
+                                </span> --}}
                             </a>
                         <!-- Modal -->
                         <div class="modal fade bd-example-modal-lg watchvideomodal" data-keyboard="false" tabindex="-1" aria-hidden="true">
@@ -207,7 +204,7 @@
                                         <div class="content">
                                             <h5 class="title">WiFi Gratis</h5>
                                             <p class="text-muted">One disadvantage of Lorum Ipsum is that in certain letters which is said more than.</p>
-                                            <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a>
+                                            {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                         </div>
                                 </div>
                             </div>
@@ -219,7 +216,7 @@
                             <div class="content d-block overflow-hidden">
                                 <h5 class="title">Tenaga Pengajar Kompeten</h5>
                                 <p class="text-muted mt-2">The most well-known dummy text is the 'Lorem', which well-known is said which is said.</p>
-                                <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a>
+                                {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                             </div>
                         </div>
                     </div><!-- end col -->
@@ -230,7 +227,7 @@
                                 <div class="content d-block overflow-hidden">
                                     <h5 class="title">Laboratorium Komputer dan Fisika<i class="fas fa-kiss-wink-heart    "></i> </h5>
                                     <p class="text-muted mt-2">Moreover, in Latin only words at the beginning of sentences which is said are capitalized.</p>
-                                    <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a>
+                                    {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                 </div>
                             </div>
                         </div>
@@ -346,7 +343,7 @@
                         <div data-aos="fade-down" data-aos-duration="1800">
                             <h3 class="fw-bold">Bergabunglah di SMP 1 Campalagian</h3>
                             <p>Bergabung dengan lebih dari 500 siswa dan kembangkan kreatifitas dan potensi kamu bersama kami</p>
-                            <a class="btn btn-primary" href="javascript:void(0)">Learn More</a>
+                            <a class="btn btn-primary" href="javascript:void(0)">Daftar Sekarang</a>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row-->
@@ -355,7 +352,7 @@
         <!-- End cta -->
 
         <!-- Start Reviews -->
-        <section class="section reviews" id="review">
+        {{-- <section class="section reviews" id="review">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
@@ -473,7 +470,7 @@
                     </div><!-- end col-->
                 </div><!-- End row-->
             </div><!-- end container-->
-        </section>
+        </section> --}}
         <!-- End Reviews -->
 
         <!-- START pricing -->
@@ -813,7 +810,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pkn as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -848,7 +845,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pai as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -883,7 +880,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bhi as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -918,7 +915,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($matematika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -953,7 +950,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ipa as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -988,7 +985,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ips as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1023,7 +1020,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bahasa_inggris as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1058,7 +1055,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($sbd as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1093,7 +1090,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pjok as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1128,7 +1125,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($informatika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1163,7 +1160,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($prakarya as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1198,7 +1195,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bimkol as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1233,7 +1230,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($staff as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="/oxhen-template/images/user/user1.png" class="d-block w-100" alt="Image 1">
+                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1381,10 +1378,10 @@
                 <div class="row row-cols-4 row-cols-md-12 g-4">
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user1.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Pramuka</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1393,10 +1390,10 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user2.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">PMR</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1405,10 +1402,10 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Tari</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1417,7 +1414,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Bimbingan Prestasi</h5>
                                 <p class="card-text">
@@ -1436,10 +1433,10 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Seni Tari</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1448,10 +1445,10 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="/oxhen-template/images/user/user3.png" class="card-img-top" alt="...">
+                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Layanan Bimbingan Konseling</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -1469,7 +1466,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
-                            <h2 class="heading">Hubungi Kami</h2>
+                            <h2 class="heading">Alamat</h2>
                             <p class="text-muted mt-2 fs-17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
@@ -1537,7 +1534,6 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-sm-10 text-center">
                         <a href="javascript:void(0)"><img src="images/logo-light.png" height="24" alt=""></a>
-                        <p class="mx-auto mt-sm-4">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
                         <ul class="list-unstyled mb-0 mt-4 social-icon">
                             <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)"><i class="mdi mdi-twitter"></i></a></li>
@@ -1556,22 +1552,23 @@
                                     <a class="text-white" href="javascript:void(0)">Home</a>
                                 </li>
                                 <li class="list-inline-item mx-lg-3 m-2">
-                                    <a class="text-white" href="javascript:void(0)">About us</a>
+                                    <a class="text-white" href="#fasilitas">Fasilitas</a>
                                 </li>
                                 <li class="list-inline-item mx-lg-3 m-2">
-                                    <a class="text-white" href="javascript:void(0)">Order</a>
+                                    <a class="text-white" href="javascript:void(0)">Tenaga Pengajar</a>
                                 </li>
                                 <li class="list-inline-item mx-lg-3 m-2">
-                                    <a class="text-white" href="javascript:void(0)">Member</a>
+                                    <a class="text-white" href="javascript:void(0)">Ekstrakulikuler</a>
                                 </li>
                                 <li class="list-inline-item mx-lg-3 m-2">
-                                    <a class="text-white" href="javascript:void(0)">Contact Us</a>
+                                    <a class="text-white" href="javascript:void(0)">Alamat</a>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row-->
-            </div><!--end container-->
+            </div>
+            <!--end container-->
         </footer>
         <!-- END FOOTER -->
         </div>
@@ -1584,7 +1581,7 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0 text-white fs-15">©
-                                <script>document.write(new Date().getFullYear())</script> Created by <a href="https://www.mandar.web.id" target="_blank">Muhammad Fuad</a> with
+                                <script>document.write(new Date().getFullYear())</script> Created by <a href="https://www.mandar.web.id" target="_blank">Mandar Web</a> with
                                 <i class="mdi mdi-heart text-danger"></i>
                             </p>
                         </div>

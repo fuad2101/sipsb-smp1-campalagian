@@ -11,13 +11,12 @@ use Illuminate\Foundation\Http\FormRequest;
 class SiswaController extends Controller
 {
     public function index(Request $request){
-        $email = 'multy_muradewi@gmail.com';
+        $email = auth()->user()->email;
         $foo =  Siswa::where('email',$email)->get();
         return view('pages.status')->with(['foo'=>$foo]);
     }
 
     public function store(FormRequest $request){
-        dd($request);
         $files = $request->file();
         $randomTime = '.'.time().'.';
 
@@ -62,7 +61,7 @@ class SiswaController extends Controller
             'pend_terakhir'=>$request->pend_terakhir,
             ]);
 
-            Alert::success('Berhasil','Pendaftaran Berhasil');
+            Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
             return redirect()->back();
     }
 
@@ -74,15 +73,18 @@ class SiswaController extends Controller
         $bar = Siswa::where('email',$email)->first();
         $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext);
         $bar->save();
+
+        Alert::info('Upload Berhasil','Bukti bayar kamu berhasil diupload');
+        return redirect()->back();
     }
 
     public function download(){
         $email = auth()->user()->email;
         $data = Siswa::where('email',$email)->first();
         // dd($data);
-        // $pdf = Pdf::loadView('export.view.kartu-daftar', ['data'=>$data]);
-        // return $pdf->download('kartu-pendaftaran.pdf');
-        return view('export.view.kartu-daftar')->with(['data'=>$data]);
+        $pdf = Pdf::loadView('export.view.kartu-daftar', ['data'=>$data]);
+        return $pdf->download('kartu-pendaftaran.pdf');
+        // return view('export.view.kartu-daftar')->with(['data'=>$data]);
     }
 
 

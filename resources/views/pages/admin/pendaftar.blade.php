@@ -14,6 +14,7 @@
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Asal Sekolah</th>
+                <th>Bukti Bayar</th>
                 <th>Status Daftar</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                     <td> <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a></td>
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
+                    <td>{{$val->bukti_bayar}}</td>
                     <td>
                         @if ($val->status_daftar == 'verifikasi')
                             <span

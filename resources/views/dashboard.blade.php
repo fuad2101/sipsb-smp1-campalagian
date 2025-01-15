@@ -109,7 +109,7 @@ Admin perspective
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a href="/form">
+        <a href="#">
             <span class="icon-holder">
                 <i class="anticon anticon-bar-chart"></i>
             </span>

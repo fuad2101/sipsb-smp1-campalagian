@@ -14,7 +14,7 @@
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Asal Sekolah</th>
-                <th>Bukti Bayar</th>
+                <th>Status Bayar</th>
                 <th>Status Daftar</th>
             </tr>
         </thead>
@@ -23,10 +23,28 @@
             @foreach ($data as $val)
                 <tr>
                     <td>{{$loop->iteration}}</td>
-                    <td> <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a></td>
+                    <td>
+                        @if (auth()->user()->role == 'admin')
+                            <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a>
+                        @else
+                            {{$val->nama}}
+                        @endif
+                    </td>
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
-                    <td>{{$val->bukti_bayar}}</td>
+                    <td>
+                        @if ($val->bukti_bayar != NULL)
+                            <span
+                                class="badge bg-success text-white"
+                                >Lunas</span
+                            >
+                        @else
+                            <span
+                                class="badge bg-warning"
+                                >Belum bayar</span
+                            >
+                        @endif
+                    </td>
                     <td>
                         @if ($val->status_daftar == 'verifikasi')
                             <span

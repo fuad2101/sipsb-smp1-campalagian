@@ -212,7 +212,7 @@
                 <!-- Footer START -->
                 <footer class="footer">
                     <div class="footer-content">
-                        <p class="m-b-0"><p>©<script>document.write(new Date().getFullYear())</script> Created by <b><a href="https://www.mandar.web.id" class="fst-italic text-reset" target="_blank" >mandar.web.id</a></b> with <i class="mdi mdi-heart text-danger"></i></p></p>
+                        <p class="m-b-0"><p>©<script>document.write(new Date().getFullYear())</script> Created by <b><a href="https://www.mandar.web.id" class="fst-italic text-reset" target="_blank" >mandar.web.id</a></b> with <i class="fa fa-heart" aria-hidden="true"></i></p></p>
                         {{-- <span>
                             <a href="" class="text-gray m-r-15">Term &amp; Conditions</a>
                             <a href="" class="text-gray">Privacy &amp; Policy</a>

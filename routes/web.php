@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
@@ -55,7 +56,9 @@ Route::get('/form', function () {
 Route::get('/status', [SiswaController::class,'index'])->middleware(['auth','verified']);
 
 Route::get('/statistik', function () {
-    return view('pages.statistik');
+    $siswa = Siswa::all();
+    // dd($siswa);
+    return view('pages.statistik')->with(['siswa'=>$siswa]);
 })->middleware(['auth','verified'])->name('statistik');
 
 Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified'])->name('pendaftar');

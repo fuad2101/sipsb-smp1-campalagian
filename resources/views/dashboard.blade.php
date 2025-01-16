@@ -8,9 +8,6 @@ $role = auth()->user()->role;
 
 @if ($role == "vip")
 
-/****
-VIP perspective
- ****/
 
     @section('content')
     VIP perspective
@@ -33,8 +30,11 @@ VIP perspective
             <span class="title">Data Pendaftar</span>
         </a>
     </li>
-    <li class="nav-item dropdown">
-        <form action="{{ route('logout') }}" method="post" class="d-inline">
+    <li class="nav-item dropdown" style="padding:10px 15px;">
+            <span class="icon-holder">
+                <i class="anticon anticon-logout"></i>
+            </span>
+            <form action="{{ route('logout') }}" method="post" class="d-inline">
             @csrf
             <button class="btn" >Logout</button>
             </form>
@@ -89,14 +89,11 @@ VIP perspective
     </li> --}}
     @endsection
 
-/****
-Admin perspective
- ****/
 
     @elseif ($role == 'admin')
 
     @section('content')
-    Admin Perspective
+
     @endsection
 
     @section('sidebar-menu')
@@ -109,7 +106,7 @@ Admin perspective
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a href="#">
+        <a href="/statistik">
             <span class="icon-holder">
                 <i class="anticon anticon-bar-chart"></i>
             </span>
@@ -175,10 +172,6 @@ Admin perspective
         </ul>
     </li> --}}
     @endsection
-
-/****
-User perspective
- ****/
 
 @else
     @section('content')

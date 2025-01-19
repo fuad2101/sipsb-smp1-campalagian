@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Login Page</title>
-        <meta name="viewport" ontent="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap v5.3.2 Landing Page Template" />
         <meta name="keywords" content="bootstrap v5.3.2, premium, marketing, multipurpose" />
         <meta content="Themesdesign" name="author" />
 
-        <link rel="shortcut icon" href="/favicon-32x32.png">
+        <link rel="shortcut icon" href="images/favicon.ico">
 
         <!-- Bootstrap css -->
         <link rel="stylesheet" href="/oxhen-template/css/bootstrap.min.css" type="text/css" />

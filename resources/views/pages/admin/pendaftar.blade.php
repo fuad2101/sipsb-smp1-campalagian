@@ -8,9 +8,9 @@
     </div>
 
     <table class="table" id="myTable" >
-        <thead>
+        <thead class="thead-dark">
             <tr>
-                <th>No</th>
+                <th scope="">No</th>
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Asal Sekolah</th>
@@ -62,4 +62,5 @@
             @endforeach
         </tbody>
     </table>
+
 @endsection

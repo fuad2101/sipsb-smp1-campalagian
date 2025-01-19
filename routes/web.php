@@ -57,13 +57,12 @@ Route::get('/status', [SiswaController::class,'index'])->middleware(['auth','ver
 
 Route::get('/statistik', function () {
     $siswa = Siswa::all();
-    // dd($siswa);
     return view('pages.statistik')->with(['siswa'=>$siswa]);
-})->middleware(['auth','verified'])->name('statistik');
+})->middleware(['auth','verified','can:is-admin'])->name('statistik');
 
-Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified'])->name('pendaftar');
-Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified']);
-Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified']);
+Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified','can:is-admin'])->name('pendaftar');
+Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified','can:is-admin']);
+Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified','can:is-admin']);
 
 
 /****

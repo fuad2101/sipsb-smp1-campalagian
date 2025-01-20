@@ -202,11 +202,14 @@ $role = auth()->user()->role;
             <span class="title">Helpdesk</span>
         </a>
     </li>
-    <li class="nav-item dropdown">
-        <form action="{{route('logout')}}" method="post">
+    <li class="nav-item dropdown" style="padding:10px 15px;">
+            <span class="icon-holder">
+                <i class="anticon anticon-logout"></i>
+            </span>
+            <form action="{{ route('logout') }}" method="post" class="d-inline">
             @csrf
-            <button>Logout</button>
-        </form>
+            <button class="btn" >Logout</button>
+            </form>
     </li>
     {{-- <li class="nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">

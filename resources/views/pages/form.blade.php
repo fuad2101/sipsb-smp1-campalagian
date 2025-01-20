@@ -18,7 +18,8 @@
         <div class="mb-3">
             <label for="" class="form-label">Jenis Kelamin</label>
             <select class="form-control form-control-sm" name="jenis_kelamin" id="">
-                <option selected value="1">Laki-laki</option>
+                <option disabled selected>Pilih Jenis Kelamin</option>
+                <option value="1">Laki-Laki</option>
                 <option value="2">Perempuan</option>
               </select>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}

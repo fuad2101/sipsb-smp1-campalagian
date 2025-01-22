@@ -175,7 +175,7 @@ $role = auth()->user()->role;
 
 @else
     @section('content')
-    User perspective
+    Welcome {{auth()->user()->name}}
     @endsection
     @section('sidebar-menu')
     <li class="nav-item dropdown">
@@ -194,14 +194,14 @@ $role = auth()->user()->role;
             <span class="title">Status Pendaftaran</span>
         </a>
     </li>
-    <li class="nav-item dropdown">
+    {{-- <li class="nav-item dropdown">
         <a href="/helpdesk">
             <span class="icon-holder">
                 <i class="anticon anticon-dashboard"></i>
             </span>
             <span class="title">Helpdesk</span>
         </a>
-    </li>
+    </li> --}}
     <li class="nav-item dropdown" style="padding:10px 15px;">
             <span class="icon-holder">
                 <i class="anticon anticon-logout"></i>

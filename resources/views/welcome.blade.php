@@ -194,7 +194,7 @@
                     </div><!-- end col-->
                 </div><!-- end row-->
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-7 mt-sm-4">
+                    {{-- <div class="col-lg-4 col-md-7 mt-sm-4">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="feature-card p-3 py-sm-4 rounded d-flex">
                                 <div class="flex-shrink-0">
@@ -204,12 +204,11 @@
                                         <div class="content">
                                             <h5 class="title">WiFi Gratis</h5>
                                             <p class="text-muted">One disadvantage of Lorum Ipsum is that in certain letters which is said more than.</p>
-                                            {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                         </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div> --}}
                     <div class="col-lg-4 col-md-7 mt-sm-4">
                         <div class="feature-card p-3 py-sm-4 rounded">
                             <i class="mdi mdi-layers-triple-outline text-primary float-start me-3 h2"></i>
@@ -234,13 +233,13 @@
                     </div><!-- end col -->
                 </div><!-- end row -->
                 <div class="row my-sm-5 py-5 align-items-center justify-content-between">
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="card bg-transparent border-0 mb-3 mb-lg-0">
                                 <img src="/oxhen-template/images/feature1.png" class="img-fluid rounded-3" alt="">
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div> --}}
                     <div class="col-lg-5">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <h3 class="feature-heading mb-2">Kepala Sekolah</h3>
@@ -323,13 +322,13 @@
                             </div> --}}
                         </div>
                     </div><!-- end col -->
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <div class="card bg-transparent border-0">
                                 <img src="/oxhen-template/images/feature2.png" class="img-fluid" alt="">
                             </div>
                         </div>
-                    </div><!-- end col -->
+                    </div> --}}
                 </div><!-- end row-->
             </div><!-- end container -->
         </section>
@@ -1374,8 +1373,8 @@
                         </div>
                     </div><!-- end col--> --}}
 
-                </div><!-- End row-->
-                <div class="row row-cols-4 row-cols-md-12 g-4">
+                </div>
+                <div class="row row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card h-100">
                             <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
@@ -1456,7 +1455,7 @@
                             </div>
                         </div>
                     </div>
-            </div><!-- end container-->
+            </div>
         </section>
         <!-- End ekstrakulikuler -->
 

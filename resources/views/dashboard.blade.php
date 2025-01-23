@@ -178,6 +178,9 @@ $role = auth()->user()->role;
     Welcome {{auth()->user()->name}}
     @endsection
     @section('sidebar-menu')
+
+    @if (! \App\Models\Siswa::where('email',auth()->user()->email))
+
     <li class="nav-item dropdown">
         <a href="/form">
             <span class="icon-holder">
@@ -186,6 +189,10 @@ $role = auth()->user()->role;
             <span class="title">Formulir Pendaftaran</span>
         </a>
     </li>
+
+    @endif
+
+
     <li class="nav-item dropdown">
         <a href="/status">
             <span class="icon-holder">

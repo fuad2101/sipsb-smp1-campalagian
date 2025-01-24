@@ -179,7 +179,7 @@ $role = auth()->user()->role;
     @endsection
     @section('sidebar-menu')
 
-    @if (! \App\Models\Siswa::where('email',auth()->user()->email))
+    @if (\App\Models\Siswa::where('email',auth()->user()->email)->first() == NULL)
 
     <li class="nav-item dropdown">
         <a href="/form">

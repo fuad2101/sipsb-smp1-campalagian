@@ -809,7 +809,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pkn as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{asset('/storage/foto_guru/pkn/nurmiati.jpg')}} " class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1377,7 +1377,7 @@
                 <div class="row row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="{{asset('/storage/ekstrakulikuler/pramuka/1.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Pramuka</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
@@ -1389,7 +1389,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="{{asset('/storage/ekstrakulikuler/pramuka/2.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">PMR</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
@@ -1401,9 +1401,9 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="{{asset('/storage/ekstrakulikuler/osis/1.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Tari</h5>
+                                <h5 class="card-title">OSIS</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
                             </div>
                             <div class="card-footer">
@@ -1413,7 +1413,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="http://dummy-images.com/sport/dummy-480x270-HockeyStick.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Bimbingan Prestasi</h5>
                                 <p class="card-text">
@@ -1432,7 +1432,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="{{asset('/storage/ekstrakulikuler/tari/2.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Seni Tari</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
@@ -1444,7 +1444,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="https://img.dummy-image-generator.com/_mono/dummy-400x400-colorBAD0C4-plain.jpg" class="card-img-top" alt="...">
+                            <img src="http://dummy-images.com/sport/dummy-480x270-HockeyStick.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Layanan Bimbingan Konseling</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>

@@ -10,7 +10,7 @@ $role = auth()->user()->role;
 
 
     @section('content')
-    VIP perspective
+    <img  class="img img-thumbnail w-50" src=" {{asset('/storage/home-1-new.png')}} " alt="">
     @endsection
 
     @section('sidebar-menu')
@@ -93,8 +93,10 @@ $role = auth()->user()->role;
     @elseif ($role == 'admin')
 
     @section('content')
-
-    @endsection
+    <div class="opacity-50">
+        <img  class="img img-thumbnail w-100 h-50" src=" {{asset('/storage/home-1-new.png')}} " alt="">
+        @endsection
+    </div>
 
     @section('sidebar-menu')
     <li class="nav-item dropdown">
@@ -175,7 +177,7 @@ $role = auth()->user()->role;
 
 @else
     @section('content')
-    Welcome {{auth()->user()->name}}
+    <img  class="img img-thumbnail w-full" src=" {{asset('/storage/home-1-new.png')}} " alt="">
     @endsection
     @section('sidebar-menu')
 

@@ -809,7 +809,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pkn as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{asset('/storage/foto_guru/pkn/nurmiati.jpg')}} " class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -844,7 +844,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pai as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -879,7 +879,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bhi as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -914,7 +914,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($matematika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -949,7 +949,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ipa as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -984,7 +984,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ips as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1019,7 +1019,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bahasa_inggris as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1054,7 +1054,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($sbd as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1089,7 +1089,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pjok as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1124,7 +1124,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($informatika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1159,7 +1159,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($prakarya as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1194,7 +1194,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bimkol as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1229,7 +1229,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($staff as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="https://placehold.co/400x400?text=Photo" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>

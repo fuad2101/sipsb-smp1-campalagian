@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\SiswasExport;
 use Maatwebsite\Excel\Facades\Excel;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -24,6 +25,7 @@ class AdminController extends Controller
         $siswa = Siswa::find($id);
         $siswa->status_daftar = 'lulus';
         $siswa->save();
+        Alert::success('Berhasil','Status siswa Lulus');
         return redirect('/pendaftar');
     }
 

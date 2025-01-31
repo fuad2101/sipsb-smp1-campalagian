@@ -42,7 +42,7 @@ class SiswaController extends Controller
         $akta = $files['akta'];
 
 
-        Siswa::create([
+        $sukses = Siswa::create([
             'nama'=>$request->nama,
             'nisn'=>$request->nisn,
             'email'=>auth()->user()->email,
@@ -61,8 +61,10 @@ class SiswaController extends Controller
             'pend_terakhir'=>$request->pend_terakhir,
             ]);
 
-            Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
-            return redirect()->back();
+            if ($sukses) {
+                Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
+                return redirect('/status');
+            }
     }
 
     public function uploadBayar(FormRequest $request){
@@ -71,7 +73,7 @@ class SiswaController extends Controller
 
         $email = auth()->user()->email;
         $bar = Siswa::where('email',$email)->first();
-        $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext);
+        $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext,'public');
         $bar->save();
 
         Alert::info('Upload Berhasil','Bukti bayar kamu berhasil diupload');

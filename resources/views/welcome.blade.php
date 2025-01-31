@@ -141,7 +141,7 @@
                                 <span class="wrap"></span> </span>
                             </h1>
                         </div>
-                            <p class="text-white-50 fs-20">Explore and learn more about everything from machine learning and global payments to scaling your team.</p>
+                            <p class="text-white-50 fs-20">Website resmi Pendaftaran Siswa Baru SMP 1 Campalagian</p>
                         <div class="home-btn hstack gap-2 flex-column d-sm-block">
                             <a class="btn btn-white me-1" href="/register">Daftar Calon Siswa Baru </a>
                             <a class="modal-btn" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target=".watchvideomodal">
@@ -188,8 +188,7 @@
                     <div class="col-lg-7">
                         <div class="text-center mb-4">
                             <h2 class="heading">Fasilitas SMP 1 Campalagian</h2>
-                            <p class="text-muted fs-17">Ut enim ad minima veniam quis nostrum exercitationem ullam
-                                corporis suscipit laboriosam nisi commodi consequatur.</p>
+                            <p class="text-muted fs-17">Fasilitas SMP 1 Campalagian</p>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row-->
@@ -214,7 +213,7 @@
                             <i class="mdi mdi-layers-triple-outline text-primary float-start me-3 h2"></i>
                             <div class="content d-block overflow-hidden">
                                 <h5 class="title">Tenaga Pengajar Kompeten</h5>
-                                <p class="text-muted mt-2">The most well-known dummy text is the 'Lorem', which well-known is said which is said.</p>
+                                <p class="text-muted mt-2">Tenaga Pengajar yang kompeten dengna metode pembelajaran terkini yang efektif dan mampu dipahami dengna baik oleh siswa</p>
                                 {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                             </div>
                         </div>
@@ -225,7 +224,7 @@
                                 <i class="mdi mdi-clipboard-flow-outline text-primary float-start me-3 h2"></i>
                                 <div class="content d-block overflow-hidden">
                                     <h5 class="title">Laboratorium Komputer dan Fisika<i class="fas fa-kiss-wink-heart    "></i> </h5>
-                                    <p class="text-muted mt-2">Moreover, in Latin only words at the beginning of sentences which is said are capitalized.</p>
+                                    <p class="text-muted mt-2">Memiliki laboratorium Fisika dan komputer dengna fasilitas lengkap untuk menunjang kegiatan praktikum</p>
                                     {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                 </div>
                             </div>
@@ -233,23 +232,23 @@
                     </div><!-- end col -->
                 </div><!-- end row -->
                 <div class="row my-sm-5 py-5 align-items-center justify-content-between">
-                    {{-- <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="card bg-transparent border-0 mb-3 mb-lg-0">
-                                <img src="/oxhen-template/images/feature1.png" class="img-fluid rounded-3" alt="">
+                                <img src="https://placehold.co/200x200?text=Photo" class="img-fluid rounded-3" alt="">
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="col-lg-5">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <h3 class="feature-heading mb-2">Kepala Sekolah</h3>
                             <p class="text-muted">Now that we've aligned the details, it's time to get things mapped out and organized. Now that we've aligned the details. </p>
                             <ul class="feature-list">
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Advertising for a trade magazine</li>
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Designing marketing materials </li>
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Update website content</li>
+                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Riwayat Pendidikan</li>
+                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Prestasi</li>
+                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Kontak</li>
                             </ul>
-                            <a class="btn btn-primary" href="avascipt:void(0)">Learn more</a>
+                            {{-- <a class="btn btn-primary" href="avascipt:void(0)">Learn more</a> --}}
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -322,13 +321,13 @@
                             </div> --}}
                         </div>
                     </div><!-- end col -->
-                    {{-- <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <div class="card bg-transparent border-0">
-                                <img src="/oxhen-template/images/feature2.png" class="img-fluid" alt="">
+                                <img src="/oxhen-template/images/home-1-new.png" class="img-fluid" alt="image">
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                 </div><!-- end row-->
             </div><!-- end container -->
         </section>
@@ -809,7 +808,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pkn as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -844,7 +843,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pai as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -879,7 +878,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bhi as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -914,7 +913,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($matematika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -949,7 +948,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ipa as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -984,7 +983,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($ips as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1019,7 +1018,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bahasa_inggris as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1054,7 +1053,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($sbd as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1089,7 +1088,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($pjok as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1124,7 +1123,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($informatika as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1159,7 +1158,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($prakarya as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1194,7 +1193,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($bimkol as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1229,7 +1228,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($staff as $val)
                                         <div class="carousel-item @if ($loop->first) active @endif ">
-                                            <img src="{{ $val->foto == '' ? "https://placehold.co/400x400?text=Photo" : $val->foto}}" class="d-block w-100" alt="Image 1">
+                                            <img src="{{ $val->foto == '' ? "https://placehold.co/600x1000?text=Photo" : $val->foto}}" class="d-block w-100" alt="">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{{$val->nama}}</h5>
                                             </div>
@@ -1262,8 +1261,7 @@
                     <div class="col-lg-7">
                         <div class="text-center mb-5">
                             <h2 class="heading">Ekstrakulikuler</h2>
-                            <p class="text-muted fs-17">Vivamus ac nulla ultrices laoreet neque mollis mi morbi elementum mauris sit amet arcu
-                                fringilla auctor In eleifend maximus nisi sed vulputate.</p>
+                            <p class="text-muted fs-17">Berbagai Kegiatan ekstrakulikuler SMP 1 Campalagian</p>
                         </div>
                     </div><!-- end col-->
                     {{-- <div class="col-lg-8">
@@ -1466,13 +1464,13 @@
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
                             <h2 class="heading">Alamat</h2>
-                            <p class="text-muted mt-2 fs-17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            {{-- <p class="text-muted mt-2 fs-17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->
                 <div class="row align-items-center gy-3">
-                    <div class="col-lg-6">
+                    <div class="col">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="card">
                                 <div class="card-body">
@@ -1483,7 +1481,7 @@
                         </div>
                     </div>
                     <!--end col-->
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <form method="post" onsubmit="return validateForm()" class="contact-form" name="myForm" id="myForm">
                                 <span id="error-msg"></span>
@@ -1521,7 +1519,7 @@
                             </form>
                             <!--end form-->
                         </div>
-                    </div><!--end col-->
+                    </div> --}}
                 </div><!--end row-->
             </div><!--end container-->
         </section>

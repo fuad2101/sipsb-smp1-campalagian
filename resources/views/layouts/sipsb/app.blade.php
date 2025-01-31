@@ -8,17 +8,12 @@
     <title>Dashboard</title>
 
     @stack('css')
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon-32x32.png">
     <!-- Core css -->
     <link href="/enlink-template/css/app.min.css" rel="stylesheet">
     {{-- Datatables --}}
     <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/af-2.7.0/b-3.2.0/b-print-3.2.0/datatables.min.css" rel="stylesheet">
-
-
-
-
 </head>
 
 <body>
@@ -202,10 +197,7 @@
                         </div>
                     </div>--}}
                     <!-- Content goes Here -->
-                    @section('content')
-                    <p>Master content</p>
-                    @show
-
+                    @yield('content')
                 </div>
                 <!-- Content Wrapper END -->
 

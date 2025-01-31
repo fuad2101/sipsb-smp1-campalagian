@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Data Siswa</title>
-</head>
-<body>
-    @foreach ($singleSiswa as $val)
-    <p>Nama: {{$val->nama}}</p>
-    <p>Nama: {{$val->foto}}</p>
-    <p><img class="img img-thumbnail w-25" src=" {{asset('storage/'.$val->foto)}} " alt=""></p>
-    @endforeach
+@extends('layouts.sipsb.app')
+
+@section('content')
+    <h4 class="text-center">RESUME PENDAFTARAN</h4>
+    <table class="table">
+        @foreach ($singleSiswa as $val)
+        <div class="row">
+            <div class="col-lg-7">
+                <tr>
+                    <td>Nama:</td>
+                    <td>{{$val->nama}}</td>
+                </tr>
+                <p><strong>Nama:</strong>  {{$val->nama}}</p>
+                <p><strong>Email:</strong> {{$val->email}}</p>
+                <p><strong>NISN:</strong>  {{$val->nisn}}</p>
+            </div>
+            <div class="col-lg-5">
+                <img class="img img-thumbnail w-25" src=" {{asset('storage/'.$val->foto)}} " alt="">
+            </div>
+        </div>
+        @endforeach
+    </table>
     <form action="" class="btn" method="post">
         @csrf
         <button class="btn btn-primary" type="submit" onclick="confirm() ">Lulus Administrasi</button>
@@ -44,7 +50,4 @@
 
         }
     </script>
-
-
-</body>
-</html>
+@endsection

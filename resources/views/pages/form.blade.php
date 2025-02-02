@@ -35,8 +35,8 @@
             <label for="" class="form-label">Jenis Kelamin</label>
             <select class="form-control form-control-sm" name="jenis_kelamin" id="">
                 <option disabled selected>--Pilih--</option>
-                <option value="1">Laki-Laki</option>
-                <option value="2">Perempuan</option>
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
               </select>
             {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
         </div>
@@ -80,10 +80,10 @@
             <label for="" class="form-label">Agama</label>
               <select class="form-control form-control-sm" name="agama" id="">
                 <option disabled selected>--Pilih--</option>
-                <option value="islam">Islam</option>
-                <option value="kristen">Kristen</option>
-                <option value="hindu">Hindu</option>
-                <option value="protestan">Protestan</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Protestan">Protestan</option>
               </select>
         </div>
         <div class="mb-3">

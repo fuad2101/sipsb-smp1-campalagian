@@ -10,6 +10,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class SiswaController extends Controller
 {
+
     public function index(Request $request){
         $email = auth()->user()->email;
         $foo =  Siswa::where('email',$email)->get();
@@ -36,11 +37,9 @@ class SiswaController extends Controller
         $kk_ext = $kk->getClientOriginalExtension();
         $kk_name = $kk->getClientOriginalName();
 
-        //dd($files);
         $ijazah = $files['ijazah'];
         $kk = $files['kk'];
         $akta = $files['akta'];
-
 
         $sukses = Siswa::create([
             'nama'=>$request->nama,
@@ -52,10 +51,10 @@ class SiswaController extends Controller
             'alamat'=>$request->alamat,
             'nomor'=>$request->nomor,
             'wali'=>$request->wali,
-            'kk'=>$kk->storeAs('KK',$request->nama.$randomTime.$kk_ext,'public'),
-            'akta'=>$akta->storeAs('Akta',$request->nama.$randomTime.$akta_ext,'public'),
-            'ijazah'=>$ijazah->storeAs('Ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
-            'foto'=>$foto->storeAs('Foto',$request->nama.$randomTime.$foto_ext,'public'),
+            'kk'=>'/storage/'.$kk->storeAs('kk',$request->nama.$randomTime.$kk_ext,'public'),
+            'akta'=>'/storage/'.$akta->storeAs('akta',$request->nama.$randomTime.$akta_ext,'public'),
+            'ijazah'=>'/storage/'.$ijazah->storeAs('ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
+            'foto'=>'/storage/'.$foto->storeAs('foto',$request->nama.$randomTime.$foto_ext,'public'),
             'jenis_kelamin'=>$request->jenis_kelamin,
             'agama'=>$request->agama,
             'pend_terakhir'=>$request->pend_terakhir,
@@ -73,7 +72,7 @@ class SiswaController extends Controller
 
         $email = auth()->user()->email;
         $bar = Siswa::where('email',$email)->first();
-        $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('Bukti_Bayar',auth()->user()->name.'.'.$ext,'public');
+        $bar->bukti_bayar = $request->file('bukti_bayar')->storeAs('bukti_bayar',auth()->user()->name.'.'.$ext,'public');
         $bar->save();
 
         Alert::info('Upload Berhasil','Bukti bayar kamu berhasil diupload');
@@ -83,11 +82,8 @@ class SiswaController extends Controller
     public function download(){
         $email = auth()->user()->email;
         $data = Siswa::where('email',$email)->first();
-        // dd($data);
-        $pdf = Pdf::loadView('export.view.kartu-daftar', ['data'=>$data]);
-        return $pdf->download('kartu-pendaftaran.pdf');
-        // return view('export.view.kartu-daftar')->with(['data'=>$data]);
+        $pdf = Pdf::loadView('export.view.kartu-daftar', ['siswa'=>$data]);
+        // return view('export.view.kartu-daftar')->with(['siswa'=>$data]);
+        return $pdf->stream('kartu-pendaftaran.pdf');
     }
-
-
 }

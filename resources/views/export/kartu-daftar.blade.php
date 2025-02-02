@@ -1,10 +1,36 @@
-@extends('layouts.sipsb.app')
-
-@section('content')
-    <h4 class="text-center">RESUME PENDAFTARAN</h4>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <table class="table table-sm table-bordered">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+       h2,h3{
+        text-align: center;
+        line-height: 5px;
+       }
+       .container{
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+       }
+       table td{
+        padding: 10px;
+       }
+       .foto{
+        height: 25%;
+       }
+    </style>
+    <title>Kartu Pendaftaran</title>
+</head>
+<body>
+    <img src="{{public_path('logo.png')}}" alt="">
+    <h2>Kartu Pendaftaran Calon Siswa</h2>
+    <h3>SMP Negri 1 Campalagian</h3>
+    <div class="container">
+        <div class="">
+            <table class="">
                 <tbody>
                     <tr>
                         <td scope="row"><b>Nama:</b> </td>
@@ -61,42 +87,12 @@
                 </tbody>
             </table>
         </div>
-        <div class="col col-lg-6">
-            <img class="img img-thumbnail" src="{{$siswa->foto}}" alt="">
+        <div>
+            <img class="foto" src="{{ public_path($siswa->foto) }}" alt="">
         </div>
     </div>
-    <div class="row">
-        <div class="col text-center">
-            <form action="" class="" method="post">
-                @csrf
-                <button class="btn btn-primary btn-lg mb-2" type="submit" onclick="confirm() ">Lulus Administrasi</button>
-            </form>
-            <a class="btn btn-lg btn-secondary" href="/pendaftar">Kembali</a>
-        </div>
-    </div>
-    <script>
-        function confirm(e) {
-            preventDefault();
+    <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"
+</p>
 
-            Swal.fire({
-            title: "Luluskan?",
-            text: "Tindakan ini tidak dapat dibatalkan. Mohon dicek dengan baik",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, Luluskan"
-            }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                title: "Berhasil",
-                text: "Your file has been deleted.",
-                icon: "success"
-                });
-            }
-            });
-            a.preventDefault();
-
-        }
-    </script>
-@endsection
+</body>
+</html>

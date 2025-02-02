@@ -17,13 +17,13 @@ class AdminController extends Controller
     }
 
     public function show($id){
-        $singleSiswa = Siswa::where('id',$id)->get();
-        return view('pages.admin.showsiswa')->with(['singleSiswa'=>$singleSiswa]);
+        $singleSiswa = Siswa::where('id',$id)->first();
+        return view('pages.admin.showsiswa')->with(['siswa'=>$singleSiswa]);
     }
 
     public function store($id){
         $siswa = Siswa::find($id);
-        $siswa->status_daftar = 'lulus';
+        $siswa->status_daftar = 'Lulus';
         $siswa->save();
         Alert::success('Berhasil','Status siswa Lulus');
         return redirect('/pendaftar');
@@ -32,8 +32,8 @@ class AdminController extends Controller
     public function export($type){
         if ($type == 'pdf') {
             $data = Siswa::all();
-            $pdf = Pdf::loadView('pages.admin.export.pdf',['data'=>$data]);
-            return $pdf->download('Laporan PPDB 2024.pdf');
+            $pdf = Pdf::loadView('export.report',['data'=>$data]);
+            return $pdf->stream('Laporan PPDB 2024.pdf');
         }elseif ($type == 'xls') {
             return Excel::download(new SiswasExport, 'Laporan PPDB.xlsx');
         }

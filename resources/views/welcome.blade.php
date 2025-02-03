@@ -235,7 +235,7 @@
                     <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="card bg-transparent border-0 mb-3 mb-lg-0">
-                                <img src="https://placehold.co/200x200?text=Photo" class="img-fluid rounded-3" alt="">
+                                <img src="{{asset('/storage/kepsek.png')}}" class="img-fluid w-75 rounded-3" alt="image">
                             </div>
                         </div>
                     </div>

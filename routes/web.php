@@ -29,7 +29,7 @@ Route::get('/', [LandingController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 
 /****
@@ -38,7 +38,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard/admin', function () {
     return view('pages.admin.index');
-})->middleware(['auth','verified','admin'])->name('admin-dashboard');
+})->middleware(['auth','admin'])->name('admin-dashboard');
 
 
 Route::get('/user/form',function(){
@@ -47,22 +47,22 @@ Route::get('/user/form',function(){
 
 Route::get('/helpdesk', function () {
     return view('pages.helpdesk');
-})->middleware(['auth','verified'])->name('helpdesk');
+})->middleware(['auth'])->name('helpdesk');
 
 Route::get('/form', function () {
     return view('pages.form');
-})->middleware(['auth','verified'])->name('form');
+})->middleware(['auth'])->name('form');
 
-Route::get('/status', [SiswaController::class,'index'])->middleware(['auth','verified']);
+Route::get('/status', [SiswaController::class,'index'])->middleware(['auth']);
 
 Route::get('/statistik', function () {
     $siswa = Siswa::all();
     return view('pages.statistik')->with(['siswa'=>$siswa]);
-})->middleware(['auth','verified','can:is-admin'])->name('statistik');
+})->middleware(['auth','can:is-admin'])->name('statistik');
 
-Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','verified','can:is-admin'])->name('pendaftar');
-Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','verified','can:is-admin']);
-Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','verified','can:is-admin']);
+Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','can:is-admin'])->name('pendaftar');
+Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','can:is-admin']);
+Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','can:is-admin']);
 
 
 /****
@@ -70,11 +70,11 @@ Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['a
  ****/
 
 
-Route::post('/form', [SiswaController::class,'store'])->middleware(['auth','verified']);
+Route::post('/form', [SiswaController::class,'store'])->middleware(['auth']);
 
-Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth','verified']);
+Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth']);
 
-Route::get('/download',[SiswaController::class,'download'])->middleware(['auth','verified']);
+Route::get('/download',[SiswaController::class,'download'])->middleware(['auth']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

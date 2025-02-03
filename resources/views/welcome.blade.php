@@ -193,27 +193,27 @@
                     </div><!-- end col-->
                 </div><!-- end row-->
                 <div class="row justify-content-center">
-                    {{-- <div class="col-lg-4 col-md-7 mt-sm-4">
-                        <div data-aos="fade-right" data-aos-duration="1800">
-                            <div class="feature-card p-3 py-sm-4 rounded d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="mdi mdi-responsive text-primary float-start me-3 h2"></i>
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                        <div class="content">
-                                            <h5 class="title">WiFi Gratis</h5>
-                                            <p class="text-muted">One disadvantage of Lorum Ipsum is that in certain letters which is said more than.</p>
-                                        </div>
+                        <div class="col-lg-4 col-md-7 mt-sm-4">
+                            <div data-aos="fade-right" data-aos-duration="1800">
+                                <div class="feature-card p-3 py-sm-4 rounded d-flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="mdi mdi-trophy-outline text-primary float-start me-3 h2"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                            <div class="content">
+                                                <h5 class="title">Sanggar Tari dan Bimbingan Prestasi</h5>
+                                                <p class="text-muted">Menyediakan fasilitas untuk mendukung pengembangan bakat tari dan prestasi akademik siswa sekaligus Melatih  kepercayaan diri dan disiplin</p>
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
                     <div class="col-lg-4 col-md-7 mt-sm-4">
                         <div class="feature-card p-3 py-sm-4 rounded">
-                            <i class="mdi mdi-layers-triple-outline text-primary float-start me-3 h2"></i>
+                            <i class="mdi mdi-school text-primary float-start me-3 h2"></i>
                             <div class="content d-block overflow-hidden">
                                 <h5 class="title">Tenaga Pengajar Kompeten</h5>
-                                <p class="text-muted mt-2">Tenaga Pengajar yang kompeten dengna metode pembelajaran terkini yang efektif dan mampu dipahami dengna baik oleh siswa</p>
+                                <p class="text-muted mt-2">Tenaga Pengajar yang kompeten dengan metode pembelajaran terkini yang efektif dan mampu dipahami dengan baik oleh siswa</p>
                                 {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                             </div>
                         </div>
@@ -221,10 +221,10 @@
                     <div class="col-lg-4 col-md-7 mt-sm-4">
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <div class="feature-card p-3 py-sm-4 rounded">
-                                <i class="mdi mdi-clipboard-flow-outline text-primary float-start me-3 h2"></i>
+                                <i class="mdi mdi-clipboard-pulse-outline text-primary float-start me-3 h2"></i>
                                 <div class="content d-block overflow-hidden">
                                     <h5 class="title">Laboratorium Komputer dan Fisika<i class="fas fa-kiss-wink-heart    "></i> </h5>
-                                    <p class="text-muted mt-2">Memiliki laboratorium Fisika dan komputer dengna fasilitas lengkap untuk menunjang kegiatan praktikum</p>
+                                    <p class="text-muted mt-2">Memiliki laboratorium Fisika dan komputer dengan fasilitas lengkap untuk menunjang kegiatan praktikum</p>
                                     {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                 </div>
                             </div>
@@ -243,11 +243,11 @@
                         <div data-aos="fade-left" data-aos-duration="1800">
                             <h3 class="feature-heading mb-2">Kepala Sekolah</h3>
                             <p class="text-muted">Now that we've aligned the details, it's time to get things mapped out and organized. Now that we've aligned the details. </p>
-                            <ul class="feature-list">
+                            {{-- <ul class="feature-list">
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Riwayat Pendidikan</li>
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Prestasi</li>
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Kontak</li>
-                            </ul>
+                            </ul> --}}
                             {{-- <a class="btn btn-primary" href="avascipt:void(0)">Learn more</a> --}}
                         </div>
                     </div><!-- end col -->
@@ -341,7 +341,7 @@
                         <div data-aos="fade-down" data-aos-duration="1800">
                             <h3 class="fw-bold">Bergabunglah di SMP 1 Campalagian</h3>
                             <p>Bergabung dengan lebih dari 500 siswa dan kembangkan kreatifitas dan potensi kamu bersama kami</p>
-                            <a class="btn btn-primary" href="javascript:void(0)">Daftar Sekarang</a>
+                            <a class="btn btn-primary" href="/register">Daftar Sekarang</a>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row-->

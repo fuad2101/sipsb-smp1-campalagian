@@ -132,7 +132,7 @@
             @enderror
             </div>
             <div class="col">
-                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm @error('kk') is-invalid @enderror"" type="file" name="kk" id="" accept=".pdf">
+                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm @error('kk') is-invalid @enderror"" type="file" name="kk" id="" accept=".jpg,.jpeg">
                 @error('kk')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -143,7 +143,7 @@
 
         <div class="row">
             <div class="col">
-                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm @error('akta') is-invalid @enderror"" type="file" name="akta" id="" accept=".pdf">
+                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm @error('akta') is-invalid @enderror"" type="file" name="akta" id="" accept=".jpg,.jpeg">
                 @error('akta')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -151,7 +151,7 @@
             @enderror
             </div>
             <div class="col">
-                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror"" type="file" name="ijazah" id="" accept=".pdf">
+                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror"" type="file" name="ijazah" id="" accept=".jpg,.jpeg">
                 @error('ijazah')
                 <div class="invalid-feedback">
                     {{$message}}

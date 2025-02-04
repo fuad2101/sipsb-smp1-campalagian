@@ -235,14 +235,14 @@
                     <div class="col-lg-6">
                         <div data-aos="fade-right" data-aos-duration="1800">
                             <div class="card bg-transparent border-0 mb-3 mb-lg-0">
-                                <img src="{{asset('/storage/kepsek.png')}}" class="img-fluid w-75 rounded-3" alt="image">
+                                <img src="{{asset('/storage/kepsek.png')}}" class="img img-thumbnail img-fluid w-75 rounded-3" alt="image">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div data-aos="fade-left" data-aos-duration="1800">
-                            <h3 class="feature-heading mb-2">Kepala Sekolah</h3>
-                            <p class="text-muted">Now that we've aligned the details, it's time to get things mapped out and organized. Now that we've aligned the details. </p>
+                            <h3 class="feature-heading mb-2">Ramli Syamsuddin, S.Pd.,M.Si</h3>
+                            <p class="text-muted">Alamat : Jl. Poros Majene Desa Bonde Kec. Campalagian</p>
                             {{-- <ul class="feature-list">
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Riwayat Pendidikan</li>
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Prestasi</li>
@@ -1409,7 +1409,7 @@
                             </div>
                             </div>
                         </div>
-                        <div class="col">
+                        {{-- <div class="col">
                             <div class="card h-100">
                             <img src="http://dummy-images.com/sport/dummy-480x270-HockeyStick.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -1427,7 +1427,7 @@
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col">
                             <div class="card h-100">
                             <img src="{{asset('/storage/ekstrakulikuler/tari/2.jpg')}}" class="card-img-top" alt="...">
@@ -1442,7 +1442,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="http://dummy-images.com/sport/dummy-480x270-HockeyStick.jpg" class="card-img-top" alt="...">
+                            <img src="{{asset('/storage/ekstrakulikuler/bimkos/1.jpg')}} " class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Layanan Bimbingan Konseling</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>

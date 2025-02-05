@@ -193,21 +193,21 @@
                     </div><!-- end col-->
                 </div><!-- end row-->
                 <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-7 mt-sm-4">
-                            <div data-aos="fade-right" data-aos-duration="1800">
-                                <div class="feature-card p-3 py-sm-4 rounded d-flex">
-                                    <div class="flex-shrink-0">
-                                        <i class="mdi mdi-trophy-outline text-primary float-start me-3 h2"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ms-2">
-                                            <div class="content">
-                                                <h5 class="title">Sanggar Tari dan Bimbingan Prestasi</h5>
-                                                <p class="text-muted">Menyediakan fasilitas untuk mendukung pengembangan bakat tari dan prestasi akademik siswa sekaligus Melatih  kepercayaan diri dan disiplin</p>
-                                            </div>
-                                    </div>
+                    <div class="col-lg-4 col-md-7 mt-sm-4">
+                        <div data-aos="fade-right" data-aos-duration="1800">
+                            <div class="feature-card p-3 py-sm-4 rounded d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="mdi mdi-trophy-outline text-primary float-start me-3 h2"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-2">
+                                        <div class="content">
+                                            <h5 class="title">Sanggar Tari dan Bimbingan Prestasi</h5>
+                                            <p class="text-muted">Menyediakan fasilitas untuk mendukung pengembangan bakat tari dan prestasi akademik siswa sekaligus Melatih  kepercayaan diri dan disiplin</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="col-lg-4 col-md-7 mt-sm-4">
                         <div class="feature-card p-3 py-sm-4 rounded">
                             <i class="mdi mdi-school text-primary float-start me-3 h2"></i>
@@ -225,6 +225,30 @@
                                 <div class="content d-block overflow-hidden">
                                     <h5 class="title">Laboratorium Komputer dan Fisika<i class="fas fa-kiss-wink-heart    "></i> </h5>
                                     <p class="text-muted mt-2">Memiliki laboratorium Fisika dan komputer dengan fasilitas lengkap untuk menunjang kegiatan praktikum</p>
+                                    {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                    <div class="col-lg-4 col-md-7 mt-sm-4">
+                        <div data-aos="fade-left" data-aos-duration="1800">
+                            <div class="feature-card p-3 py-sm-4 rounded">
+                                <i class="mdi mdi-hospital-box-outline text-primary float-start me-3 h2"></i>
+                                <div class="content d-block overflow-hidden">
+                                    <h5 class="title">UKS (Unit Kesehatan Sekolah) <i class="fas fa-kiss-wink-heart"></i> </h5>
+                                    <p class="text-muted mt-2">Menyediakan layanan Kesehatan dasar seperti pemeriksaan kesehatan, pengobatan ringan, dan edukasi kesehatan</p>
+                                    {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                    <div class="col-lg-4 col-md-7 mt-sm-4">
+                        <div data-aos="fade-left" data-aos-duration="1800">
+                            <div class="feature-card p-3 py-sm-4 rounded">
+                                <i class="mdi mdi-signal-variant text-primary float-start me-3 h2"></i>
+                                <div class="content d-block overflow-hidden">
+                                    <h5 class="title">Wifi<i class="fas fa-kiss-wink-heart    "></i> </h5>
+                                    <p class="text-muted mt-2">Jaringan WiFi yang stabil dan cepat untuk mendukung kegiatan belajar mengajar serta keamanan jaringan yang terjaga dengan baik</p>
                                     {{-- <a href="javascipt:void(0)" class="text-dark">Read More <i class="mdi mdi-chevron-right"></i></a> --}}
                                 </div>
                             </div>
@@ -1375,80 +1399,164 @@
                 <div class="row row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card h-100">
-                            <img src="{{asset('/storage/ekstrakulikuler/pramuka/1.jpg')}}" class="card-img-top" alt="...">
+                            <div id="pramuka" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pramuka/1.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pramuka/2.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pramuka/3.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pramuka/4.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#pramuka" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#pramuka" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title">Pramuka</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
+                                <h5 class="card-title"> Pramuka</h5>
+                                <p class="card-text">Pramuka bukan hanya sekadar kegiatan ekstrakurikuler, tapi juga wadah untuk menempa karakter dan menumbuhkan jiwa kepemimpinan. Melalui kegiatan Pramuka, siswa akan dilatih untuk bekerja sama dalam tim, memecahkan masalah, dan mengambil keputusan yang tepat. Mari bergabung dan jadi bagian dari keluarga besar Pramuka SMP 1 Campalagian!</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                             </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="{{asset('/storage/ekstrakulikuler/pramuka/2.jpg')}}" class="card-img-top" alt="...">
+                            <div id="pmr" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pmr/1.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pmr/2.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/pmr/3.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#pmr" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#pmr" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">PMR</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
+                                <p class="card-text">Siap menjadi pahlawan tanpa tanda jasa? PMR SMP 1 Campalagian mengajarkan siswa untuk  peduli serta berkontribusi dalam kegiatan kemanusiaan. Mari bergabung dan menjadi bagian dari tim relawan yang solid!</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                             </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="{{asset('/storage/ekstrakulikuler/osis/1.jpg')}}" class="card-img-top" alt="...">
+                            <div id="osis" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{{asset('/storage/ekstrakulikuler/osis/1.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/osis/2.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/osis/3.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#osis" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#osis" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">OSIS</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
+                                <p class="card-text">OSIS adalah wadah yang tepat untuk melatih kepemimpinan, mengembangkan kreativitas, dan belajar bekerja sama dalam tim. Ayo bergabung dengan OSIS SMP 1 Campalagian dan jadilah siswa yang aktif, inovatif, dan berprestasi!"</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                             </div>
                             </div>
                         </div>
-                        {{-- <div class="col">
-                            <div class="card h-100">
-                            <img src="http://dummy-images.com/sport/dummy-480x270-HockeyStick.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Bimbingan Prestasi</h5>
-                                <p class="card-text">
-                                    <ul>
-                                        <li>OSN</li>
-                                        <li>Matematika</li>
-                                        <li>IPA</li>
-                                        <li>IPS</li>
-                                    </ul>
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                            </div>
-                        </div> --}}
                         <div class="col">
                             <div class="card h-100">
-                            <img src="{{asset('/storage/ekstrakulikuler/tari/2.jpg')}}" class="card-img-top" alt="...">
+                            <div id="tari" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{{asset('/storage/ekstrakulikuler/tari/1.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/tari/2.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/tari/3.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/tari/4.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#tari" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#tari" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Seni Tari</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
+                                <p class="card-text">Suka menari dan ingin mengembangkan bakat? Ayo bergabung bersama kelompok Seni tari SMP 1 Campalagian yang kreatif dan bersemangat!. Pelajari berbagai jenis tarian, untuk jadi penari profesional!</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                             </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                            <img src="{{asset('/storage/ekstrakulikuler/bimkos/1.jpg')}} " class="card-img-top" alt="...">
+                            <div id="bimkos" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{{asset('/storage/ekstrakulikuler/bimkos/1.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{{asset('/storage/ekstrakulikuler/bimkos/2.jpg')}}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#bimkos" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#bimkos" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Layanan Bimbingan Konseling</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non, id fuga sit consequuntur, eveniet, itaque iure rerum architecto earum eius.</p>
+                                <p class="card-text">Kesehatan mental sama pentingnya dengan kesehatan fisik. Jangan biarkan masalahmu menumpuk dan mengganggu kegiatan belajar. Di SMP 1 Campalagian, ada layanan bimbingan konseling yang siap mendengarkan keluh kesahmu, memberikan dukungan, dan membantu mencari solusi terbaik untuk mendukung siswa meraih prestasi terbaik!.</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                             </div>
                             </div>
                         </div>

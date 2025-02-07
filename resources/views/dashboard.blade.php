@@ -115,36 +115,62 @@ $role = auth()->user()->role;
             <span class="title">Statistik</span>
         </a>
     </li>
-    <li class="nav-item dropdown" style="padding:10px 15px;">
+    {{-- <li class="nav-item dropdown" style="padding:10px 15px;">
             <span class="icon-holder">
                 <i class="anticon anticon-logout"></i>
             </span>
             <form action="{{ route('logout') }}" method="post" class="d-inline">
             @csrf
             <button class="btn" >Logout</button>
-            </form>
+            </form> --}}
             {{-- <span class="title">Logout</span> --}}
-    </li>
-    {{-- <li class="nav-item dropdown">
+    {{-- </li> --}}
+    <li class=  "nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">
             <span class="icon-holder">
-                <i class="anticon anticon-pie-chart"></i>
+                <i class="anticon anticon-user"></i>
             </span>
-            <span class="title">Dropdown</span>
+            <span class="title">Tenaga Pengajar</span>
             <span class="arrow">
                 <i class="arrow-icon"></i>
             </span>
         </a>
         <ul class="dropdown-menu">
             <li>
-                <a href="">Dropdown 1</a>
+                <a href="/kepsek">Kepala Sekolah</a>
             </li>
             <li>
-                <a href="">Dropdown 2</a>
+                <a href="/guru">Guru</a>
             </li>
         </ul>
     </li>
-    <li class="nav-item dropdown">
+    <li class=  "nav-item dropdown">
+        <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+                <i class="anticon anticon-swap"></i>
+            </span>
+            <span class="title">Manajemen User</span>
+            <span class="arrow">
+                <i class="arrow-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="">Admin</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown" style="padding:10px 15px;">
+        <span class="icon-holder">
+            <i class="anticon anticon-logout"></i>
+        </span>
+        <form action="{{ route('logout') }}" method="post" class="d-inline">
+        @csrf
+        <button class="btn" >Logout</button>
+        </form>
+        {{-- <span class="title">Logout</span> --}}
+    </li>
+    {{-- <li class="nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">
             <span class="icon-holder">
                 <i class="anticon anticon-file"></i>

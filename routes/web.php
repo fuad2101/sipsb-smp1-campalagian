@@ -4,9 +4,12 @@ use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ManageSiswaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -53,6 +56,11 @@ Route::get('/form', function () {
     return view('pages.form');
 })->middleware(['auth'])->name('form');
 
+Route::get('guru',[GuruController::class,'index']);
+Route::get('kepsek',[KepsekController::class,'index']);
+Route::get('kepsek/edit',[KepsekController::class,'edit']);
+Route::post('kepsek/edit',[KepsekController::class,'update']);
+
 Route::get('/status', [SiswaController::class,'index'])->middleware(['auth']);
 
 Route::get('/statistik', function () {
@@ -60,10 +68,9 @@ Route::get('/statistik', function () {
     return view('pages.statistik')->with(['siswa'=>$siswa]);
 })->middleware(['auth','can:is-admin'])->name('statistik');
 
-Route::get('/pendaftar', [AdminController::class,'index'])->middleware(['auth','can:is-admin'])->name('pendaftar');
-Route::get('/pendaftar/{id}', [AdminController::class,'show'])->middleware(['auth','can:is-admin']);
-Route::post('/pendaftar/{id}', [AdminController::class,'store'])->middleware(['auth','can:is-admin']);
-
+Route::get('/pendaftar', [ManageSiswaController::class,'index'])->middleware(['auth','can:is-admin'])->name('pendaftar');
+Route::get('/pendaftar/{id}', [ManageSiswaController::class,'show'])->middleware(['auth','can:is-admin']);
+Route::post('/pendaftar/{id}', [ManageSiswaController::class,'store'])->middleware(['auth','can:is-admin']);
 
 /****
  * Siswa

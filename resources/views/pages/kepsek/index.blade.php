@@ -2,11 +2,6 @@
 
 @section('content')
 
-    <div class="row mb-5">
-        <a class="btn btn-danger mr-2" href="/export/pdf" target="_blank">Export PDF</a>
-        <a class="btn btn-success" href="/export/xls" target="_blank">Export Excel</a>
-    </div>
-
     <table class="table" id="myTable" >
         <thead class="thead-dark">
             <tr>
@@ -17,12 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Ramli Syamsuddin</td>
-                <td>Jl. Poros Majene Desa Bonde Kec. Campalagian</td>
-                <td><a href="/kepsek/edit" class="btn btn-warning">Edit</span><span class="btn btn-danger">Hapus</span></td>
-            </tr>
+            @foreach ($val as $val)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$val->nama}}</td>
+                    <td>{{$val->alamat}}</td>
+                    <td><a href="/kepsek/edit" class="btn btn-warning">Edit <a href="" class="btn btn-danger">Hapus</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 

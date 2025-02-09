@@ -16,7 +16,7 @@ class ManageSiswaController extends Controller
     public function index()
     {
         $data = Siswa::all();
-        return view('pages.admin.pendaftar')->with(['data'=>$data]);
+        return view('pages.siswa.pendaftar')->with(['data'=>$data]);
     }
 
     /**
@@ -45,7 +45,7 @@ class ManageSiswaController extends Controller
     public function show(string $id)
     {
         $singleSiswa = Siswa::where('id',$id)->first();
-        return view('pages.admin.showsiswa')->with(['siswa'=>$singleSiswa]);
+        return view('pages.siswa.showsiswa')->with(['siswa'=>$singleSiswa]);
     }
 
     /**

@@ -137,15 +137,15 @@ $role = auth()->user()->role;
         </a>
         <ul class="dropdown-menu">
             <li>
-                <a href="/kepsek">Kepala Sekolah</a>
+                <a href="/guru">Guru</a>
             </li>
             <li>
-                <a href="/guru">Guru</a>
+                <a href="/kepsek">Kepala Sekolah</a>
             </li>
         </ul>
     </li>
     <li class=  "nav-item dropdown">
-        <a class="dropdown-toggle" href="javascript:void(0);">
+        <a class="dropdown-toggle" href="javascript:void">
             <span class="icon-holder">
                 <i class="anticon anticon-swap"></i>
             </span>
@@ -156,7 +156,7 @@ $role = auth()->user()->role;
         </a>
         <ul class="dropdown-menu">
             <li>
-                <a href="">Admin</a>
+                <a href="/admin">Admin</a>
             </li>
         </ul>
     </li>

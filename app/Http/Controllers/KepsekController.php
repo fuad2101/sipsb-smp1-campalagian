@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guru;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KepsekController extends Controller
 {
@@ -12,7 +13,8 @@ class KepsekController extends Controller
      */
     public function index()
     {
-        return view('pages.kepsek.index');
+        $data = Guru::where('jabatan','kepala sekolah')->get();
+        return view('pages.kepsek.index')->with(['val'=>$data]);
     }
 
     /**
@@ -51,9 +53,20 @@ class KepsekController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $kepsek = Guru::where('jabatan','kepala sekolah')->first();
+        // dd($kepsek);
+        if ($request->nama != $kepsek->nama || $request->alamat != $kepsek->alamat) {
+            $kepsek->nama = $request->nama ;
+            $kepsek->alamat = $request->alamat ;
+            $kepsek->save();
+            Alert::success('Berhasil','Data berhasil disimpan');
+            return redirect()->action([KepsekController::class,'index']);
+        }else{
+            Alert::info('Info','Tidak ada data yang dirubah');
+            return redirect()->action([KepsekController::class,'index']);
+        }
     }
 
     /**

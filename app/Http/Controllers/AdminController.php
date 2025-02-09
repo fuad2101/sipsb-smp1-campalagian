@@ -12,8 +12,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class AdminController extends Controller
 {
     public function index(){
-        $data = Siswa::all();
-        return view('pages.admin.pendaftar')->with(['data'=>$data]);
+        return view('pages.admin.index');
     }
 
     public function show($id){

@@ -1,16 +1,11 @@
 @extends('dashboard')
 
 @section('content')
-
-    <form action="/edit/kepsek" method="post">
+    <form action="/kepsek/edit" method="post">
         @csrf
-        <input type="text" value="{{$val->nama}}">
-        <input type="text" value="">
-        <input type="text" value="">
-        <input type="text" value="">
-        <input type="text" value="">
-        <input type="text" value="">
-        <button class="btn btn-primary" type="submit">Simpan</button>
+        <input class="form-control" type="text" value="{{$val->nama}}" name="nama">
+        <input class="form-control" type="text" value="{{$val->alamat}}" name="alamat">
+        <button class="btn btn-primary mt-3" type="submit">Update</button>
     </form>
 
 @endsection

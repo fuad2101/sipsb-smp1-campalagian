@@ -39,6 +39,8 @@ Route::get('/dashboard', function () {
  * Admin
  ****/
 
+Route::get('admin',[AdminController::class,'index']);
+
 Route::get('/dashboard/admin', function () {
     return view('pages.admin.index');
 })->middleware(['auth','admin'])->name('admin-dashboard');
@@ -57,6 +59,9 @@ Route::get('/form', function () {
 })->middleware(['auth'])->name('form');
 
 Route::get('guru',[GuruController::class,'index']);
+Route::get('guru/edit/{id}',[GuruController::class,'edit']);
+Route::post('guru/edit/{id}',[GuruController::class,'update']);
+
 Route::get('kepsek',[KepsekController::class,'index']);
 Route::get('kepsek/edit',[KepsekController::class,'edit']);
 Route::post('kepsek/edit',[KepsekController::class,'update']);

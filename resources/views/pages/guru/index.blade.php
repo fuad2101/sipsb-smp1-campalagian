@@ -12,17 +12,23 @@
             <tr>
                 <th scope="">No</th>
                 <th>Nama</th>
+                <th>Alamat</th>
                 <th>Mata Pelajaran</th>
+                <th>Jabatan</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Nama Guru</td>
-                <td>Mata Pelajaran</td>
-                <td><span class="btn btn-warning">Edit</span><span class="btn btn-danger">Hapus</span></td>
-            </tr>
+            @foreach ($val as $val)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$val->nama}}</td>
+                    <td>{{$val->alamat}}</td>
+                    <td>{{$val->mata_pelajaran}}</td>
+                    <td>{{$val->jabatan}}</td>
+                    <td><a href="/guru/edit/{{$val->id}}" target="_blank" class="btn btn-sm btn-warning">Edit<a href="" class="btn btn-sm btn-danger">Hapus</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 

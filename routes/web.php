@@ -40,6 +40,11 @@ Route::get('/dashboard', function () {
  ****/
 
 Route::get('admin',[AdminController::class,'index']);
+Route::get('admin/create',[AdminController::class,'create']);
+Route::post('admin/create',[AdminController::class,'store']);
+Route::get('admin/edit/{id}',[AdminController::class,'edit']);
+Route::delete('admin/edit/{id}',[AdminController::class,'destroy']);
+// Route::post('admin/edit/{id}',[AdminController::class,'edit']);
 
 Route::get('/dashboard/admin', function () {
     return view('pages.admin.index');

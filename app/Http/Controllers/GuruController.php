@@ -55,18 +55,15 @@ class GuruController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $guru = guru::where('id',$id)->first();
-        dd($guru);
-        if ($request->nama != $guru->nama || $request->alamat != $guru->alamat) {
-            $guru->nama = $request->nama ;
-            $guru->alamat = $request->alamat ;
-            $guru->save();
-            Alert::success('Berhasil','Data berhasil disimpan');
-            return redirect()->action([GuruController::class,'index']);
-        }else{
-            Alert::info('Info','Tidak ada data yang dirubah');
-            return redirect()->action([GuruController::class,'index']);
-        }
+        $guru = Guru::where('id',$id)->first();
+        $guru->nama = $request->nama ;
+        $guru->alamat = $request->alamat ;
+        $guru->mata_pelajaran = $request->mata_pelajaran ;
+        $guru->jabatan = $request->jabatan ;
+        $guru->save();
+
+        Alert::success('Berhasil','Data berhasil disimpan');
+        return redirect()->action([GuruController::class,'index']);
     }
 
     /**

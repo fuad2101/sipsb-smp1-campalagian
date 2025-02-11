@@ -82,7 +82,7 @@ class SiswaController extends Controller
     public function download(){
         $email = auth()->user()->email;
         $data = Siswa::where('email',$email)->first();
-        $pdf = Pdf::loadView('export.view.kartu-daftar', ['siswa'=>$data]);
+        $pdf = Pdf::loadView('export.kartu-daftar', ['siswa'=>$data]);
         // return view('export.view.kartu-daftar')->with(['siswa'=>$data]);
         return $pdf->stream('kartu-pendaftaran.pdf');
     }

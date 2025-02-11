@@ -21,11 +21,14 @@
        .foto{
         height: 25%;
        }
+       .logo-sekolah{
+        height: 85px;
+       }
     </style>
     <title>Kartu Pendaftaran</title>
 </head>
 <body>
-    <img src="{{public_path('logo.png')}}" alt="">
+    <img class="logo-sekolah" src="{{public_path('logo-sekolah.jpg')}}" alt="">
     <h2>Kartu Pendaftaran Calon Siswa</h2>
     <h3>SMP Negri 1 Campalagian</h3>
     <div class="container">
@@ -87,9 +90,9 @@
                 </tbody>
             </table>
         </div>
-        <div>
+        {{-- <div>
             <img class="foto" src="{{ public_path($siswa->foto) }}" alt="">
-        </div>
+        </div> --}}
     </div>
     <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"
 </p>

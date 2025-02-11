@@ -16,9 +16,17 @@
                             {{$message}}
                         </div>
                     @enderror
-                    <button class="btn btn-primary mt-3" type="submit">Upload</button>
+
+                    @if (session('success'))
+                    <div class="alert alert-success">
+                        <b>{{ session('success') }}</b>
+                    </div>
+                    @endif
+
+                    <button class="btn btn-sm btn-primary mt-3" type="submit">Upload</button>
                 </form>
-                <a class="btn btn-primary my-4" target="_blank" href="/download">Download Kartu Pendaftaran</a>
+
+                <a class="btn btn-success my-4" target="_blank" href="/download">Download Kartu Pendaftaran</a>
             @endif
         @endforeach
 

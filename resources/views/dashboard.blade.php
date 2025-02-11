@@ -95,8 +95,8 @@ $role = auth()->user()->role;
     @section('content')
     <div class="opacity-50">
         <img  class="img img-thumbnail w-100 h-50" src=" {{asset('/storage/home-1-new.png')}} " alt="">
-        @endsection
     </div>
+    @endsection
 
     @section('sidebar-menu')
     <li class="nav-item dropdown">
@@ -170,6 +170,16 @@ $role = auth()->user()->role;
         </form>
         {{-- <span class="title">Logout</span> --}}
     </li>
+    <hr>
+    @include('components.sipsb.update')
+    <li class="nav-item dropdown">
+        <a href="/feedback">
+            <span class="icon-holder">
+                <i class="anticon anticon-google"></i>
+            </span>
+            <span class="title">Feedback</span>
+        </a>
+    </li>
     {{-- <li class="nav-item dropdown">
         <a class="dropdown-toggle" href="javascript:void(0);">
             <span class="icon-holder">
@@ -205,6 +215,7 @@ $role = auth()->user()->role;
     @section('content')
     <img  class="img img-thumbnail w-full" src=" {{asset('/storage/home-1-new.png')}} " alt="">
     @endsection
+
     @section('sidebar-menu')
 
     @if (\App\Models\Siswa::where('email',auth()->user()->email)->first() == NULL)

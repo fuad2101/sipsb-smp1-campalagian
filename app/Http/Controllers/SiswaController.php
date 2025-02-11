@@ -76,7 +76,7 @@ class SiswaController extends Controller
         $bar->save();
 
         Alert::info('Upload Berhasil','Bukti bayar kamu berhasil diupload');
-        return redirect()->back();
+        return redirect()->back()->with('success','Upload bukti bayar berhasil');
     }
 
     public function download(){

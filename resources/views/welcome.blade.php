@@ -265,6 +265,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div data-aos="fade-left" data-aos-duration="1800">
+                            <h1 class="">Kepala Sekolah</h1>
                             <h3 class="feature-heading mb-2">Ramli Syamsuddin, S.Pd.,M.Si</h3>
                             <p class="text-muted">Alamat : Jl. Poros Majene Desa Bonde Kec. Campalagian</p>
                             {{-- <ul class="feature-list">

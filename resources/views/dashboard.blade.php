@@ -10,7 +10,7 @@ $role = auth()->user()->role;
 
 
     @section('content')
-    <img  class="img img-thumbnail w-50" src=" {{asset('/storage/home-1-new.png')}} " alt="">
+    <img  class="img img-thumbnail w-100" src="{{asset('/storage/home-1-dashboard.png')}} " alt="">
     @endsection
 
     @section('sidebar-menu')
@@ -94,7 +94,7 @@ $role = auth()->user()->role;
 
     @section('content')
     <div class="opacity-50">
-        <img  class="img img-thumbnail w-100 h-50" src=" {{asset('/storage/home-1-new.png')}} " alt="">
+        <img  class="img img-thumbnail w-100 h-50" src="{{asset('/storage/home-1-dashboard.png')}} " alt="">
     </div>
     @endsection
 
@@ -173,7 +173,7 @@ $role = auth()->user()->role;
     <hr>
     @include('components.sipsb.update')
     <li class="nav-item dropdown">
-        <a href="/feedback">
+        <a href="#" >
             <span class="icon-holder">
                 <i class="anticon anticon-google"></i>
             </span>

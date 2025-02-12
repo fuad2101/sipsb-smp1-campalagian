@@ -11,15 +11,18 @@
         line-height: 5px;
        }
        .container{
-        border: 1px solid black;
-        display: flex;
-        justify-content: space-between;
+         display: flex;
+         border: 1px solid black;
+       }
+       table-container{
        }
        table td{
         padding: 10px;
        }
        .foto{
-        height: 25%;
+        max-height: 25%;
+       }
+       foto-container{
        }
        .logo-sekolah{
         height: 85px;
@@ -32,7 +35,11 @@
     <h2>Kartu Pendaftaran Calon Siswa</h2>
     <h3>SMP Negri 1 Campalagian</h3>
     <div class="container">
-        <div class="">
+        <div class="foto-container">
+            {{-- <img class="foto" src="/storage/foto/kepsek.jpg" alt="img"> --}}
+            <img class="foto" src="{{public_path($siswa->foto)}}" alt="">
+        </div>
+        <div class="table-container">
             <table class="">
                 <tbody>
                     <tr>
@@ -90,9 +97,6 @@
                 </tbody>
             </table>
         </div>
-        {{-- <div>
-            <img class="foto" src="{{ public_path($siswa->foto) }}" alt="">
-        </div> --}}
     </div>
     <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"
 </p>

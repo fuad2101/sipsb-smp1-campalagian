@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>SIPSB | SMP1 Campalagian</title>
+        <title>SIMPPDB | SMP Negeri 1 Campalagian</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Premium Bootstrap v5.3.2 Landing Page Template" />
-        <meta name="keywords" content="bootstrap v5.3.2, premium, marketing, multipurpose" />
+        <meta name="description" content="Sistem Informasi Penerimaan Siswa Baru SMP 1 Campalagian" />
+        <meta name="keywords" content="ppdb,campalagian,smp 1 campalagian" />
         <meta content="Themesdesign" name="author" />
 
         <!-- fevicon -->
@@ -65,6 +65,10 @@
                         <li class="nav-item">
                             <a class="nav-link mb-3 mb-lg-0" href="#contact">Alamat</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Kontak</a>
+                        </li>
+
                     </ul>
                     <!-- Button trigger modal -->
                     {{-- <button type="button" class="btn btn-primary nav-btn" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
@@ -78,56 +82,104 @@
             </div><!-- End container -->
         </nav>
         <!-- End Navbar -->
-          <!-- Modal -->
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
 
-                        <div class="modal-body p-5">
-                            <div class="text-center mb-5">
-                                <h4 class="modal-title" id="exampleModalLongTitle">Sing Up</h4>
-                                <p class="fs-14">Already Have an account? <a href="javascript:void(0)">Log in here</a></p>
+        <!-- Kontak Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body p-5">
+                        <div class="text-center mb-2">
+                            <h4 class="modal-title" id="exampleModalLongTitle">Kontak</h4>
+                            <p class="fs-14">Ada pertanyaan? Hubungi kami <b>081243368726</b> </p>
+                        </div>
+                        <div class="d-grid gap-3">
+                            <a class="btn btn-primary btn-lg btn-success" targe="_blank" thref="https://api.whatsapp.com/send/?phone=6281243368726&text&type=phone_number&app_absent=0">
+                            <span class="d-flex justify-content-center align-items-center">
+                                {{-- <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description"> --}}
+                                Chat WhatsApp
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                    {{-- <div class="modal-footer d-block text-center px-5 pb-5">
+                        <p class="footer-text mb-4">Trusted by the world's best teams</p>
+                        <div class="mx-auto">
+                            <div class="row justify-content-between">
+                            <div class="col">
+                                <img class="img-fluid" src="images/github.svg" alt="Logo">
                             </div>
-                            <div class="d-grid gap-3">
-                                <a class="btn btn-outline-dark btn-lg" href="javascript:void(0)">
-                                <span class="d-flex justify-content-center align-items-center">
-                                    <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description">
-                                    Sign up with Google
-                                </span>
-                                </a>
-                                <a class="btn btn-primary btn-lg" href="javascript:void(0)">Sign up with Email</a>
-                                <div class="text-center">
-                                    <p class="mb-0 fs-13">By continuing you agree to our <a class="text-primary" href="javascript:void(0)">Terms and Conditions</a></p>
-                                </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/gitlab.svg" alt="Logo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/linkedin.svg" alt="Logo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/instagram.svg" alt="Logo">
+                            </div>
                             </div>
                         </div>
-                        <div class="modal-footer d-block text-center px-5 pb-5">
-                            <p class="footer-text mb-4">Trusted by the world's best teams</p>
-                            <div class="mx-auto">
-                              <div class="row justify-content-between">
-                                <div class="col">
-                                  <img class="img-fluid" src="images/github.svg" alt="Logo">
-                                </div>
-                                <div class="col">
-                                    <img class="img-fluid" src="images/gitlab.svg" alt="Logo">
-                                </div>
-                                <div class="col">
-                                    <img class="img-fluid" src="images/linkedin.svg" alt="Logo">
-                                </div>
-                                <div class="col">
-                                    <img class="img-fluid" src="images/instagram.svg" alt="Logo">
-                                </div>
-                              </div>
-                            </div>
-                            <!-- End Row -->
-                          </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
-            <!-- end modal -->
+        </div>
+        <!-- end modal -->
+
+
+        <!-- Modal -->
+        {{-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body p-5">
+                        <div class="text-center mb-5">
+                            <h4 class="modal-title" id="exampleModalLongTitle">Sing Up</h4>
+                            <p class="fs-14">Already Have an account? <a href="javascript:void(0)">Log in here</a></p>
+                        </div>
+                        <div class="d-grid gap-3">
+                            <a class="btn btn-outline-dark btn-lg" href="javascript:void(0)">
+                            <span class="d-flex justify-content-center align-items-center">
+                                <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description">
+                                Sign up with Google
+                            </span>
+                            </a>
+                            <a class="btn btn-primary btn-lg" href="javascript:void(0)">Sign up with Email</a>
+                            <div class="text-center">
+                                <p class="mb-0 fs-13">By continuing you agree to our <a class="text-primary" href="javascript:void(0)">Terms and Conditions</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-block text-center px-5 pb-5">
+                        <p class="footer-text mb-4">Trusted by the world's best teams</p>
+                        <div class="mx-auto">
+                            <div class="row justify-content-between">
+                            <div class="col">
+                                <img class="img-fluid" src="images/github.svg" alt="Logo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/gitlab.svg" alt="Logo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/linkedin.svg" alt="Logo">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="images/instagram.svg" alt="Logo">
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                        </div>
+                </div>
+            </div>
+        </div> --}}
+        <!-- end modal -->
 
         <div class="overflow-hidden-x">
             <!-- Start Home -->
@@ -1704,6 +1756,8 @@
         <!--end back-to-top-->
 
         <!--Custom js-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
         <script src="/oxhen-template/js/counter.js"></script>
 
         <!--Bootstrap Js-->

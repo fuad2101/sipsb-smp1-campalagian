@@ -7,8 +7,6 @@ $role = auth()->user()->role;
 
 
 @if ($role == "vip")
-
-
     @section('content')
     <img  class="img img-thumbnail w-100" src="{{asset('/storage/home-1-dashboard.png')}} " alt="">
     @endsection
@@ -213,13 +211,20 @@ $role = auth()->user()->role;
 
 @else
     @section('content')
-    <img  class="img img-thumbnail w-full" src=" {{asset('/storage/home-1-new.png')}} " alt="">
+    <img  class="img img-thumbnail w-full" src=" {{asset('/storage/home-1-dashboard.png')}} " alt="">
     @endsection
 
     @section('sidebar-menu')
 
+    <li class="nav-item dropdown">
+        <a href="/dashboard">
+            <span class="icon-holder">
+                <i class="anticon anticon-dashboard"></i>
+            </span>
+            <span class="title">Beranda</span>
+        </a>
+    </li>
     @if (\App\Models\Siswa::where('email',auth()->user()->email)->first() == NULL)
-
     <li class="nav-item dropdown">
         <a href="/form">
             <span class="icon-holder">
@@ -228,10 +233,7 @@ $role = auth()->user()->role;
             <span class="title">Formulir Pendaftaran</span>
         </a>
     </li>
-
-    @endif
-
-
+    @else
     <li class="nav-item dropdown">
         <a href="/status">
             <span class="icon-holder">
@@ -240,6 +242,8 @@ $role = auth()->user()->role;
             <span class="title">Status Pendaftaran</span>
         </a>
     </li>
+    @endif
+
     {{-- <li class="nav-item dropdown">
         <a href="/helpdesk">
             <span class="icon-holder">

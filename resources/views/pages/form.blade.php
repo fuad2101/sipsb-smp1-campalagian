@@ -23,6 +23,15 @@
     <form action="/form" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
+            <label for="" class="form-label">Nomor Registrasi:</label>
+            <input type="text" class="form-control form-control-sm @error('nama') is-invalid @enderror"  value="" name="nama" id="" aria-describedby="helpId" placeholder="" disabled />
+            @error('nama')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+            @enderror
+        </div>
+        <div class="mb-3">
             <label for="" class="form-label">Nama Lengkap</label>
             <input type="text" class="form-control form-control-sm @error('nama') is-invalid @enderror"  value="" name="nama" id="" aria-describedby="helpId" placeholder=""/>
             @error('nama')
@@ -158,6 +167,9 @@
                 </div>
                 @enderror
             </div>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="tes-online" id="" class="form-check-input" mandatory><label class="form-check-label" for="">Dengan ini saya menyatakan bersedia mengikuti seleksi mengikuti tes secara offline</label>
         </div>
         <button class="btn btn-primary mt-4 form-control" type="submit">Submit Pendaftaran</button>
 

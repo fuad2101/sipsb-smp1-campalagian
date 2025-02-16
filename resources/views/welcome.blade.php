@@ -189,7 +189,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <div class="home-heading">
-                            <h1 class="mb-3 text-white">Selamat Datang di Website SMP 1 <span class="typewrite text-primary d-none d-sm-inline-block" data-period="2000" data-type='[ "Campalagian" ]'>
+                            <h1 class="mb-3 text-white">Selamat Datang di Website SMP Negeri 1 <span class="typewrite text-primary d-none d-sm-inline-block" data-period="2000" data-type='[ "Campalagian" ]'>
                                 <span class="wrap"></span> </span>
                             </h1>
                         </div>

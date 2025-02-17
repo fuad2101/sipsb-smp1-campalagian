@@ -2,20 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
-use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Siswa;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Foundation\Http\FormRequest;
 
 class SiswaController extends Controller
 {
 
     public function index(Request $request){
+
+        $noreg = Siswa::select('no_registrasi')->latest()->first();;
+
+        if($noreg != NULL){
+            $noreg = $noreg->no_registrasi++ ;
+        }else {
+            $noreg = 1;
+        }
+
+        $nomor = Str::of($noreg)->padLeft(6,'02500');
+        return view('pages.form')->with(['nomor'=>$nomor]);
+    }
+
+    public function status(){
         $email = auth()->user()->email;
         $foo =  Siswa::where('email',$email)->get();
         return view('pages.status')->with(['foo'=>$foo]);
     }
+
 
     public function store(FormRequest $request){
         $files = $request->file();
@@ -41,7 +57,17 @@ class SiswaController extends Controller
         $kk = $files['kk'];
         $akta = $files['akta'];
 
-        $sukses = Siswa::create([
+        $noreg = Siswa::select('no_registrasi')->latest()->first();;
+        if($noreg != NULL){
+            $noreg = $noreg->no_registrasi++ ;
+        }else {
+            $noreg = 1;
+        }
+
+        $nomor = Str::of($noreg)->padLeft(6,'02500');
+
+        $insert = Siswa::create([
+            'no_registrasi'=>$nomor,
             'nama'=>$request->nama,
             'nisn'=>$request->nisn,
             'email'=>auth()->user()->email,
@@ -60,7 +86,7 @@ class SiswaController extends Controller
             'pend_terakhir'=>$request->pend_terakhir,
             ]);
 
-            if ($sukses) {
+            if ($insert) {
                 Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
                 return redirect('/status');
             }
@@ -83,7 +109,6 @@ class SiswaController extends Controller
         $email = auth()->user()->email;
         $data = Siswa::where('email',$email)->first();
         $pdf = Pdf::loadView('export.kartu-daftar', ['siswa'=>$data]);
-        // return view('export.view.kartu-daftar')->with(['siswa'=>$data]);
-        return $pdf->stream('kartu-pendaftaran.pdf');
+        return $pdf->stream();
     }
 }

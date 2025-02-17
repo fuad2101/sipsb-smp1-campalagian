@@ -59,9 +59,7 @@ Route::get('/helpdesk', function () {
     return view('pages.helpdesk');
 })->middleware(['auth'])->name('helpdesk');
 
-Route::get('/form', function () {
-    return view('pages.form');
-})->middleware(['auth'])->name('form');
+Route::get('/form',[SiswaController::class,'index'])->middleware(['auth'])->name('form');
 
 Route::get('guru',[GuruController::class,'index']);
 Route::get('guru/edit/{id}',[GuruController::class,'edit']);
@@ -71,7 +69,7 @@ Route::get('kepsek',[KepsekController::class,'index']);
 Route::get('kepsek/edit',[KepsekController::class,'edit']);
 Route::post('kepsek/edit',[KepsekController::class,'update']);
 
-Route::get('/status', [SiswaController::class,'index'])->middleware(['auth']);
+Route::get('/status', [SiswaController::class,'status'])->middleware(['auth']);
 
 Route::get('/statistik', function () {
     $siswa = Siswa::all();

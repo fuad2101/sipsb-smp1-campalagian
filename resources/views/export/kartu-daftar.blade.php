@@ -4,39 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
-       h2,h3{
+        h2,h3{
         text-align: center;
-        line-height: 5px;
-       }
-       .container{
-         display: flex;
-         border: 1px solid black;
-       }
-       table-container{
-       }
-       table td{
+        }
+        .container{
+        border: 1px solid black;
+        }
+        table-container{
+        }
+        table td{
         padding: 10px;
-       }
-       .foto{
+        }
+        .foto{
         max-height: 25%;
-       }
-       foto-container{
-       }
-       .logo-sekolah{
+        }
+        .logo-sekolah,.logo-pemkab{
         height: 85px;
-       }
+        }
+        .header{
+            width: 100%;
+        }
+        .header p{
+            text-align: center;
+            line-height: 3px;
+        }
+        .header p{
+            font-size: 20px;
+        }
+        .header p:last-child{
+            font-size: 12px;
+        }
     </style>
     <title>Kartu Pendaftaran</title>
 </head>
 <body>
-    <img class="logo-sekolah" src="{{public_path('logo-sekolah.jpg')}}" alt="">
-    <h2>Kartu Pendaftaran Calon Siswa</h2>
-    <h3>SMP Negri 1 Campalagian</h3>
+    <table class="header">
+        <tr>
+            <td>
+                <img class="logo-pemkab" src="{{public_path('logo-polman.png')}}" alt="">
+            </td>
+            <td>
+                <p>PEMERINTAH KABUPATEN POLEWALI MANDAR</p>
+                <p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                <p>SMP NEGERI 1 CAMPALAGIAN</p>
+                <p>Alamat: Jl. Poros Majene Desa Bonde Kec. Campalagian Kab. Polewali Mandar</p>
+            </td>
+            <td><img class="logo-sekolah" src="{{public_path('logo-sekolah.jpg')}}" alt=""></td>
+        </tr>
+    </table>
+    <hr>
+
+    <h3>KARTU PENDAFTARAN CALON PESERTA DIDIK BARU <br> SMPN 1 CAMPALAGIAN</h3>
     <div class="container">
         <div class="foto-container">
-            {{-- <img class="foto" src="/storage/foto/kepsek.jpg" alt="img"> --}}
             <img class="foto" src="{{public_path($siswa->foto)}}" alt="">
         </div>
         <div class="table-container">
@@ -98,8 +120,21 @@
             </table>
         </div>
     </div>
-    <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"
-</p>
+    <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"</p>
+
+    <p>Campalagian, </p>
+
+    <div class="footer">
+        <p>Menyetujui</p>
+        <div>
+            <p>Orangtua/wali</p>
+            <p>Siswa terdaftar</p>
+        </div>
+        <div>
+            <p>.............</p>
+            <p>.............</p>
+        </div>
+    </div>
 
 </body>
 </html>

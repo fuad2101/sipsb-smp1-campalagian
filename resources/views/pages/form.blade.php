@@ -24,7 +24,7 @@
         @csrf
         <div class="mb-3">
             <label for="" class="form-label">Nomor Registrasi:</label>
-            <input type="text" class="form-control form-control-sm @error('nama') is-invalid @enderror"  value="" name="nama" id="" aria-describedby="helpId" placeholder="" disabled />
+            <input type="text" class="form-control form-control-sm @error('nama') is-invalid @enderror"  value="{{$nomor}}" name="nama" id="" aria-describedby="helpId" placeholder="" disabled />
             @error('nama')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -169,7 +169,7 @@
             </div>
         </div>
         <div class="form-check">
-            <input type="checkbox" name="tes-online" id="" class="form-check-input" mandatory><label class="form-check-label" for="">Dengan ini saya menyatakan bersedia mengikuti seleksi mengikuti tes secara offline</label>
+            <input type="checkbox" name="tes-online" id="bersedia" class="form-check-input" required><label class="form-check-label" for="bersedia">Dengan ini saya menyatakan bersedia mengikuti seleksi mengikuti tes secara offline</label>
         </div>
         <button class="btn btn-primary mt-4 form-control" type="submit">Submit Pendaftaran</button>
 

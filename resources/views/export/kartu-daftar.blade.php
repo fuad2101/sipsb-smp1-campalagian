@@ -10,15 +10,22 @@
         text-align: center;
         }
         .container{
-        border: 1px solid black;
+        /* border: 1px solid black; */
+        /* padding-left: 10px; */
         }
-        table-container{
+        table{
+            border-spacing: 0px;
+        }
+        .table-container td{
+            border-bottom: 1px solid black;
+            padding: 5px;
+        }
+        .table-container{
+            /* background-color:aliceblue; */
+            /* width: 100%; */
         }
         table td{
-        padding: 10px;
-        }
-        .foto{
-        max-height: 25%;
+            padding: 10px;
         }
         .logo-sekolah,.logo-pemkab{
         height: 85px;
@@ -36,6 +43,33 @@
         .header p:last-child{
             font-size: 12px;
         }
+        .footer td{
+            /* border: 1px solid black; */
+        }
+        .coba1{
+            /* background-color: yellow; */
+            position:absolute;
+            /* top: -800px; */
+            right: 20px;
+            z-index: 10;
+
+        }
+        .coba2{
+            /* background-color: orange; */
+            position: absolute;
+        }
+        .flex-container{
+            margin-top: 5px;
+            overflow:visible;
+            /* border: 1px black solid; */
+        }
+        .foto-siswa{
+            position: absolute;
+            max-height: 35%;
+            right: 5%;
+            top: 250px;
+        }
+
     </style>
     <title>Kartu Pendaftaran</title>
 </head>
@@ -58,12 +92,13 @@
 
     <h3>KARTU PENDAFTARAN CALON PESERTA DIDIK BARU <br> SMPN 1 CAMPALAGIAN</h3>
     <div class="container">
-        <div class="foto-container">
-            <img class="foto" src="{{public_path($siswa->foto)}}" alt="">
-        </div>
         <div class="table-container">
             <table class="">
                 <tbody>
+                    <tr>
+                        <td scope="row"><b>No. Peserta:</b> </td>
+                        <td>{{$siswa->no_registrasi}}</td>
+                    </tr>
                     <tr>
                         <td scope="row"><b>Nama:</b> </td>
                         <td>{{$siswa->nama}}</td>
@@ -118,23 +153,26 @@
                     </tr>
                 </tbody>
             </table>
+            <img class="foto-siswa" src="{{public_path($siswa->foto)}}" alt="">
         </div>
     </div>
     <p>"Demikian data pribadi ini saya buat dengan sebenarnya dan bila ternyata isian yang dibuat tidak benar, saya bersedia menanggung akibat hukum yang ditimbulkannya"</p>
 
-    <p>Campalagian, </p>
-
     <div class="footer">
-        <p>Menyetujui</p>
-        <div>
-            <p>Orangtua/wali</p>
-            <p>Siswa terdaftar</p>
-        </div>
-        <div>
-            <p>.............</p>
-            <p>.............</p>
+        <p style="text-align:right;margin-top:5%;">Campalagian, ............................... 2025</p>
+        {{-- <p style="text-align:right;margin-top:5%;">Campalagian, <?php echo date('d M Y') ?></p> --}}
+        <p>Menyetujui,</p>
+
+        <div class="flex-container">
+            <div class="coba2">
+                <p style="">Orangtua/wali</p>
+                <p style="margin-top:100px;">...............................</p>
+            </div>
+            <div class="coba1">
+                <p>Siswa terdaftar</p>
+                <p style="margin-top:100px;">...............................</p>
+            </div>
         </div>
     </div>
-
 </body>
 </html>

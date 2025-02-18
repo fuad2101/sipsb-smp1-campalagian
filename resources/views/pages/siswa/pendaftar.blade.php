@@ -14,7 +14,7 @@
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Asal Sekolah</th>
-                <th>Status Bayar</th>
+                {{-- <th>Status Bayar</th> --}}
                 <th>Status Daftar</th>
             </tr>
         </thead>
@@ -32,7 +32,7 @@
                     </td>
                     <td>{{$val->nisn}}</td>
                     <td>{{$val->sekolah_asal}}</td>
-                    <td>
+                    {{-- <td>
                         @if ($val->bukti_bayar != NULL)
                             <span
                                 class="badge bg-success text-white"
@@ -44,7 +44,7 @@
                                 >Belum bayar</span
                             >
                         @endif
-                    </td>
+                    </td> --}}
                     <td>
                         @if ($val->status_daftar == 'verifikasi')
                             <span

@@ -125,11 +125,11 @@
                         <h5 class="card-title mb-0 text-white">Daftar Ulang</h5>
                     </div>
                     <div class="row align-items-center mb-2 d-flex">
-                        <div class="col-8">
+                        {{-- <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0 text-white">
                                 {{ $siswa->where('bukti_bayar','!=',NULL)->count()}} Siswa
                             </h2>
-                        </div>
+                        </div> --}}
                         {{-- <div class="col-4 text-right">
                             <span>10% <i class="fa fa-arrow-up"></i></span>
                         </div> --}}
@@ -149,9 +149,9 @@
                     </div>
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
-                            <h2 class="d-flex align-items-center mb-0 text-white">
+                            {{-- <h2 class="d-flex align-items-center mb-0 text-white">
                                 {{ $siswa->where('bukti_bayar','!=',NULL)->count()}} Siswa
-                            </h2>
+                            </h2> --}}
                         </div>
                         {{-- <div class="col-4 text-right">
                             <span>2.5% <i class="fa fa-arrow-up"></i></span>

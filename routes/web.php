@@ -78,7 +78,8 @@ Route::get('/statistik', function () {
 
 Route::get('/pendaftar', [ManageSiswaController::class,'index'])->middleware(['auth','can:is-admin'])->name('pendaftar');
 Route::get('/pendaftar/{id}', [ManageSiswaController::class,'show'])->middleware(['auth','can:is-admin']);
-Route::post('/pendaftar/{id}', [ManageSiswaController::class,'store'])->middleware(['auth','can:is-admin']);
+Route::post('/pendaftar/{id}', [ManageSiswaController::class,'update'])->middleware(['auth','can:is-admin']);
+Route::patch('/pendaftar/{id}', [ManageSiswaController::class,'updateSeleksi'])->middleware(['auth','can:is-admin']);
 
 /****
  * Siswa
@@ -90,6 +91,7 @@ Route::post('/form', [SiswaController::class,'store'])->middleware(['auth']);
 Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth']);
 
 Route::get('/download',[SiswaController::class,'download'])->middleware(['auth']);
+Route::get('/download-bukti-diterima',[SiswaController::class,'downloadSeleksi'])->middleware(['auth']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

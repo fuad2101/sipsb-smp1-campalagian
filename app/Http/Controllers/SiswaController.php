@@ -17,13 +17,14 @@ class SiswaController extends Controller
         $noreg = Siswa::select('no_registrasi')->latest()->first();;
 
         if($noreg != NULL){
-            $noreg = $noreg->no_registrasi++ ;
+            $noreg = $noreg->no_registrasi + 1;
         }else {
-            $noreg = 1;
+            $noreg = 2025001;
         }
+        // dd($noreg);
 
-        $nomor = Str::of($noreg)->padLeft(6,'02500');
-        return view('pages.form')->with(['nomor'=>$nomor]);
+        // $nomor = Str::of($noreg)->padLeft(7,'202500');
+        return view('pages.form')->with(['nomor'=>$noreg]);
     }
 
     public function status(){
@@ -58,16 +59,15 @@ class SiswaController extends Controller
         $akta = $files['akta'];
 
         $noreg = Siswa::select('no_registrasi')->latest()->first();;
+
         if($noreg != NULL){
-            $noreg = $noreg->no_registrasi++ ;
+            $noreg = $noreg->no_registrasi + 1;
         }else {
-            $noreg = 1;
+            $noreg = 2025001;
         }
 
-        $nomor = Str::of($noreg)->padLeft(6,'02500');
-
         $insert = Siswa::create([
-            'no_registrasi'=>$nomor,
+            'no_registrasi'=>$noreg,
             'nama'=>$request->nama,
             'nisn'=>$request->nisn,
             'email'=>auth()->user()->email,
@@ -110,5 +110,12 @@ class SiswaController extends Controller
         $data = Siswa::where('email',$email)->first();
         $pdf = Pdf::loadView('export.kartu-daftar', ['siswa'=>$data]);
         return $pdf->stream();
+    }
+
+    public function downloadSeleksi(){
+        $email = auth()->user()->email;
+        $data = Siswa::where('email',$email)->first();
+        $pdf = Pdf::loadView('export.kartu-diterima', ['siswa'=>$data]);
+        return $pdf->stream('Bukti Diterima.pdf');
     }
 }

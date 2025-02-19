@@ -14,8 +14,8 @@
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Asal Sekolah</th>
-                {{-- <th>Status Bayar</th> --}}
                 <th>Status Daftar</th>
+                <th>Status Seleksi</th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
                     <td>{{$loop->iteration}}</td>
                     <td>
                         @if (auth()->user()->role == 'admin')
-                            <a href="/pendaftar/{{$val->id}}" target="_blank">{{$val->nama}}</a>
+                            <a href="/pendaftar/{{$val->id}}">{{$val->nama}}</a>
                         @else
                             {{$val->nama}}
                         @endif
@@ -46,7 +46,7 @@
                         @endif
                     </td> --}}
                     <td>
-                        @if ($val->status_daftar == 'verifikasi')
+                        @if ($val->status_daftar == 'Verifikasi')
                             <span
                                 class="badge bg-warning"
                                 >Verifikasi</span
@@ -55,6 +55,19 @@
                             <span
                                 class="badge bg-success text-white"
                                 >Lulus Berkas</span
+                            >
+                        @endif
+                    </td>
+                    <td>
+                        @if ($val->status_seleksi == 'Terjadwal')
+                            <span
+                                class="badge bg-warning"
+                                >Terjadwal</span
+                            >
+                        @else
+                            <span
+                                class="badge bg-success text-white"
+                                >Lulus Seleksi</span
                             >
                         @endif
                     </td>

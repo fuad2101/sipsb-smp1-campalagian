@@ -168,7 +168,7 @@
                 @enderror
             </div>
         </div>
-        <div class="form-check">
+        <div class="form-check my-3 font-weight-bold">
             <input type="checkbox" name="tes-online" id="bersedia" class="form-check-input" required><label class="form-check-label" for="bersedia">Dengan ini saya menyatakan bersedia mengikuti seleksi mengikuti tes secara offline</label>
         </div>
         <button class="btn btn-primary mt-4 form-control" type="submit">Submit Pendaftaran</button>

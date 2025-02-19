@@ -69,7 +69,12 @@
         <div class="col text-center">
             <form action="" class="" method="post">
                 @csrf
-                <button class="btn btn-primary btn-lg mb-2" type="submit" onclick="confirm() ">Lulus Administrasi</button>
+                <button class="btn btn-primary btn-lg mb-2" type="submit" onclick="confirm() ">Lulus ADMINISTRASI</button>
+            </form>
+            <form action="/pendaftar/{{$siswa->id}}" class="" method="post">
+                @method('patch')
+                @csrf
+                <button class="btn btn-info btn-lg mb-2" type="submit" onclick="confirm() ">Lulus SELEKSI</button>
             </form>
             <a class="btn btn-lg btn-secondary" href="/pendaftar">Kembali</a>
         </div>

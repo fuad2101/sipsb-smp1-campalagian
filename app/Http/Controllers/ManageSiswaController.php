@@ -32,11 +32,6 @@ class ManageSiswaController extends Controller
      */
     public function store($id)
     {
-        $siswa = Siswa::find($id);
-        $siswa->status_daftar = 'Lulus';
-        $siswa->save();
-        Alert::success('Berhasil','Status siswa Lulus');
-        return redirect('/pendaftar');
     }
 
     /**
@@ -59,9 +54,22 @@ class ManageSiswaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(string $id)
     {
-        //
+        $siswa = Siswa::find($id);
+        $siswa->status_daftar = 'Lulus';
+        $siswa->save();
+        Alert::success('Berhasil','Status siswa Lulus');
+        return redirect('/pendaftar');
+    }
+
+    public function updateSeleksi(string $id)
+    {
+        $siswa = Siswa::find($id);
+        $siswa->status_seleksi = 'Lulus';
+        $siswa->save();
+        Alert::success('Berhasil','Status seleksi berhasil dirubah');
+        return redirect('/pendaftar');
     }
 
     /**
@@ -80,4 +88,5 @@ class ManageSiswaController extends Controller
             return Excel::download(new SiswasExport, 'Laporan PPDB.xlsx');
         }
     }
+
 }

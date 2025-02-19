@@ -66,6 +66,7 @@
         .foto-siswa{
             position: absolute;
             max-height: 35%;
+            max-width: 270px;
             right: 5%;
             top: 250px;
         }

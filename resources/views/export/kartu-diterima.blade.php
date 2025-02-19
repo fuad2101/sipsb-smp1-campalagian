@@ -75,7 +75,7 @@
         }
 
     </style>
-    <title>Kartu Pendaftaran</title>
+    <title>Kartu Lulus Seleksi</title>
 </head>
 <body>
     <table class="header">

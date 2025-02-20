@@ -120,6 +120,10 @@
                         <td scope="row"><b>NISN:</b></td>
                         <td>{{$siswa->nisn}}</td>
                     </tr>
+                    <tr>
+                        <td scope="row"><b>Jalur Seleksi:</b></td>
+                        <td>{{$siswa->jalur_seleksi}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

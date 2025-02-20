@@ -35,12 +35,18 @@ class SiswaController extends Controller
 
 
     public function store(FormRequest $request){
+
+        // dd($request->file());
         $files = $request->file();
         $randomTime = '.'.time().'.';
 
         $foto = $files['foto'];
         $foto_ext = $foto->getClientOriginalExtension();
         $foto_name = $foto->getClientOriginalName();
+
+        $dok_tambahan = $files['dok_tambahan'];
+        $dok_tambahan_ext = $dok_tambahan->getClientOriginalExtension();
+        $dok_tambahan_name = $foto->getClientOriginalName();
 
         $ijazah = $files['ijazah'];
         $ijazah_ext = $ijazah->getClientOriginalExtension();
@@ -81,6 +87,8 @@ class SiswaController extends Controller
             'akta'=>'/storage/'.$akta->storeAs('akta',$request->nama.$randomTime.$akta_ext,'public'),
             'ijazah'=>'/storage/'.$ijazah->storeAs('ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
             'foto'=>'/storage/'.$foto->storeAs('foto',$request->nama.$randomTime.$foto_ext,'public'),
+            'dok_tambahan'=>'/storage/'.$dok_tambahan->storeAs('dok_tambahan',$request->nama.$randomTime.$dok_tambahan_ext,'public'),
+            'jalur_seleksi'=>$request->jalur_seleksi,
             'jenis_kelamin'=>$request->jenis_kelamin,
             'agama'=>$request->agama,
             'pend_terakhir'=>$request->pend_terakhir,

@@ -131,6 +131,16 @@
             @enderror
         </div>
 
+        <div class="mb-3">
+            <label for="" class="form-label">Jalur seleksi</label>
+            <select class="form-control form-control-sm" name="jalur_seleksi" id="">
+                <option disabled selected>--Pilih--</option>
+                <option value="Zonasi">Zonasi</option>
+                <option value="Afirmasi">Afirmasi</option>
+                <option value="Prestasi">Prestasi</option>
+                <option value="Mutasi">Mutasi</option>
+            </select>
+        </div>
         <div class="row">
             <div class="col">
                 <label for="">Upload Foto</label><input class="form-control form-control-sm @error('foto') is-invalid @enderror"" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png">
@@ -167,24 +177,49 @@
                 </div>
                 @enderror
             </div>
+            <div class="col dok_tambahan">
+                <label for=""> Dokumen Tambahan</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror" type="file" name="dok_tambahan" id="" accept=".jpg,.jpeg">
+
+                <div class="alert alert-warning" role="alert">
+                  <h4 class="alert-heading"></h4>
+                  <ul>
+                    <li>Afirmasi: upload KIP/SKTM</li>
+                    <li>Prestasi: upload sertifikat/nilairapor</li>
+                    <li>Mutasi: upload SK Mutasi</li>
+                  </ul>
+                  <p class="mb-0"></p>
+                </div>
+                <p>
+
+
+                </p>
+                @error('ijazah')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+                @enderror
+            </div>
         </div>
         <div class="form-check my-3 font-weight-bold">
             <input type="checkbox" name="tes-online" id="bersedia" class="form-check-input" required><label class="form-check-label" for="bersedia">Dengan ini saya menyatakan bersedia mengikuti seleksi mengikuti tes secara offline</label>
         </div>
         <button class="btn btn-primary mt-4 form-control" type="submit">Submit Pendaftaran</button>
-
     </form>
 </div>
 @endsection
 
 @push('script')
-{{-- <script>
+<script>
     $(function () {
-        $('[name="foto"]').change(function() {
-            alert($(this).val());
+        $('[name="jalur_seleksi"]').change(function() {
+            if ($(this).val() === 'Zonasi') {
+                $('.dok_tambahan').hide();
+            }else{
+               $('.dok_tambahan').show();
+            }
         })
     });
-</script> --}}
+</script>
 @endpush
 
 

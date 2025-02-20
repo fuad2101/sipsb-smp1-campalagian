@@ -41,5 +41,16 @@ class DatabaseSeeder extends Seeder
             'password' => 'multy',
             'remember_token' => Str::random(10),
          ]);
+
+         \App\Models\User::factory()->create([
+            'name' => 'Jhon Doe',
+            'email' => 'jhondoe@gmail.com',
+            'email_verified_at' => now(),
+            'role' => 'user',
+            'password' => 'jhondoe',
+            'remember_token' => Str::random(10),
+         ]);
+
+
     }
 }

@@ -1,6 +1,6 @@
 @extends('dashboard')
 
-@push('css')
+@push('style')
     <style>
         .card {
     background-color: #fff;
@@ -68,7 +68,6 @@
 @endpush
 
 @section('content')
-
 
     <div class="row ">
         <div class="col-md-6">
@@ -163,6 +162,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            {!! $chart1->container() !!}
+        </div>
+        <div class="col-md-6">
+            {!! $chart2->container() !!}
+        </div>
     </div>
 
 @endsection
+
+@push('script')
+        <script src="{{ $chart1->cdn() }}"></script>
+        <script src="{{ $chart2->cdn() }}"></script>
+        {{ $chart1->script() }}
+        {{ $chart2->script() }}
+@endpush

@@ -1,5 +1,8 @@
 <?php
 
+use App\Charts\Chart1;
+use App\Charts\Chart2;
+use App\Charts\PendaftarChart;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -9,8 +12,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\LandingController;
-use App\Http\Controllers\ManageSiswaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ManageSiswaController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 /*
@@ -33,6 +37,8 @@ Route::get('/', [LandingController::class,'index']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+// Route::get('/dashboard', [DashboardController::class,'index']);
 
 
 /****
@@ -71,9 +77,9 @@ Route::post('kepsek/edit',[KepsekController::class,'update']);
 
 Route::get('/status', [SiswaController::class,'status'])->middleware(['auth']);
 
-Route::get('/statistik', function () {
+Route::get('/statistik', function (Chart1 $chart1, Chart2 $chart2 ) {
     $siswa = Siswa::all();
-    return view('pages.statistik')->with(['siswa'=>$siswa]);
+    return view('pages.statistik')->with(['siswa'=>$siswa,'chart1'=>$chart1->build(),'chart2'=> $chart2->build() ]);
 })->middleware(['auth','can:is-admin'])->name('statistik');
 
 Route::get('/pendaftar', [ManageSiswaController::class,'index'])->middleware(['auth','can:is-admin'])->name('pendaftar');

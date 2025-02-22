@@ -20,6 +20,7 @@ class Chart2
             ->setSubtitle('Wins during season 2021.')
             ->addData('San Francisco', [6, 9, 3, 4, 10, 8])
             ->addData('Boston', [7, 3, 8, 2, 6, 4])
+            ->setColors(['#3E68AD', '#A01A6A',])
             ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
     }
 }

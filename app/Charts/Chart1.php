@@ -19,6 +19,7 @@ class Chart1
             ->setTitle('Top 3 scorers of the team.')
             ->setSubtitle('Season 2021.')
             ->addData([40, 50, 30])
+            ->setColors(['#3E68AD', '#A01A6A','#D48D2F'])
             ->setLabels(['Player 7', 'Player 10', 'Player 9']);
     }
 }

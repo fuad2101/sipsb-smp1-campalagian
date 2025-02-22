@@ -87,6 +87,9 @@ $role = auth()->user()->role;
     </li> --}}
     @endsection
 
+    @push('style')
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    @endpush
 
     @elseif ($role == 'admin')
 

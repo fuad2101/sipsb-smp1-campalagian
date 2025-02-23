@@ -143,7 +143,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <label for="">Upload Foto</label><input class="form-control form-control-sm @error('foto') is-invalid @enderror"" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png">
+                <label class="form-label" for="">Upload Foto</label><input class="form-control form-control-sm @error('foto') is-invalid @enderror"" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png">
                 @error('foto')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -177,8 +177,10 @@
                 </div>
                 @enderror
             </div>
+        </div>
+        <div class="row mt-3">
             <div class="col dok_tambahan">
-                <label for=""> Dokumen Tambahan</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror" type="file" name="dok_tambahan" id="" accept=".jpg,.jpeg">
+                <label for="">Dokumen Tambahan (Untuk jalur seleksi Afirmasi, Prestasi dan Mutasi) </label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror" type="file" name="dok_tambahan" id="" accept=".jpg,.jpeg">
 
                 <div class="alert alert-warning" role="alert">
                   <h4 class="alert-heading"></h4>
@@ -189,11 +191,7 @@
                   </ul>
                   <p class="mb-0"></p>
                 </div>
-                <p>
-
-
-                </p>
-                @error('ijazah')
+                @error('dok_tambahan')
                 <div class="invalid-feedback">
                     {{$message}}
                 </div>
@@ -211,11 +209,12 @@
 @push('script')
 <script>
     $(function () {
+        $('.dok_tambahan').hide();
         $('[name="jalur_seleksi"]').change(function() {
             if ($(this).val() === 'Zonasi') {
-                $('.dok_tambahan').hide();
+                $('.dok_tambahan').hide(1000);
             }else{
-               $('.dok_tambahan').show();
+               $('.dok_tambahan').show(1000);
             }
         })
     });

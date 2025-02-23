@@ -2,6 +2,7 @@
 
 namespace App\Charts;
 
+use App\Models\Siswa;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 class Chart2
@@ -15,12 +16,18 @@ class Chart2
 
     public function build(): \ArielMejiaDev\LarapexCharts\BarChart
     {
+        $male = Siswa::where('jenis_kelamin','Laki-laki')->count();
+        $female = Siswa::where('jenis_kelamin','Perempuan')->count();
         return $this->chart->barChart()
-            ->setTitle('San Francisco vs Boston.')
-            ->setSubtitle('Wins during season 2021.')
-            ->addData('San Francisco', [6, 9, 3, 4, 10, 8])
-            ->addData('Boston', [7, 3, 8, 2, 6, 4])
+            ->setTitle('Jenis Kelamin')
+            ->setSubtitle('Jumlah pendaftar berdasarkan jenis kelamin')
+            ->addData('Laki-laki', [$male])
+            ->addData('Perempuan', [$female])
             ->setColors(['#3E68AD', '#A01A6A',])
-            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
+            // ->setXAxis(['Jumlah', 'February', 'March', 'April', 'May', 'June']);
+            ->setXAxis([''])
+            // ->setGrid(false, '#3F51B5', 0.1)
+            // ->setLabels(['Active users', 'Inactive users'])
+            ->setMarkers(['#FF5722', '#E040FB'], $male, $female);
     }
 }

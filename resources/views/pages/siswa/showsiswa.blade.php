@@ -55,8 +55,12 @@
                         <td>{{$siswa->pend_terakhir}}</td>
                     </tr>
                     <tr>
-                        <td scope="row"><b>Status:</b></td>
+                        <td scope="row"><b>Status Daftar:</b></td>
                         <td>{{$siswa->status_daftar}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><b>Status Seleksi:</b></td>
+                        <td>{{$siswa->status_seleksi}}</td>
                     </tr>
                 </tbody>
             </table>

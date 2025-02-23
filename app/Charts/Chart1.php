@@ -2,6 +2,7 @@
 
 namespace App\Charts;
 
+use App\Models\Siswa;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 class Chart1
@@ -15,11 +16,15 @@ class Chart1
 
     public function build(): \ArielMejiaDev\LarapexCharts\PieChart
     {
+        $zonasi = Siswa::where('jalur_seleksi','Zonasi')->count();
+        $afirmasi = Siswa::where('jalur_seleksi','Afirmasi')->count();
+        $prestasi = Siswa::where('jalur_seleksi','Prestasi')->count();
+        $mutasi = Siswa::where('jalur_seleksi','Mutasi')->count();
         return $this->chart->pieChart()
-            ->setTitle('Top 3 scorers of the team.')
-            ->setSubtitle('Season 2021.')
-            ->addData([40, 50, 30])
-            ->setColors(['#3E68AD', '#A01A6A','#D48D2F'])
-            ->setLabels(['Player 7', 'Player 10', 'Player 9']);
+            ->setTitle('Jalur Seleksi')
+            ->setSubtitle('Jumlah calon siswa berdasarkan kategori jalur seleksi')
+            ->addData([$zonasi, $afirmasi, $prestasi, $mutasi])
+            ->setColors(['#3E68AD', '#A01A6A','#D48D2F','#1B8B5D'])
+            ->setLabels(['Zonasi', 'Afirmasi', 'Prestasi','Mutasi']);
     }
 }

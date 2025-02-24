@@ -44,9 +44,13 @@ class SiswaController extends Controller
         $foto_ext = $foto->getClientOriginalExtension();
         $foto_name = $foto->getClientOriginalName();
 
-        $dok_tambahan = $files['dok_tambahan'];
-        $dok_tambahan_ext = $dok_tambahan->getClientOriginalExtension();
-        $dok_tambahan_name = $foto->getClientOriginalName();
+        $dok_tambahan ='';
+
+        if ($files['dok_tambahan'] !=) {
+            $dok_tambahan = $files['dok_tambahan'];
+            $dok_tambahan_ext = $dok_tambahan->getClientOriginalExtension();
+            $dok_tambahan_name = $foto->getClientOriginalName();
+        }
 
         $ijazah = $files['ijazah'];
         $ijazah_ext = $ijazah->getClientOriginalExtension();

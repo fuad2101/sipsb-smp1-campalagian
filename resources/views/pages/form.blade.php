@@ -143,7 +143,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <label class="form-label" for="">Upload Foto</label><input class="form-control form-control-sm @error('foto') is-invalid @enderror"" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png">
+                <label class="form-label" for="">Upload Foto</label><input class="form-control form-control-sm @error('foto') is-invalid @enderror"" type="file" name="foto" id="" accept="image/.jpg,.jpeg,.png" required>
                 @error('foto')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -151,7 +151,7 @@
             @enderror
             </div>
             <div class="col">
-                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm @error('kk') is-invalid @enderror"" type="file" name="kk" id="" accept=".jpg,.jpeg">
+                <label for="">Kartu Keluarga</label><input class="form-control form-control-sm @error('kk') is-invalid @enderror" type="file" name="kk" id="" accept=".jpg,.jpeg" required>
                 @error('kk')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -162,7 +162,7 @@
 
         <div class="row">
             <div class="col">
-                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm @error('akta') is-invalid @enderror"" type="file" name="akta" id="" accept=".jpg,.jpeg">
+                <label for="">Akta Kelahiran</label><input class="form-control form-control-sm @error('akta') is-invalid @enderror"" type="file" name="akta" id="" accept=".jpg,.jpeg" required>
                 @error('akta')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -170,7 +170,7 @@
             @enderror
             </div>
             <div class="col">
-                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror"" type="file" name="ijazah" id="" accept=".jpg,.jpeg">
+                <label for=""> Ijazah/SKHU/Keterangan Lulus dr sekolah</label><input class="form-control form-control-sm @error('ijazah') is-invalid @enderror"" type="file" name="ijazah" id="" accept=".jpg,.jpeg" required>
                 @error('ijazah')
                 <div class="invalid-feedback">
                     {{$message}}

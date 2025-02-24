@@ -44,14 +44,6 @@ class SiswaController extends Controller
         $foto_ext = $foto->getClientOriginalExtension();
         $foto_name = $foto->getClientOriginalName();
 
-        $dok_tambahan ='';
-
-        if ($files['dok_tambahan'] !=) {
-            $dok_tambahan = $files['dok_tambahan'];
-            $dok_tambahan_ext = $dok_tambahan->getClientOriginalExtension();
-            $dok_tambahan_name = $foto->getClientOriginalName();
-        }
-
         $ijazah = $files['ijazah'];
         $ijazah_ext = $ijazah->getClientOriginalExtension();
         $ijazah_name = $ijazah->getClientOriginalName();
@@ -64,9 +56,11 @@ class SiswaController extends Controller
         $kk_ext = $kk->getClientOriginalExtension();
         $kk_name = $kk->getClientOriginalName();
 
-        $ijazah = $files['ijazah'];
-        $kk = $files['kk'];
-        $akta = $files['akta'];
+        $dok_tambahan ='';
+
+        // $ijazah = $files['ijazah'];
+        // $kk = $files['kk'];
+        // $akta = $files['akta'];
 
         $noreg = Siswa::select('no_registrasi')->latest()->first();;
 
@@ -76,7 +70,12 @@ class SiswaController extends Controller
             $noreg = 2025001;
         }
 
-        $insert = Siswa::create([
+        if (isset($files['dok_tambahan'])) {
+            $dok_tambahan = $files['dok_tambahan'];
+            $dok_tambahan_ext = $dok_tambahan->getClientOriginalExtension();
+            $dok_tambahan_name = $foto->getClientOriginalName();
+
+            $insert = Siswa::create([
             'no_registrasi'=>$noreg,
             'nama'=>$request->nama,
             'nisn'=>$request->nisn,
@@ -96,7 +95,57 @@ class SiswaController extends Controller
             'jenis_kelamin'=>$request->jenis_kelamin,
             'agama'=>$request->agama,
             'pend_terakhir'=>$request->pend_terakhir,
+            'status_daftar'=>'Verifikasi',
+            'status_seleksi'=>'Terjadwal',
             ]);
+
+        }else{
+            $insert = Siswa::create([
+            'no_registrasi'=>$noreg,
+            'nama'=>$request->nama,
+            'nisn'=>$request->nisn,
+            'email'=>auth()->user()->email,
+            'tempat_lahir'=>$request->tempat_lahir,
+            'tanggal_lahir'=>$request->tanggal_lahir,
+            'sekolah_asal'=>$request->sekolah_asal,
+            'alamat'=>$request->alamat,
+            'nomor'=>$request->nomor,
+            'wali'=>$request->wali,
+            'kk'=>'/storage/'.$kk->storeAs('kk',$request->nama.$randomTime.$kk_ext,'public'),
+            'akta'=>'/storage/'.$akta->storeAs('akta',$request->nama.$randomTime.$akta_ext,'public'),
+            'ijazah'=>'/storage/'.$ijazah->storeAs('ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
+            'foto'=>'/storage/'.$foto->storeAs('foto',$request->nama.$randomTime.$foto_ext,'public'),
+            'jalur_seleksi'=>$request->jalur_seleksi,
+            'jenis_kelamin'=>$request->jenis_kelamin,
+            'agama'=>$request->agama,
+            'pend_terakhir'=>$request->pend_terakhir,
+            'status_daftar'=>'Verifikasi',
+            'status_seleksi'=>'Terjadwal',
+            ]);
+        }
+
+
+        // $insert = Siswa::create([
+        //     'no_registrasi'=>$noreg,
+        //     'nama'=>$request->nama,
+        //     'nisn'=>$request->nisn,
+        //     'email'=>auth()->user()->email,
+        //     'tempat_lahir'=>$request->tempat_lahir,
+        //     'tanggal_lahir'=>$request->tanggal_lahir,
+        //     'sekolah_asal'=>$request->sekolah_asal,
+        //     'alamat'=>$request->alamat,
+        //     'nomor'=>$request->nomor,
+        //     'wali'=>$request->wali,
+        //     'kk'=>'/storage/'.$kk->storeAs('kk',$request->nama.$randomTime.$kk_ext,'public'),
+        //     'akta'=>'/storage/'.$akta->storeAs('akta',$request->nama.$randomTime.$akta_ext,'public'),
+        //     'ijazah'=>'/storage/'.$ijazah->storeAs('ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
+        //     'foto'=>'/storage/'.$foto->storeAs('foto',$request->nama.$randomTime.$foto_ext,'public'),
+        //     'dok_tambahan'=>'/storage/'.$dok_tambahan->storeAs('dok_tambahan',$request->nama.$randomTime.$dok_tambahan_ext,'public'),
+        //     'jalur_seleksi'=>$request->jalur_seleksi,
+        //     'jenis_kelamin'=>$request->jenis_kelamin,
+        //     'agama'=>$request->agama,
+        //     'pend_terakhir'=>$request->pend_terakhir,
+        //     ]);
 
             if ($insert) {
                 Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');

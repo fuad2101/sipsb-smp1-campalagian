@@ -97,7 +97,7 @@
                             <p class="fs-14">Ada pertanyaan? Hubungi kami <b>081243368726</b> </p>
                         </div>
                         <div class="d-grid gap-3">
-                            <a class="btn btn-primary btn-lg btn-success" targe="_blank" thref="https://api.whatsapp.com/send/?phone=6281243368726&text&type=phone_number&app_absent=0">
+                            <a class="btn btn-primary btn-lg btn-success" targe="_blank" href="https://api.whatsapp.com/send/?phone=6281243368726&text&type=phone_number&app_absent=0">
                             <span class="d-flex justify-content-center align-items-center">
                                 {{-- <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description"> --}}
                                 Chat WhatsApp
@@ -193,7 +193,7 @@
                                 <span class="wrap"></span> </span>
                             </h1>
                         </div>
-                            <p class="text-white-50 fs-20">Website resmi Pendaftaran Siswa Baru SMP 1 Campalagian</p>
+                            <p class="text-white-50 fs-20">Website resmi Pendaftaran Siswa Baru SMP Negeri 1 Campalagian</p>
                         <div class="home-btn hstack gap-2 flex-column d-sm-block">
                             <a class="btn btn-white me-1" href="/register">Daftar Calon Siswa Baru </a>
                             <a class="modal-btn" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target=".watchvideomodal">
@@ -239,8 +239,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="text-center mb-4">
-                            <h2 class="heading">Fasilitas SMP 1 Campalagian</h2>
-                            <p class="text-muted fs-17">Fasilitas SMP 1 Campalagian</p>
+                            <h2 class="heading">Fasilitas SMP Negeri 1 Campalagian</h2>
+                            <p class="text-muted fs-17">Fasilitas SMP Negeri 1 Campalagian</p>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row-->
@@ -416,7 +416,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-6">
                         <div data-aos="fade-down" data-aos-duration="1800">
-                            <h3 class="fw-bold">Bergabunglah di SMP 1 Campalagian</h3>
+                            <h3 class="fw-bold">Bergabunglah di SMP Negeri 1 Campalagian</h3>
                             <p>Bergabung dengan lebih dari 500 siswa dan kembangkan kreatifitas dan potensi kamu bersama kami</p>
                             <a class="btn btn-primary" href="/register">Daftar Sekarang</a>
                         </div>
@@ -866,7 +866,7 @@
                     <div class="col-lg-7">
                         <div class="text-center mb-5">
                             <h2 class="heading">Tenaga Pengajar</h2>
-                            <p class="text-muted fs-17">Tenaga Pengajar dan Staff SMP 1 Campalagian</p>
+                            <p class="text-muted fs-17">Tenaga Pengajar dan Staff SMP Negeri 1 Campalagian</p>
                         </div>
                     </div><!-- end col-->
                 </div><!-- end row -->
@@ -1338,7 +1338,7 @@
                     <div class="col-lg-7">
                         <div class="text-center mb-5">
                             <h2 class="heading">Ekstrakulikuler</h2>
-                            <p class="text-muted fs-17">Berbagai Kegiatan ekstrakulikuler SMP 1 Campalagian</p>
+                            <p class="text-muted fs-17">Berbagai Kegiatan ekstrakulikuler SMP Negeri 1 Campalagian</p>
                         </div>
                     </div><!-- end col-->
                     {{-- <div class="col-lg-8">
@@ -1478,7 +1478,7 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"> Pramuka</h5>
-                                <p class="card-text">Pramuka bukan hanya sekadar kegiatan ekstrakurikuler, tapi juga wadah untuk menempa karakter dan menumbuhkan jiwa kepemimpinan. Melalui kegiatan Pramuka, siswa akan dilatih untuk bekerja sama dalam tim, memecahkan masalah, dan mengambil keputusan yang tepat. Mari bergabung dan jadi bagian dari keluarga besar Pramuka SMP 1 Campalagian!</p>
+                                <p class="card-text">Pramuka bukan hanya sekadar kegiatan ekstrakurikuler, tapi juga wadah untuk menempa karakter dan menumbuhkan jiwa kepemimpinan. Melalui kegiatan Pramuka, siswa akan dilatih untuk bekerja sama dalam tim, memecahkan masalah, dan mengambil keputusan yang tepat. Mari bergabung dan jadi bagian dari keluarga besar Pramuka SMP Negeri 1 Campalagian!</p>
                             </div>
                             <div class="card-footer">
                                 {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
@@ -1510,7 +1510,7 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">PMR</h5>
-                                <p class="card-text">Siap menjadi pahlawan tanpa tanda jasa? PMR SMP 1 Campalagian mengajarkan siswa untuk  peduli serta berkontribusi dalam kegiatan kemanusiaan. Mari bergabung dan menjadi bagian dari tim relawan yang solid!</p>
+                                <p class="card-text">Siap menjadi pahlawan tanpa tanda jasa? PMR SMP Negeri 1 Campalagian mengajarkan siswa untuk  peduli serta berkontribusi dalam kegiatan kemanusiaan. Mari bergabung dan menjadi bagian dari tim relawan yang solid!</p>
                             </div>
                             <div class="card-footer">
                                 {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
@@ -1542,7 +1542,7 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">OSIS</h5>
-                                <p class="card-text">OSIS adalah wadah yang tepat untuk melatih kepemimpinan, mengembangkan kreativitas, dan belajar bekerja sama dalam tim. Ayo bergabung dengan OSIS SMP 1 Campalagian dan jadilah siswa yang aktif, inovatif, dan berprestasi!"</p>
+                                <p class="card-text">OSIS adalah wadah yang tepat untuk melatih kepemimpinan, mengembangkan kreativitas, dan belajar bekerja sama dalam tim. Ayo bergabung dengan OSIS SMP Negeri 1 Campalagian dan jadilah siswa yang aktif, inovatif, dan berprestasi!"</p>
                             </div>
                             <div class="card-footer">
                                 {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
@@ -1577,7 +1577,7 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Seni Tari</h5>
-                                <p class="card-text">Suka menari dan ingin mengembangkan bakat? Ayo bergabung bersama kelompok Seni tari SMP 1 Campalagian yang kreatif dan bersemangat!. Pelajari berbagai jenis tarian, untuk jadi penari profesional!</p>
+                                <p class="card-text">Suka menari dan ingin mengembangkan bakat? Ayo bergabung bersama kelompok Seni tari SMP Negeri 1 Campalagian yang kreatif dan bersemangat!. Pelajari berbagai jenis tarian, untuk jadi penari profesional!</p>
                             </div>
                             <div class="card-footer">
                                 {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
@@ -1606,7 +1606,7 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Layanan Bimbingan Konseling</h5>
-                                <p class="card-text">Kesehatan mental sama pentingnya dengan kesehatan fisik. Jangan biarkan masalahmu menumpuk dan mengganggu kegiatan belajar. Di SMP 1 Campalagian, ada layanan bimbingan konseling yang siap mendengarkan keluh kesahmu, memberikan dukungan, dan membantu mencari solusi terbaik untuk mendukung siswa meraih prestasi terbaik!.</p>
+                                <p class="card-text">Kesehatan mental sama pentingnya dengan kesehatan fisik. Jangan biarkan masalahmu menumpuk dan mengganggu kegiatan belajar. Di SMP Negeri 1 Campalagian, ada layanan bimbingan konseling yang siap mendengarkan keluh kesahmu, memberikan dukungan, dan membantu mencari solusi terbaik untuk mendukung siswa meraih prestasi terbaik!.</p>
                             </div>
                             <div class="card-footer">
                                 {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}

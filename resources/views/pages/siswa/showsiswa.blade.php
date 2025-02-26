@@ -62,6 +62,22 @@
                         <td scope="row"><b>Status Seleksi:</b></td>
                         <td>{{$siswa->status_seleksi}}</td>
                     </tr>
+                    <tr>
+                        <td scope="row"><b>Dokumen</b></td>
+                        <td>
+                            @if ($siswa->kk != NULL)
+
+                            <a href="{{$siswa->kk}}" class="btn btn-sm btn-dark" target="_blank"><i class="fas fa-paperclip    "></i> KK</a>
+
+                            @endif
+
+
+                        <a href="{{$siswa->akta}}" class="btn btn-sm btn-dark" target="_blank"><i class="fas fa-paperclip    "></i> Akta</a>
+
+                        <a href="{{$siswa->ijazah}}" class="btn btn-sm btn-dark" target="_blank"><i class="fas fa-paperclip    "></i> Ijazah</a>
+
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

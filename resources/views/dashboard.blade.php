@@ -247,6 +247,19 @@ $role = auth()->user()->role;
     </li>
     @endif
 
+    {{-- @dd(\App\Models\Siswa::where('status_seleksi','Lulus')->where(\App\Models\Siswa::where('email',auth()->user()->email))->first()) --}}
+    @if (\App\Models\Siswa::where('email',auth()->user()->email)->first('status_seleksi'))
+
+    <li class="nav-item dropdown">
+        <a href="#">
+            <span class="icon-holder">
+                <i class="anticon anticon-form"></i>
+            </span>
+            <span class="title">Daftar Ulang</span>
+        </a>
+    </li>
+    @endif
+
     {{-- <li class="nav-item dropdown">
         <a href="/helpdesk">
             <span class="icon-holder">

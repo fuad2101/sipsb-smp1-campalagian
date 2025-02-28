@@ -82,7 +82,7 @@
             </table>
         </div>
         <div class="col col-lg-6">
-            <img class="img img-thumbnail" src="{{$siswa->foto}}" alt="">
+            <img class="img img-thumbnail w-50" src="{{$siswa->foto}}" alt="">
         </div>
     </div>
     <div class="row">

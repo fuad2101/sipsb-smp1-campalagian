@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DaftarUlangController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\LandingController;
@@ -93,6 +94,8 @@ Route::patch('/pendaftar/{id}', [ManageSiswaController::class,'updateSeleksi'])-
 
 
 Route::post('/form', [SiswaController::class,'store'])->middleware(['auth']);
+Route::get('/daftar-ulang', [DaftarUlangController::class,'create'])->middleware(['auth']);
+Route::post('/daftar-ulang', [DaftarUlangController::class,'store'])->middleware(['auth']);
 
 Route::post('/upload-bayar',[SiswaController::class,'uploadBayar'])->middleware(['auth']);
 

@@ -37,10 +37,10 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky" id="navbar">
             <div class="container">
                 <!-- LOGO -->
-                <a class="navbar-brand text-uppercase" href="index-1.html">
+                {{-- <a class="navbar-brand text-uppercase" href="index-1.html">
                     <img class="logo-light" src="images/logo-light.png" alt="" height="25">
                     <img class="logo-dark" src="images/logo-dark.png" alt="" height="25">
-                </a>
+                </a> --}}
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,10 +94,11 @@
                     <div class="modal-body p-5">
                         <div class="text-center mb-2">
                             <h4 class="modal-title" id="exampleModalLongTitle">Kontak</h4>
-                            <p class="fs-14">Ada pertanyaan? Hubungi kami <b>081243368726</b> </p>
+                            {{-- <p class="fs-14">Ada pertanyaan? Hubungi kami <b>081243368726</b> </p> --}}
+                            <p class="fs-14">Ada pertanyaan? Hubungi kami <b>+62821‑9538‑0013 </b> </p>
                         </div>
                         <div class="d-grid gap-3">
-                            <a class="btn btn-primary btn-lg btn-success" targe="_blank" href="https://api.whatsapp.com/send/?phone=6281243368726&text&type=phone_number&app_absent=0">
+                            <a class="btn btn-primary btn-lg btn-success" target="_blank" href="https://api.whatsapp.com/send/?phone=6282195380013&text&type=phone_number&app_absent=0">
                             <span class="d-flex justify-content-center align-items-center">
                                 {{-- <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description"> --}}
                                 Chat WhatsApp

@@ -8,7 +8,7 @@ $role = auth()->user()->role;
 
 @if ($role == "vip")
     @section('content')
-    <img  class="img img-thumbnail w-100" src="{{asset('/storage/home-1-dashboard.png')}} " alt="">
+        <x-hero></x-hero>
     @endsection
 
     @section('sidebar-menu')
@@ -94,9 +94,7 @@ $role = auth()->user()->role;
     @elseif ($role == 'admin')
 
     @section('content')
-    <div class="opacity-50">
-        <img  class="img img-thumbnail w-100 h-50" src="{{asset('/storage/home-1-dashboard.png')}} " alt="">
-    </div>
+        <x-hero></x-hero>
     @endsection
 
     @section('sidebar-menu')
@@ -214,7 +212,7 @@ $role = auth()->user()->role;
 
 @else
     @section('content')
-    <img  class="img img-thumbnail w-full" src=" {{asset('/storage/home-1-dashboard.png')}} " alt="">
+        <x-hero></x-hero>
     @endsection
 
     @section('sidebar-menu')

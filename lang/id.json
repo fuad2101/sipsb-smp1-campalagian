@@ -5,5 +5,6 @@
     "Verify Email Address": "Verifikasi Alamat Email",
     "Please click the button below to verify your email address.": "Klik tombol di bawah untuk verifikasi email kamu",
     "If you did not create an account, no further action is required.": "Abaikan email ini jika anda tidak mencoba membuat akun",
-    "I have verify my email":"Saya sudah verifikasi email"
+    "I have verify my email":"Saya sudah verifikasi email",
+    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.":"Lupa password? Jangan khawatir, isi alamat email kamu, kami akan kirimkan link untuk reset password"
 }

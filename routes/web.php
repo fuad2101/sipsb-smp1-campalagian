@@ -37,7 +37,7 @@ Route::get('/', [LandingController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth','verified'])->name('dashboard');
 
 // Route::get('/dashboard', [DashboardController::class,'index']);
 
@@ -118,16 +118,16 @@ Route::get('feedback',function(){
  * Email Verification
  ****/
 
-// Route::get('/email/verify', function () {
-//     return view('auth.verify-email');
-// })->middleware('auth')->name('verification.notice');
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
 
 
-// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-//     $request->fulfill();
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
 
-//     return redirect('/dashboard');
-// })->middleware(['auth', 'signed'])->name('verification.verify');
+    return redirect('/dashboard');
+})->middleware(['auth','signed'])->name('verification.verify');
 
 
 Route::post('/email/verification-notification', function (Request $request) {

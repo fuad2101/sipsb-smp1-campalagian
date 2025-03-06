@@ -113,6 +113,6 @@
         <p><b>Ramli Syamsuddin, S.Pd., M.Si</b><br>Nip.19661231 199203 1 175</p>
 
     </div>
-
+    <p style="background-color:darkgray;text-align:center;">Waktu download: <?php echo date("d M Y h:i:s") ?></p>
 </body>
 </html>

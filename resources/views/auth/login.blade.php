@@ -70,7 +70,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="text-sm-end">
-                                                <a href="recoverpw.html" class="text-muted fs-13"><i class="mdi mdi-lock me-1"></i> Lupa Password?</a>
+                                                <a href="{{route('password.request')}}" class="text-muted fs-13"><i class="mdi mdi-lock me-1"></i> Lupa Password?</a>
                                             </div>
                                         </div>
                                     </div>

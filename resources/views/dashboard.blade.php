@@ -245,8 +245,8 @@ $role = auth()->user()->role;
     </li>
     @endif
 
-    {{-- @dd(\App\Models\Siswa::where('status_seleksi','Lulus')->where(\App\Models\Siswa::where('email',auth()->user()->email))->first()) --}}
-    @if (\App\Models\Siswa::where('email',auth()->user()->email)->first('status_seleksi') == 'Lulus')
+    {{-- @dd(auth()->user()->email) --}}
+    @if (\App\Models\Siswa::where('email',auth()->user()->email)->where('status_seleksi','Lulus')->first())
 
     <li class="nav-item dropdown">
         <a href="/daftar-ulang">

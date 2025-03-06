@@ -175,5 +175,6 @@
             </div>
         </div>
     </div>
+    <p>Waktu download: <?php echo date("l, d M Y h:i:s A") ?></p>
 </body>
 </html>

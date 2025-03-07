@@ -168,6 +168,7 @@
             <div class="coba2">
                 <p style="">Orangtua/wali</p>
                 <p style="margin-top:100px;">...............................</p>
+                <p style="margin-top:50px;">Waktu download: @php echo date("d M Y") @endphp</p>
             </div>
             <div class="coba1">
                 <p>Siswa terdaftar</p>
@@ -175,6 +176,5 @@
             </div>
         </div>
     </div>
-    <p>Waktu download: <?php echo date("l, d M Y h:i:s A") ?></p>
 </body>
 </html>

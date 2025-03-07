@@ -133,5 +133,6 @@
         Selamat Anda dinyatakan DITERIMA!
         Dalam Seleksi Penerimaan Peserta Didik Baru di SMP Negeri 1 Campalagian Tahun Pelajaran 2025/2026
     </div>
+    <p style="margin-top:50px;text-align:center;">Waktu download: @php echo date("d M Y") @endphp</p>
 </body>
 </html>

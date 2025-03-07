@@ -47,19 +47,19 @@
                             <div class="p-4 mt-n5 bg-white card rounded pb-0">
                                 <form method="POST" action="{{route('login')}}">
                                     @csrf
+                                    @error('email')
+                                            <div class="alert alert-danger d-flex align-items-center" role="alert">{{$message }}</div>
+                                    @enderror
+                                    @error('password')
+                                            <div class="alert alert-danger d-flex align-items-center" role="alert">{{$message }}</div>
+                                    @enderror
                                     <div class="mb-3">
                                         <label class="fs-14 mb-2" for="user name">Email</label>
                                         <input type="email" class="form-control" name="email" id="user name" placeholder="Enter Email">
-                                        @error('email')
-                                                <div class="text-danger text-sm">{{$message }}</div>
-                                        @enderror
                                     </div>
                                     <div class="mb-2">
                                         <label class="fs-14 mb-2" for="userpassword">Password</label>
                                         <input type="password" name="password" class="form-control" id="userpassword" placeholder="Enter Password">
-                                        @error('password')
-                                                <div class="text-danger text-sm">{{$message }}</div>
-                                        @enderror
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">

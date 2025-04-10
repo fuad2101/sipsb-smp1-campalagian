@@ -68,8 +68,17 @@
                         <li class="nav-item">
                             <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Kontak</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#ppdb" class="nav-link">Jadwal PPDB</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PPDB
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#alur">Alur</a></li>
+                                <li><a class="dropdown-item" href="#info-umum">Informasi Umum</a></li>
+                                {{-- <li><hr class="dropdown-divider"></li> --}}
+                                <li><a class="dropdown-item" href="#jadwal">Jadwal</a></li>
+                                <li><a class="dropdown-item" href="#tata-cara">Tata Cara Pendaftaran</a></li>
+                            </ul>
                         </li>
 
                     </ul>
@@ -418,7 +427,7 @@
         <section class="section feature" id="ppdb">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col">
+                    {{-- <div class="col">
                         <div class="text-center mb-4">
                             <h2 class="heading">Jadwal PPDB SMP Negeri 1 Campalagian</h2>
                             <div id="jadwalppdb" class="carousel slide" data-bs-ride="carousel" data-aos="fade-left" data-aos-duration="1800">
@@ -446,110 +455,28 @@
                                 </button>
                             </div>
                         </div>
-                    </div><!-- end col-->
-                </div><!-- end row-->
+                    </div> --}}
+                    <div class="text-center mb-4">
+                        <h2 class="heading mt-3">Alur PPDB SMP Negeri 1 Campalagian</h2>
+                        <div class="col-12 mt-4" id="alur">
+                            <img src="{{asset('/storage/alur.jpg')}}" class="img-fluid" alt="gambar alur">
+                        </div>
+                        <h2 class="heading mt-3">Informasi Umum PPDB</h2>
+                        <div class="col-12 mt-4" id="info-umum">
+                            <img src="{{asset('/storage/info-umum.jpg')}}" class="img-fluid w-50" alt="gambar alur">
+                        </div>
+                        <h2 class="heading mt-3">Jadwal PPDB SMP Negeri 1 Campalagian</h2>
+                        <div class="col-12 mt-4" id="jadwal">
+                            <img src="{{asset('/storage/jadwal.jpg')}}" class="img-fluid" alt="gambar alur">
+                        </div>
+                        <h2 class="heading mt-3">Tata Cara Pendaftaran   </h2>
+                        <div class="col-12 mt-4" id="tata-cara">
+                            <img src="{{asset('/storage/tata-cara.jpg')}}" class="img-fluid w-50" alt="gambar alur">
+                        </div>
+                    </div>
+                </div>
                 <div class="row justify-content-center">
-
                 </div><!-- end row -->
-                <div class="row my-sm-5 py-5 align-items-center justify-content-between">
-                    <div class="col-lg-6">
-                        <div data-aos="fade-right" data-aos-duration="1800">
-                            <div class="card bg-transparent border-0 mb-3 mb-lg-0">
-                                <img src="{{asset('/storage/kepsek.png')}}" class="img img-thumbnail img-fluid w-75 rounded-3" alt="image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div data-aos="fade-left" data-aos-duration="1800">
-                            <h1 class="">Kepala Sekolah</h1>
-                            <h3 class="feature-heading mb-2">Ramli Syamsuddin, S.Pd.,M.Si</h3>
-                            <p class="text-muted">Alamat : Jl. Poros Majene Desa Bonde Kec. Campalagian</p>
-                            {{-- <ul class="feature-list">
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Riwayat Pendidikan</li>
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Prestasi</li>
-                                <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Kontak</li>
-                            </ul> --}}
-                            {{-- <a class="btn btn-primary" href="avascipt:void(0)">Learn more</a> --}}
-                        </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6">
-                        <div data-aos="fade-right" data-aos-duration="1800">
-                            <h3 class="feature-heading">Visi</h3>
-                            <p class="text-muted">Visi: Religius, memiliki kecakapan abad 21, berprestasi dan peduli lingkungan.</p>
-                            <h3 class="feature-heading">Misi</h3>
-                            <ul>
-                                <li>Mewujudkan peserta didik yang religious sehingga terbangun insan yang beriman, bertaqwa, mandiri, berakhlak mulia, terampil, dan siap mendukung Pendidikan/jenjang berikutnya. </li>
-                                <li>Mengarahkan peserta didik untuk memiliki kecakapan abad 21. </li>
-                                <li>Mewujudkan peserta didik yang berprestasi akakdemik maupun non akademik.</li>
-                            </ul>
-                            {{-- <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <a class="accordion-button" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <div>
-                                            <p class="mb-0">Flexible access to facilities.</p>
-                                            <p class="mb-0 fs-13 text-muted">Our new key fobs make it so easy!</p>
-                                        </div>
-                                    </a>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p class="fs-14 text-muted mb-1">Lorem text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-                                        <a href="javascript:void(0)">
-                                            Check it out <i class="mdi mdi-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <a class="accordion-button collapsed" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <div>
-                                            <p class="mb-0">Snacks, drinks, coffee, and more.</p>
-                                            <p class="mb-0 fs-13 text-muted">Keep your engine going with free food and drinks.</p>
-                                        </div>
-                                    </a>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p class="fs-14 text-muted mb-0">Lorem text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-                                        <a href="javascript:void(0)" class="fs-14 text-decoration-none">
-                                            Check it out <i class="mdi mdi-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <a class="accordion-button collapsed" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <div>
-                                            <p class="mb-0">On site tech support</p>
-                                            <p class="mb-0 fs-13 text-muted">Connectivity, power, and IT issues solved in no time.</p>
-                                        </div>
-                                    </a>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p class="fs-14 text-muted mb-0">Lorem text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
-                                        <a href="javascript:void(0)" class="fs-14 text-decoration-none">
-                                            Check it out <i class="mdi mdi-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                </div>
-                            </div> --}}
-                        </div>
-                    </div><!-- end col -->
-                    <div class="col-lg-6">
-                        <div data-aos="fade-left" data-aos-duration="1800">
-                            <div class="card bg-transparent border-0">
-                                <img src="/oxhen-template/images/home-1-new.png" class="img-fluid" alt="image">
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end row-->
             </div><!-- end container -->
         </section>
         <!-- end Features -->

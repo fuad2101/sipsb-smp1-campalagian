@@ -339,6 +339,8 @@
                                 <li><i class="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Kontak</li>
                             </ul> --}}
                             {{-- <a class="btn btn-primary" href="avascipt:void(0)">Learn more</a> --}}
+                            <p style="text-align: justify;"> <em>"Selamat Datang di PPDB SMP 1 Campalagian!<br>
+                                Kami senang Anda tertarik untuk bergabung dengan kami. Kami berkomitmen untuk memberikan pendidikan yang berkualitas dan lingkungan belajar yang kondusif.<br><br>Pada halaman ini, Anda dapat menemukan informasi tentang proses PPDB, jadwal penting, dan persyaratan pendaftaran. Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami.Terima kasih atas kepercayaan Anda kepada kami. Kami berharap dapat menyambut Anda sebagai bagian dari keluarga besar SMP Negeri 1 Campalagian"/<em></p>
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->

@@ -96,6 +96,15 @@
               </select>
         </div>
         <div class="mb-3">
+            <label for="" class="form-label">Suku</label>
+              <select class="form-control form-control-sm" name="suku" id="">
+                <option disabled selected>--Pilih Suku--</option>
+                <option value="Mandar">Mandar</option>
+                <option value="Bugis">Bugis</option>
+                <option value="Jawa">Jawa</option>
+              </select>
+        </div>
+        <div class="mb-3">
             <label for="" class="form-label">Alamat lengkap</label>
             <input type="text" class="form-control form-control-sm @error('alamat') is-invalid @enderror"" name="alamat" id="" aria-describedby="helpId" placeholder=""/>
             @error('alamat')

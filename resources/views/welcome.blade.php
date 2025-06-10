@@ -78,6 +78,7 @@
                                 {{-- <li><hr class="dropdown-divider"></li> --}}
                                 <li><a class="dropdown-item" href="#jadwal">Jadwal</a></li>
                                 <li><a class="dropdown-item" href="#tata-cara">Tata Cara Pendaftaran</a></li>
+                                <li><a class="dropdown-item" href="{{asset('/storage/panduan.pdf')}}" target="_blank">Buku Panduan</a></li>
                             </ul>
                         </li>
 
@@ -107,10 +108,10 @@
                         <div class="text-center mb-2">
                             <h4 class="modal-title" id="exampleModalLongTitle">Kontak</h4>
                             {{-- <p class="fs-14">Ada pertanyaan? Hubungi kami <b>081243368726</b> </p> --}}
-                            <p class="fs-14">Ada pertanyaan? Hubungi kami <b>+62821‑9538‑0013 </b> </p>
+                            <p class="fs-14">Ada pertanyaan? Hubungi kami <b>+62815-2427-9381</b> </p>
                         </div>
                         <div class="d-grid gap-3">
-                            <a class="btn btn-primary btn-lg btn-success" target="_blank" href="https://api.whatsapp.com/send/?phone=6282195380013&text&type=phone_number&app_absent=0">
+                            <a class="btn btn-primary btn-lg btn-success" target="_blank" href="https://api.whatsapp.com/send/?phone=6281524279381&text&type=phone_number&app_absent=0">
                             <span class="d-flex justify-content-center align-items-center">
                                 {{-- <img class="avatar avatar-xs me-2" src="images/google.jpg" alt="Image Description"> --}}
                                 Chat WhatsApp
@@ -475,6 +476,7 @@
                         <div class="col-12 mt-4" id="tata-cara">
                             <img src="{{asset('/storage/tata-cara.jpg')}}" class="img-fluid w-50" alt="gambar alur">
                         </div>
+
                     </div>
                 </div>
                 <div class="row justify-content-center">

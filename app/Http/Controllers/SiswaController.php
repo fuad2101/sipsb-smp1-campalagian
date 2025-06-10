@@ -21,22 +21,19 @@ class SiswaController extends Controller
         }else {
             $noreg = 2025001;
         }
-        // dd($noreg);
-
-        // $nomor = Str::of($noreg)->padLeft(7,'202500');
         return view('pages.form')->with(['nomor'=>$noreg]);
     }
 
     public function status(){
         $email = auth()->user()->email;
         $foo =  Siswa::where('email',$email)->get();
+
         return view('pages.status')->with(['foo'=>$foo]);
     }
 
 
     public function store(FormRequest $request){
 
-        // dd($request->file());
         $files = $request->file();
         $randomTime = '.'.time().'.';
 
@@ -57,10 +54,6 @@ class SiswaController extends Controller
         $kk_name = $kk->getClientOriginalName();
 
         $dok_tambahan ='';
-
-        // $ijazah = $files['ijazah'];
-        // $kk = $files['kk'];
-        // $akta = $files['akta'];
 
         $noreg = Siswa::select('no_registrasi')->latest()->first();;
 
@@ -118,39 +111,17 @@ class SiswaController extends Controller
             'jalur_seleksi'=>$request->jalur_seleksi,
             'jenis_kelamin'=>$request->jenis_kelamin,
             'agama'=>$request->agama,
+            'suku'=>$request->suku,
             'pend_terakhir'=>$request->pend_terakhir,
             'status_daftar'=>'Verifikasi',
             'status_seleksi'=>'Terjadwal',
             ]);
         }
 
-
-        // $insert = Siswa::create([
-        //     'no_registrasi'=>$noreg,
-        //     'nama'=>$request->nama,
-        //     'nisn'=>$request->nisn,
-        //     'email'=>auth()->user()->email,
-        //     'tempat_lahir'=>$request->tempat_lahir,
-        //     'tanggal_lahir'=>$request->tanggal_lahir,
-        //     'sekolah_asal'=>$request->sekolah_asal,
-        //     'alamat'=>$request->alamat,
-        //     'nomor'=>$request->nomor,
-        //     'wali'=>$request->wali,
-        //     'kk'=>'/storage/'.$kk->storeAs('kk',$request->nama.$randomTime.$kk_ext,'public'),
-        //     'akta'=>'/storage/'.$akta->storeAs('akta',$request->nama.$randomTime.$akta_ext,'public'),
-        //     'ijazah'=>'/storage/'.$ijazah->storeAs('ijazah',$request->nama.$randomTime.$ijazah_ext,'public'),
-        //     'foto'=>'/storage/'.$foto->storeAs('foto',$request->nama.$randomTime.$foto_ext,'public'),
-        //     'dok_tambahan'=>'/storage/'.$dok_tambahan->storeAs('dok_tambahan',$request->nama.$randomTime.$dok_tambahan_ext,'public'),
-        //     'jalur_seleksi'=>$request->jalur_seleksi,
-        //     'jenis_kelamin'=>$request->jenis_kelamin,
-        //     'agama'=>$request->agama,
-        //     'pend_terakhir'=>$request->pend_terakhir,
-        //     ]);
-
-            if ($insert) {
-                Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
-                return redirect('/status');
-            }
+        if ($insert) {
+            Alert::success('Berhasil','Pendaftaran Berhasil, data kamu sedang dalam proses verifikasi admin');
+            return redirect('/status');
+        }
     }
 
     public function uploadBayar(FormRequest $request){

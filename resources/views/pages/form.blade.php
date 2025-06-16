@@ -128,6 +128,7 @@
                 <option disabled selected>--Pilih--</option>
                 <option value="SD">SD</option>
                 <option value="SMP">SMP</option>
+                <option value="MI Madrasah Ibtidayyah">MI Madrasah Ibtidayyah</option>
             </select>
         </div>
         <div class="mb-3">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Guru;
+use App\Models\Infografis;
 
 class LandingController extends Controller
 {
@@ -26,6 +27,7 @@ class LandingController extends Controller
         $prakarya = Guru::where('mata_pelajaran','Prakarya')->where('foto','!=','')->get();
         $bimkol= Guru::where('mata_pelajaran','Bimbingan dan Konseling ')->where('foto','!=','')->get();
         $staff= Guru::where('mata_pelajaran','Staf Administrasi')->where('foto','!=','')->get();
+        $infografis = Infografis::latest()->get();
 
         return view('welcome')->with([
 
@@ -42,6 +44,7 @@ class LandingController extends Controller
             'prakarya'=>$prakarya,
             'bimkol'=>$bimkol,
             'staff'=>$staff,
+            'infografis'=>$infografis,
             ]);
     }
 

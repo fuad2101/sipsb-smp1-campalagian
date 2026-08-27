@@ -63,6 +63,9 @@
                             <a class="nav-link" href="#ekstrakulikuler">Ekstrakulikuler</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#pelayanan-publik">Pelayanan Publik</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link mb-3 mb-lg-0" href="#contact">Alamat</a>
                         </li>
                         <li class="nav-item">
@@ -459,7 +462,7 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="text-center mb-4">
+                    {{-- <div class="text-center mb-4">
                         <h2 class="heading mt-3">Alur PPDB SMP Negeri 1 Campalagian</h2>
                         <div class="col-12 mt-4" id="alur">
                             <img src="{{asset('/storage/alur.jpg')}}" class="img-fluid" alt="gambar alur">
@@ -477,7 +480,7 @@
                             <img src="{{asset('/storage/tata-cara.jpg')}}" class="img-fluid w-50" alt="gambar alur">
                         </div>
 
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row justify-content-center">
                 </div><!-- end row -->
@@ -1264,6 +1267,53 @@
         </section>
         <!-- End ekstrakulikuler -->
 
+        <!-- Start pelayanan publik -->
+        <section class="section reviews" id="pelayanan-publik">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="text-center mb-5">
+                            <h2 class="heading">Pelayanan Publik</h2>
+                            <p class="text-muted fs-17">Informasi publik SMP Negeri 1 Campalagian</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    @forelse ($infografis as $item)
+                        <div class="col">
+                            <div class="card h-100">
+                                <img class="card-img-top img-fluid cursor-pointer" style="height: 220px; object-fit: cover;" src="{{ $item->url_image }}" alt="{{ $item->nama }}" data-bs-toggle="modal" data-bs-target="#infografisModal{{ $item->id }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $item->nama }}</h5>
+                                    @if ($item->deskripsi)
+                                        <p class="card-text text-muted">{{ $item->deskripsi }}</p>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="modal fade" id="infografisModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content bg-transparent border-0">
+                                        <div class="modal-body p-0 text-center">
+                                            <img src="{{ $item->url_image }}" class="img-fluid rounded" alt="{{ $item->nama }}">
+                                            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="col-12 text-center text-muted">
+                            <p>Belum ada informasi publik yang tersedia.</p>
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+        </section>
+        <!-- End pelayanan publik -->
+
+
+
         <!-- Start contact -->
         <section class="section contact" id="contact">
             <div class="container">
@@ -1352,19 +1402,22 @@
                     <div class="col-lg-12">
                         <div class="text-center mt-3">
                             <ul class="list-unstyled mb-0">
-                                <li class="list-inline-item mx-lg-3 m-2">
+                                <li class="list-inline-item mx-lg-2 ">
                                     <a class="text-white" href="javascript:void(0)">Home</a>
                                 </li>
-                                <li class="list-inline-item mx-lg-3 m-2">
+                                <li class="list-inline-item mx-lg-2 ">
                                     <a class="text-white" href="#fasilitas">Fasilitas</a>
                                 </li>
-                                <li class="list-inline-item mx-lg-3 m-2">
+                                <li class="list-inline-item mx-lg-2 ">
                                     <a class="text-white" href="javascript:void(0)">Tenaga Pengajar</a>
                                 </li>
-                                <li class="list-inline-item mx-lg-3 m-2">
+                                <li class="list-inline-item mx-lg-2 ">
                                     <a class="text-white" href="javascript:void(0)">Ekstrakulikuler</a>
                                 </li>
-                                <li class="list-inline-item mx-lg-3 m-2">
+                                <li class="list-inline-item mx-lg-2 ">
+                                    <a class="text-white" href="javascript:void(0)">Pelayanan Publik</a>
+                                </li>
+                                <li class="list-inline-item mx-lg-2 ">
                                     <a class="text-white" href="javascript:void(0)">Alamat</a>
                                 </li>
                             </ul>
